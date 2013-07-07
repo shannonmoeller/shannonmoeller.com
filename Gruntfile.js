@@ -27,10 +27,12 @@ module.exports = function (grunt) {
             ]
         },
 
-        autoprefixer: {
+        cssmin: {
+            all: []
         },
 
-        cssmin: {
+        autoprefixer: {
+            all: []
         },
 
         /**
@@ -55,7 +57,8 @@ module.exports = function (grunt) {
                     cwd: '<%= dirs.src %>',
                     src: [
                         '**/*.hbt',
-                        '!**/partial/**'
+                        '!**/partial/**',
+                        '!**/vendor/**'
                     ],
                     dest: '<%= dirs.dest %>',
                     ext: '.html'
@@ -64,6 +67,22 @@ module.exports = function (grunt) {
         },
 
         prettify: {
+            all: {
+                options: {
+                    brace_style: 'end-expand',
+                    indent_size: 4
+                },
+
+                files: [{expand: true,
+                    cwd: '<%= dirs.dest %>',
+                    ext: '.html',
+                    src: [
+                        '**/*.html',
+                        '!**/vendor/**'
+                    ],
+                    dest: '<%= dirs.dest %>'
+                }]
+            }
         },
 
         /**
@@ -80,9 +99,12 @@ module.exports = function (grunt) {
         },
 
         browserify: {
+            all: [],
+            test: []
         },
 
         simplemocha: {
+            test: []
         },
 
         /**
@@ -90,9 +112,6 @@ module.exports = function (grunt) {
          */
 
         clean: {
-            css: '<%= dirs.dest %>/assets/css',
-            html: '<%= dirs.dest %>/**/*.html',
-            js: '<%= dirs.dest %>/assets/js',
             dest: '<%=dirs.dest %>',
             node: 'node_modules'
         },
@@ -120,17 +139,20 @@ module.exports = function (grunt) {
     });
 
     // Plugins
+    grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-csslint');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-hbt');
     grunt.loadNpmTasks('grunt-prettify');
+    grunt.loadNpmTasks('grunt-simple-mocha');
 
     // Tasks
-    grunt.registerTask('css', ['clean:css', 'csslint']);
-    grunt.registerTask('html', ['clean:html', 'hbt']);
-    grunt.registerTask('js', ['clean:js', 'jshint']);
-    grunt.registerTask('test', ['css', 'html', 'js']);
-    grunt.registerTask('default', ['test']);
+    grunt.registerTask('css', ['csslint', 'cssmin', 'autoprefixer']);
+    grunt.registerTask('html', ['hbt', 'prettify']);
+    grunt.registerTask('js', ['jshint', 'browserify', 'simplemocha']);
+    grunt.registerTask('test', ['clean:dest', 'css', 'html', 'js']);
+    grunt.registerTask('default', ['html']);
 };
