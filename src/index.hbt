@@ -1,0 +1,11 @@
+{{#extend "layout"}}
+    {{#replace "body"}}
+        <h2>Welcome Home</h2>
+
+        <ul>
+            {{#items}}
+                <li>{{.}}</li>
+            {{/items}}
+        </ul>
+    {{/replace}}
+{{/extend}}
