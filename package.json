@@ -14,6 +14,7 @@
     "grunt-autoprefixer": "*",
     "grunt-browserify": "*",
     "grunt-contrib-clean": "*",
+    "grunt-contrib-copy": "*",
     "grunt-contrib-csslint": "*",
     "grunt-contrib-cssmin": "*",
     "grunt-contrib-jshint": "*",

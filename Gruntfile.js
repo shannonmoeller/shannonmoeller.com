@@ -12,7 +12,52 @@ module.exports = function (grunt) {
 
         dirs: {
             dest: 'www',
-            src: 'src'
+            docs: 'docs',
+            src: 'src',
+            test: 'test'
+        },
+
+        /**
+         * HTML
+         */
+
+        hbt: {
+            options: {
+                data: require('./src/data'),
+                helpers: [
+                    '<%= dirs.src %>/**/helper/**/*.js',
+                    '<%= dirs.src %>/**/vendor/handlebars*/**/*.js'
+                ],
+                partials: ['<%= dirs.src %>/**/partial/**/*.hbt']
+            },
+            all: {
+                expand: true,
+                cwd: '<%= dirs.src %>',
+                src: [
+                    '**/*.hbt',
+                    '!**/partial/**',
+                    '!**/vendor/**'
+                ],
+                dest: '<%= dirs.dest %>',
+                ext: '.html'
+            }
+        },
+
+        prettify: {
+            options: {
+                indent_char: ' ',
+                indent_size: 4
+            },
+            all: {
+                expand: true,
+                cwd: '<%= dirs.dest %>',
+                src: [
+                    '**/*.html',
+                    '!**/vendor/**'
+                ],
+                dest: '<%= dirs.dest %>',
+                ext: '.html'
+            }
         },
 
         /**
@@ -28,60 +73,26 @@ module.exports = function (grunt) {
         },
 
         cssmin: {
-            all: []
-        },
-
-        autoprefixer: {
-            all: []
-        },
-
-        /**
-         * HTML
-         */
-
-        hbt: {
+            options: {
+                removeEmpty: true
+            },
             all: {
-                options: {
-                    data: require('./meta'),
-                    helpers: [
-                        '<%= dirs.src %>/**/helper/**/*.js',
-                        '<%= dirs.src %>/**/vendor/handlebars*/**/*.js'
-                    ],
-                    partials: [
-                        '<%= dirs.src %>/**/partial/**/*.hbt'
-                    ]
-                },
-
-                files: [{
-                    expand: true,
-                    cwd: '<%= dirs.src %>',
-                    src: [
-                        '**/*.hbt',
-                        '!**/partial/**',
-                        '!**/vendor/**'
-                    ],
-                    dest: '<%= dirs.dest %>',
-                    ext: '.html'
-                }]
+                expand: true,
+                cwd: '<%= dirs.src %>',
+                src: ['assets/css/*.css'],
+                dest: '<%= dirs.dest %>'
             }
         },
 
-        prettify: {
+        autoprefixer: {
+            options: {
+                browsers: ['last 2 versions']
+            },
             all: {
-                options: {
-                    brace_style: 'end-expand',
-                    indent_size: 4
-                },
-
-                files: [{expand: true,
-                    cwd: '<%= dirs.dest %>',
-                    ext: '.html',
-                    src: [
-                        '**/*.html',
-                        '!**/vendor/**'
-                    ],
-                    dest: '<%= dirs.dest %>'
-                }]
+                expand: true,
+                cwd: '<%= dirs.dest %>',
+                src: ['assets/css/*.css'],
+                dest: '<%= dirs.dest %>'
             }
         },
 
@@ -99,12 +110,52 @@ module.exports = function (grunt) {
         },
 
         browserify: {
-            all: [],
-            test: []
+            build: {
+                options: {
+                    standalone: '<%= pkg.name %>'
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= dirs.src %>',
+                    src: ['assets/js/controller/*.js'],
+                    dest: '<%= dirs.dest %>'
+                }]
+            },
+            test: {
+                options: {
+                    debug: true
+                },
+                files: [{
+                    expand: true,
+                    cwd: '<%= dirs.test %>',
+                    src: ['**/test.*.js'],
+                    dest: '<%= dirs.test %>/all.js'
+                }]
+            }
         },
 
         simplemocha: {
-            test: []
+            options: {
+                reporter: 'spec'
+            },
+            all: ['test/all.js']
+        },
+
+        /**
+         * Assets
+         */
+
+        copy: {
+            all: {
+                expand: true,
+                cwd: '<%= dirs.src %>',
+                src: [
+                    'assets/font/**',
+                    'assets/img/**'
+                ],
+                dest: '<%= dirs.dest %>',
+                filter: 'isFile'
+            }
         },
 
         /**
@@ -112,47 +163,65 @@ module.exports = function (grunt) {
          */
 
         clean: {
-            dest: '<%=dirs.dest %>',
+            dest: [
+                '<%= dirs.dest %>/*',
+                '!**/.git/**'
+            ],
             node: 'node_modules'
         },
 
         watch: {
             options: {
-                livereload: true,
+                livereload: true
             },
-
-            css: {
-                files: '<%= csslint.all %>',
-                tasks: ['css']
+            all: {
+                files: ['Gruntfile.js'],
+                tasks: ['default']
             },
-
             html: {
-                files: '<%= hbt.all.files %>',
+                files: [
+                    '<%= dirs.src %>/data.js',
+                    '<%= dirs.src %>/**/*.hbt'
+                ],
                 tasks: ['html']
             },
-
+            css: {
+                files: ['<%= dirs.src %>/**/*.css'],
+                tasks: ['css']
+            },
             js: {
-                files: '<%= jshint.all %>',
+                files: ['<%= dirs.src %>/**/*.js'],
                 tasks: ['js']
+            },
+            assets: {
+                files: [
+                    'assets/font/**',
+                    'assets/img/**'
+                ],
+                tasks: ['assets']
             }
         }
     });
 
     // Plugins
-    grunt.loadNpmTasks('grunt-browserify');
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-csslint');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-hbt');
     grunt.loadNpmTasks('grunt-prettify');
+    grunt.loadNpmTasks('grunt-contrib-csslint');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-browserify');
     grunt.loadNpmTasks('grunt-simple-mocha');
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     // Tasks
-    grunt.registerTask('css', ['csslint', 'cssmin', 'autoprefixer']);
     grunt.registerTask('html', ['hbt', 'prettify']);
+    grunt.registerTask('css', ['csslint', 'cssmin', 'autoprefixer']);
     grunt.registerTask('js', ['jshint', 'browserify', 'simplemocha']);
-    grunt.registerTask('test', ['clean:dest', 'css', 'html', 'js']);
-    grunt.registerTask('default', ['html']);
+    grunt.registerTask('assets', ['copy']);
+
+    // Default
+    grunt.registerTask('default', ['clean:dest', 'html', 'css', 'js', 'assets']);
 };

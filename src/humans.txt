@@ -1,0 +1,24 @@
+# humanstxt.org/
+
+# TEAM
+
+  Dude: Shannon Moeller
+  Twitter: @shannonmoeller
+
+# THANKS
+
+  Mentor: Jeremy Fisher
+  Twitter: @fisherfrontier
+
+  Mentor: Josh Goforth
+  Twitter: @gojosh
+
+  Mentor: Matt Dunlap
+  Twitter: @prestaul
+
+# COLOPHON
+
+  Font: Aleo
+  Designer: Alessio Laiso
+  Url: http://www.behance.net/gallery/ALEO-Free-Font-Family/8018673
+

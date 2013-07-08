@@ -1,11 +1,15 @@
 {{#extend "layout"}}
     {{#replace "body"}}
-        <h2>Welcome Home</h2>
+        <h2 class="hdg hdg_2">Welcome Home</h2>
 
         <ul>
             {{#items}}
                 <li>{{.}}</li>
             {{/items}}
         </ul>
+    {{/replace}}
+
+    {{#replace "foot"}}
+        <script defer src="assets/js/controller/home.js"></script>
     {{/replace}}
 {{/extend}}

@@ -1,0 +1,17 @@
+.media {
+    overflow: hidden;
+}
+
+.media-img {
+    float: left;
+    margin-right: 10px;
+}
+
+.media-imgAlt {
+    float: right;
+    margin-left: 10px;
+}
+
+.media-bd {
+    overflow: hidden;
+}

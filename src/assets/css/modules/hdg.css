@@ -1,0 +1,12 @@
+.hdg {
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+.hdg_1 {
+    font-size: 36px;
+}
+
+.hdg_2 {
+    font-size: 24px;
+}
