@@ -3,9 +3,10 @@
 Name: Shannon Moeller
 Email: me@shannonmoeller.com
 Twitter: @shannonmoeller
+Copyright: (c) 2004-2014 Shannon Moeller
 
 /* COLOPHON */
 
-Standards: HTML5, CSS3, SVG
-Typeface: https://www.theleagueofmoveabletype.com/junction
+Standards: HTML5, CSS3, SVG, WOFF
+Typeface: https://www.theleagueofmoveabletype.com/junction/
 Wood Texture: http://www.psdgraphics.com/textures/basketball-floor-texture/
