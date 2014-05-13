@@ -1,8 +1,0 @@
-/*csslint box-sizing:false, universal-selector:false */
-
-body {
-    background: #666666;
-    color: #eeeeee;
-    font: lighter 16px/1.2 'Aleo', sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
