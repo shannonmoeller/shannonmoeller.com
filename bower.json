@@ -1,8 +1,0 @@
-{
-  "name": "shannonmoeller.com",
-  "version": "10.0.0",
-  "private": true,
-  "dependencies": {
-    "handlebars-layouts": "*"
-  }
-}
