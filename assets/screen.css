@@ -1,0 +1,236 @@
+/*csslint
+    box-model: false,
+    box-sizing: false,
+    bulletproof-font-face: false,
+    compatible-vendor-prefixes: false,
+    duplicate-background-images: false,
+    fallback-colors: false,
+    universal-selector: false
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    font: normal 20px/1.38 Junction, sans-serif;
+}
+
+body {
+    background: #666 url(wallpaper.svg) left top;
+    color: #eee;
+    margin: 0;
+    position: relative;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    margin: 0;
+}
+
+i {
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content {
+    max-width: 30rem;
+    padding: 2rem;
+}
+
+.graphics {
+    display: none;
+}
+
+.external > * {
+    display: inline-block;
+}
+
+.external > * + * {
+    margin-left: 0.5rem;
+}
+
+.icon {
+    font-family: Social, sans-serif;
+    font-size: 0;
+}
+
+.icon:before {
+    font-size: 1.38rem;
+}
+
+.icon_googleplus:before {
+    content: "\e600";
+}
+
+.icon_twitter:before {
+    content: "\e601";
+}
+
+.icon_github:before {
+    content: "\e602";
+}
+
+.icon_linkedin:before {
+    content: "\e603";
+}
+
+@media (min-width: 639px) and (min-height: 479px) {
+    html, body {
+        font-size: 24px;
+        height: 100%;
+    }
+
+    .content {
+        margin: -1px;
+        padding: 3rem;
+        position: relative;
+        text-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2);
+        width: 60%;
+        z-index: 2;
+    }
+
+    .graphics,
+    .graphics > *,
+    .room,
+    .room > * {
+        display: block;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+    }
+
+    .graphics {
+        overflow: hidden;
+    }
+
+    .room {
+        -webkit-perspective: 1000px;
+        -ms-perspective: 1000px;
+        perspective: 1000px;
+    }
+
+    .room-floor {
+        background: #666 url(flooring.jpg) right top;
+        background-size: 1024px 768px;
+        box-shadow: 456px 256px 256px hsla(25, 50%, 20%, 0.25) inset;
+
+        -webkit-transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+            translateY(50%) translateZ(200px) rotateX(90deg);
+        -ms-transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+            translateY(50%) translateZ(200px) rotateX(90deg);
+        transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+            translateY(50%) translateZ(200px) rotateX(90deg);
+    }
+
+    .room-wallRight {
+        background: #666 url(wallpaper.svg) left bottom;
+        border-bottom: 24px solid #444;
+        box-shadow: 456px 256px 512px hsla(0, 0%, 0%, 0.3) inset;
+
+        -webkit-transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+            translateX(50%) translateZ(256px) rotateY(-90deg);
+        -ms-transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+            translateX(50%) translateZ(256px) rotateY(-90deg);
+        transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+            translateX(50%) translateZ(256px) rotateY(-90deg);
+    }
+
+    .room-wallBack {
+        background: #666 url(wallpaper.svg) right bottom;
+        border-bottom: 24px solid #444;
+        box-shadow: 0 256px 512px hsla(0, 0%, 0%, 0.5) inset;
+
+        -webkit-transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+        -ms-transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+        transform:
+            translateX(-12%) translateY(-18%)
+            rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+    }
+
+    .fridge {
+        background: url(fridge.svg) no-repeat 85% 75%;
+        background-size: 256px auto;
+
+        -webkit-transform: rotate(1.75deg);
+        -ms-transform: rotate(1.75deg);
+        transform: rotate(1.75deg);
+    }
+}
+
+@media (min-width: 899px) and (min-height: 575px) {
+    html, body {
+        font-size: 28px;
+    }
+
+    .fridge {
+        background-size: 328px auto;
+
+        -webkit-transform: rotate(2deg);
+        -ms-transform: rotate(2deg);
+        transform: rotate(2deg);
+    }
+}
+
+@media (min-width: 1023px) and (min-height: 767px) {
+    html, body {
+        font-size: 32px;
+    }
+
+    .fridge {
+        background-size: 410px auto;
+    }
+}
+
+@media (min-width: 1279px) and (min-height: 799px) {
+    .content {
+        padding: 4rem;
+    }
+
+    .fridge {
+        background-size: 456px auto;
+        bottom: -20px;
+    }
+}
+
+@font-face {
+    font-family: Junction;
+    src: url(junction.woff) format('woff');
+}
+
+@font-face {
+    font-family: Social;
+    src: url(social.woff) format('woff');
+}
