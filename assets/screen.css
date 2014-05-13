@@ -100,7 +100,7 @@ ul {
         padding: 3rem;
         position: relative;
         text-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2);
-        width: 60%;
+        width: 58%;
         z-index: 2;
     }
 
@@ -190,9 +190,9 @@ ul {
     }
 }
 
-@media (min-width: 899px) and (min-height: 575px) {
+@media (min-width: 900px) and (min-height: 576px) {
     html, body {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .fridge {
@@ -204,17 +204,21 @@ ul {
     }
 }
 
-@media (min-width: 1023px) and (min-height: 767px) {
+@media (min-width: 1024px) and (min-height: 768px) {
     html, body {
-        font-size: 32px;
+        font-size: 26px;
     }
 
     .fridge {
-        background-size: 410px auto;
+        background-size: 400px auto;
     }
 }
 
-@media (min-width: 1279px) and (min-height: 799px) {
+@media (min-width: 1280px) and (min-height: 800px) {
+    html, body {
+        font-size: 30px;
+    }
+
     .content {
         padding: 4rem;
     }
