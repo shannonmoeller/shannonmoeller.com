@@ -14,6 +14,7 @@
 
 html, body {
     font: normal 20px/1.38 Junction, sans-serif;
+    height: 100%;
 }
 
 body {
@@ -21,6 +22,8 @@ body {
     color: #eee;
     margin: 0;
     position: relative;
+    min-height: 840px;
+    overflow-x: hidden;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -48,12 +51,11 @@ ul {
 }
 
 .content {
-    max-width: 30rem;
+    margin: -1px;
     padding: 2rem;
-}
-
-.graphics {
-    display: none;
+    position: relative;
+    text-shadow: 1px 2px 5px hsla(0, 0%, 0%, 0.2);
+    z-index: 2;
 }
 
 .external > * {
@@ -89,10 +91,95 @@ ul {
     content: "\e603";
 }
 
+.room {
+    overflow: hidden;
+}
+
+.graphics > *,
+.room,
+.room > * {
+    display: block;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.graphics {
+    overflow: hidden;
+}
+
+.room {
+    -webkit-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.room-floor {
+    background: #666 url(flooring.jpg) right top;
+    background-size: 1024px 768px;
+    box-shadow: 456px 256px 256px hsla(25, 50%, 20%, 0.25) inset;
+    left: -20px;
+    right: -20px;
+
+    -webkit-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateY(50%) translateZ(200px) rotateX(90deg);
+    -ms-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateY(50%) translateZ(200px) rotateX(90deg);
+    transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateY(50%) translateZ(200px) rotateX(90deg);
+}
+
+.room-wallRight {
+    background: #666 url(wallpaper.svg) left bottom;
+    border-bottom: 24px solid #444;
+    box-shadow: 456px 256px 512px hsla(0, 0%, 0%, 0.3) inset;
+
+    -webkit-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateX(50%) rotateY(-90deg);
+    -ms-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateX(50%) rotateY(-90deg);
+    transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateX(50%) rotateY(-90deg);
+}
+
+.room-wallBack {
+    background: #666 url(wallpaper.svg) right bottom;
+    border-bottom: 24px solid #444;
+    box-shadow: 0 256px 512px hsla(0, 0%, 0%, 0.5) inset;
+
+    -webkit-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+    -ms-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+    transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+}
+
+.fridge {
+    background: url(fridge.svg) no-repeat 50% 90%;
+    background-size: 256px auto;
+}
+
 @media (min-width: 639px) and (min-height: 479px) {
     html, body {
         font-size: 24px;
-        height: 100%;
     }
 
     .content {
@@ -104,33 +191,17 @@ ul {
         z-index: 2;
     }
 
-    .graphics,
-    .graphics > *,
-    .room,
-    .room > * {
+    .graphics {
         display: block;
         bottom: 0;
+        height: auto;
         left: 0;
         position: fixed;
         right: 0;
         top: 0;
     }
 
-    .graphics {
-        overflow: hidden;
-    }
-
-    .room {
-        -webkit-perspective: 1000px;
-        -ms-perspective: 1000px;
-        perspective: 1000px;
-    }
-
     .room-floor {
-        background: #666 url(flooring.jpg) right top;
-        background-size: 1024px 768px;
-        box-shadow: 456px 256px 256px hsla(25, 50%, 20%, 0.25) inset;
-
         -webkit-transform:
             translateX(-12%) translateY(-18%)
             rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
@@ -146,10 +217,6 @@ ul {
     }
 
     .room-wallRight {
-        background: #666 url(wallpaper.svg) left bottom;
-        border-bottom: 24px solid #444;
-        box-shadow: 456px 256px 512px hsla(0, 0%, 0%, 0.3) inset;
-
         -webkit-transform:
             translateX(-12%) translateY(-18%)
             rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
@@ -165,10 +232,6 @@ ul {
     }
 
     .room-wallBack {
-        background: #666 url(wallpaper.svg) right bottom;
-        border-bottom: 24px solid #444;
-        box-shadow: 0 256px 512px hsla(0, 0%, 0%, 0.5) inset;
-
         -webkit-transform:
             translateX(-12%) translateY(-18%)
             rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);

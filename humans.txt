@@ -1,0 +1,11 @@
+/* AUTHOR */
+
+Name: Shannon Moeller
+Email: me@shannonmoeller.com
+Twitter: @shannonmoeller
+
+/* COLOPHON */
+
+Standards: HTML5, CSS3, SVG
+Typeface: https://www.theleagueofmoveabletype.com/junction
+Wood Texture: http://www.psdgraphics.com/textures/basketball-floor-texture/
