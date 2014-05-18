@@ -1,0 +1,22 @@
+/*csslint
+    box-model: false
+*/
+
+.site {
+    min-height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.site-bd {
+    padding: 2rem 2rem 18rem;
+    position: relative;
+    z-index: 1;
+}
+
+@media (orientation: landscape) {
+    .site-bd {
+        padding: 6vw;
+        width: 60vw;
+    }
+}

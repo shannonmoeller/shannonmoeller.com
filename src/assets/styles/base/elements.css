@@ -1,0 +1,44 @@
+/*csslint
+    box-sizing: false,
+    universal-selector: false
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font: 4vmin/1.38 Junction, sans-serif;
+    height: 100%;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    background: #444;
+    color: #eee;
+    height: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: normal;
+}
+
+i {
+    font-style: normal;
+}
+
+p {
+    padding: 1rem 0;
+}

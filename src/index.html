@@ -1,0 +1,48 @@
+{{#extend 'layout'}}
+
+    {{#replace 'body'}}
+        <h1 class="isHidden">{{title}}</h1>
+
+        <h2>Howdy.</h2>
+
+        <p>
+            I&rsquo;m Shannon Moeller, a web and graphics dude in Western New
+            York; with a penchant for clean code, elegant design, and green
+            refrigerators&mdash;especially on t&#8209;shirts.
+        </p>
+
+        <ul class="external">
+            <li>
+                <a href="http://github.com/shannonmoeller" rel="external">
+                    <i class="icon icon_github">Github</i>
+                </a>
+            </li>
+            <li>
+                <a href="http://twitter.com/shannonmoeller" rel="external">
+                    <i class="icon icon_twitter">Twitter</i>
+                </a>
+            </li>
+            <li>
+                <a href="http://google.com/+shannonmoeller" rel="external">
+                    <i class="icon icon_googleplus">Google+</i>
+                </a>
+            </li>
+            <li>
+                <a href="http://linkedin.com/in/shannonmoeller" rel="external">
+                    <i class="icon icon_linkedin">LinkedIn</i>
+                </a>
+            </li>
+        </ul>
+    {{/replace}}
+
+    {{#replace 'foot'}}
+        <div class="room" aria-hidden="true">
+            <div class="room-floor"></div>
+            <div class="room-wall room-wall_right"></div>
+            <div class="room-wall room-wall_left"></div>
+        </div> <!-- /room -->
+
+        <div class="fridge" aria-hidden="true"></div>
+    {{/replace}}
+
+{{/extend}}

@@ -1,0 +1,79 @@
+/*csslint
+    compatible-vendor-prefixes: false,
+    universal-selector: false
+*/
+
+.room,
+.room > * {
+    bottom: 0;
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.room {
+    -webkit-perspective: 1000px;
+    -ms-perspective: 1000px;
+    perspective: 1000px;
+}
+
+.room-floor {
+    background: #666 url(../../media/images/flooring.jpg) right top;
+    background-size: 1024px 768px;
+    left: -20px;
+    right: -20px;
+
+    -webkit-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateY(50%) translateZ(200px) rotateX(90deg);
+    -ms-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateY(50%) translateZ(200px) rotateX(90deg);
+    transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateY(50%) translateZ(200px) rotateX(90deg);
+}
+
+.room-wall {
+    background: #666 url(../../media/images/wallpaper.svg);
+    background-size: 128px auto;
+    border-bottom: 24px solid #444;
+}
+
+.room-wall_left {
+    background-position: right bottom;
+    box-shadow: -128px -128px 1024px rgba(0, 0, 0, 0.4) inset;
+
+    -webkit-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+    -ms-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+    transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg);
+}
+
+.room-wall_right {
+    background-position: left bottom;
+    box-shadow: 512px -128px 1024px rgba(0, 0, 0, 0.4) inset;
+
+    -webkit-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateX(50%) rotateY(-90deg);
+    -ms-transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateX(50%) rotateY(-90deg);
+    transform:
+        translateX(-12%) translateY(-18%)
+        rotateX(-11.25deg) rotateY(11.25deg) rotateZ(-2.8125deg)
+        translateX(50%) rotateY(-90deg);
+}

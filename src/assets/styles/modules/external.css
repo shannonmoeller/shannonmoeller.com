@@ -1,0 +1,11 @@
+/*csslint
+    universal-selector: false
+*/
+
+.external > * {
+    display: inline-block;
+}
+
+.external > * + * {
+    margin-left: 0.5rem;
+}

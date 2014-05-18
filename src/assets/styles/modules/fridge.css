@@ -1,0 +1,27 @@
+/*csslint
+    compatible-vendor-prefixes: false
+*/
+
+.fridge {
+    background: url(../../media/images/fridge.svg) no-repeat 50% 90%;
+    background-size: contain;
+    display: block;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    bottom: 5%;
+    position: absolute;
+}
+
+@media (orientation: landscape) {
+    .fridge {
+        bottom: 5%;
+        left: 60%;
+        right: 10%;
+        top: 5%;
+
+        -webkit-transform: rotateX(1.618deg);
+        -ms-transform: rotateX(1.618deg);
+        transform: rotateX(1.618deg);
+    }
+}

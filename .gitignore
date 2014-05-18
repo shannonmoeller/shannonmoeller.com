@@ -1,4 +1,6 @@
 .*.swp
 .DS_Store
-node_modules
-npm-debug.json
+._.DS_Store
+node_modules/
+npm-debug.log
+web/

@@ -1,0 +1,13 @@
+.icon {
+    font-family: Social, sans-serif;
+    font-size: 0;
+}
+
+.icon:before {
+    font-size: 1.38rem;
+}
+
+.icon_github:before { content: "\e602"; }
+.icon_googleplus:before { content: "\e600"; }
+.icon_linkedin:before { content: "\e603"; }
+.icon_twitter:before { content: "\e601"; }

@@ -1,0 +1,36 @@
+{
+  "name": "shannonmoeller.com",
+  "version": "12.0.1",
+  "description": "Source code for my site.",
+  "author": "Shannon Moeller <me@shannonmoeller.com> (http://shannonmoeller.com)",
+  "license": "proprietary",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shannonmoeller/shannonmoeller.com.git"
+  },
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-rework": "^0.2.2",
+    "gulp-build": "^0.5.3",
+    "gulp-jscs": "^0.5.0",
+    "gulp-jshint": "^1.6.1",
+    "jshint-stylish": "^0.2.0",
+    "handlebars-layouts": "^0.3.2",
+    "handlebars": "^2.0.0-alpha.2",
+    "map-stream": "^0.1.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-minify-css": "^0.3.4",
+    "gulp-plumber": "^0.6.1",
+    "gulp-watch": "^0.6.4",
+    "vinyl-fs": "^0.1.4",
+    "glob": "^3.2.9",
+    "clean-css": "^2.1.8",
+    "gulp-livereload": "^1.5.0",
+    "mout": "^0.9.1",
+    "gulp-hb": "^0.1.1"
+  },
+  "engines": {
+    "node": ">= 0.10"
+  }
+}
