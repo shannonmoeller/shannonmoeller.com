@@ -24,6 +24,7 @@ body {
     background: #444;
     color: #eee;
     height: 100%;
+    text-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.4);
 }
 
 a {

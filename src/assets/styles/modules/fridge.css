@@ -15,10 +15,8 @@
 
 @media (orientation: landscape) {
     .fridge {
-        bottom: 0;
         left: 60%;
-        right: 10%;
-        top: 0;
+        top: 5%;
 
         -webkit-transform: rotateX(1.618deg);
         -ms-transform: rotateX(1.618deg);
