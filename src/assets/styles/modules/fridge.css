@@ -3,7 +3,7 @@
 */
 
 .fridge {
-    background: url(../../media/images/fridge.svg) no-repeat 50% 90%;
+    background: url(../../media/images/fridge.svg) no-repeat 50% 85%;
     background-size: contain;
     display: block;
     top: 50%;
@@ -15,10 +15,10 @@
 
 @media (orientation: landscape) {
     .fridge {
-        bottom: 5%;
+        bottom: 0;
         left: 60%;
         right: 10%;
-        top: 5%;
+        top: 0;
 
         -webkit-transform: rotateX(1.618deg);
         -ms-transform: rotateX(1.618deg);
