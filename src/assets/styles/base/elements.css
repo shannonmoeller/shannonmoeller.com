@@ -10,7 +10,8 @@
 }
 
 html {
-    font: 4vmin/1.38 Junction, sans-serif;
+    font: 24px/1.38 Junction, sans-serif;
+    font-size: 4vmin;
     height: 100%;
 
     -webkit-font-smoothing: antialiased;

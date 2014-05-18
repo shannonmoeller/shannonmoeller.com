@@ -16,7 +16,7 @@
 
 @media (orientation: landscape) {
     .site-bd {
-        padding: 6vw;
-        width: 60vw;
+        padding: 2.5rem;
+        width: 60%;
     }
 }

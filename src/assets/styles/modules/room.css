@@ -42,7 +42,7 @@
 .room-wall {
     background: #666 url(../../media/images/wallpaper.svg);
     background-size: 128px auto;
-    border-bottom: 24px solid #444;
+    border-bottom: 0.8rem solid #444;
 }
 
 .room-wall_left {
