@@ -1,8 +1,21 @@
+---
+external:
+  - title: Github
+    url: http://github.com/shannonmoeller
+    icon: github
+  - title: Twitter
+    url: http://twitter.com/shannonmoeller
+    icon: twitter
+  - title: Google+
+    url: http://google.com/+shannonmoeller
+    icon: googleplus
+  - title: LinkedIn
+    url: http://linkedin.com/in/shannonmoeller
+    icon: linkedin
+---
 {{#extend 'layout'}}
 
-    {{#replace 'body'}}
-        <h1 class="isHidden">{{title}}</h1>
-
+    {{#append 'body'}}
         <h2>Howdy.</h2>
 
         <p>
@@ -12,37 +25,24 @@
         </p>
 
         <ul class="external">
-            <li>
-                <a href="http://github.com/shannonmoeller" rel="external">
-                    <i class="icon icon_github">Github</i>
-                </a>
-            </li>
-            <li>
-                <a href="http://twitter.com/shannonmoeller" rel="external">
-                    <i class="icon icon_twitter">Twitter</i>
-                </a>
-            </li>
-            <li>
-                <a href="http://google.com/+shannonmoeller" rel="external">
-                    <i class="icon icon_googleplus">Google+</i>
-                </a>
-            </li>
-            <li>
-                <a href="http://linkedin.com/in/shannonmoeller" rel="external">
-                    <i class="icon icon_linkedin">LinkedIn</i>
-                </a>
-            </li>
-        </ul>
-    {{/replace}}
+            {{#each file.meta.external}}
+                <li>
+                    <a href="{{url}}" rel="external">
+                        <i class="icon icon_{{icon}}">{{title}}</i>
+                    </a>
+                </li>
+            {{/each}}
+        </ul> <!-- /external -->
+    {{/append}}
 
-    {{#replace 'foot'}}
+    {{#prepend 'foot'}}
         <div class="room" aria-hidden="true">
             <div class="room-floor"></div>
             <div class="room-wall room-wall_right"></div>
             <div class="room-wall room-wall_left"></div>
-        </div> <!-- /room -->
+        </div>
 
         <div class="fridge" aria-hidden="true"></div>
-    {{/replace}}
+    {{/prepend}}
 
 {{/extend}}

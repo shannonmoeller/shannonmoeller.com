@@ -3,7 +3,7 @@
 */
 
 .fridge {
-    background: url(../../media/images/fridge.svg) no-repeat 50% 85%;
+    background: url(../../media/images/fridge.svg) no-repeat center bottom;
     background-size: contain;
     display: block;
     top: 50%;
@@ -18,8 +18,8 @@
         left: 60%;
         top: 5%;
 
-        -webkit-transform: rotateX(1.618deg);
-        -ms-transform: rotateX(1.618deg);
-        transform: rotateX(1.618deg);
+        -webkit-transform: rotateZ(1deg);
+        -ms-transform: rotateZ(1deg);
+        transform: rotateZ(1deg);
     }
 }

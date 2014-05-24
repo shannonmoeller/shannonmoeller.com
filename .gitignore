@@ -1,6 +1,11 @@
+
+coverage/
+docs/
+node_modules/
+web/
+
+*.log
 .*.swp
 .DS_Store
 ._.DS_Store
-node_modules/
-npm-debug.log
-web/
+

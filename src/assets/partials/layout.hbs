@@ -6,24 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>{{title}}</title>
+    <title>{{{title}}}</title>
 
     <link rel="author" href="humans.txt" />
     <link rel="apple-touch-icon" href="assets/media/images/apple-touch-icon.png" />
-    <link rel="shortcut icon" type="image/png" href="assets/media/images/favicon.png" />
-    <link rel="stylesheet" media="screen, projection" href="assets/styles/screen.css" />
+    <link rel="shortcut icon" href="assets/media/images/favicon.ico" />
+    <link rel="stylesheet" href="assets/styles/screen.css" />
 
 </head>
 <body>
 
     <div class="site">
         <div class="site-bd" role="main">
-            {{#block 'body'}}{{/block}}
+            {{#block 'body'}}
+                <h1 class="isHidden">{{{title}}}</h1>
+            {{/block}}
         </div> <!-- /site-bd -->
 
         <div class="site-ft" role="contentinfo">
-            {{#block 'foot'}}{{/block}}
-            <p class="isHidden"><small>&copy; 2004-14 Shannon Moeller</small></p>
+            {{#block 'foot'}}
+                <p class="isHidden"><small>&copy; 2004-14 Shannon Moeller</small></p>
+            {{/block}}
         </div> <!-- /site-ft -->
     </div> <!-- /site -->
 
@@ -33,7 +36,7 @@
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ga}}', 'auto');ga('send', 'pageview');
+        ga('create', '{{{ga}}}', 'auto');ga('send', 'pageview');
     </script>
 
 </body>
