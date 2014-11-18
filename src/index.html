@@ -13,9 +13,9 @@ external:
     url: http://linkedin.com/in/shannonmoeller
     icon: linkedin
 ---
-{{#extend 'layout'}}
+{{#extend "layout"}}
 
-    {{#append 'body'}}
+    {{#content "body" mode="append"}}
         <h2>Howdy.</h2>
 
         <p>
@@ -33,9 +33,9 @@ external:
                 </li>
             {{/each}}
         </ul> <!-- /external -->
-    {{/append}}
+    {{/content}}
 
-    {{#prepend 'foot'}}
+    {{#content "foot" mode="prepend"}}
         <div class="room" aria-hidden="true">
             <div class="room-floor"></div>
             <div class="room-wall room-wall_right"></div>
@@ -43,6 +43,6 @@ external:
         </div>
 
         <div class="fridge" aria-hidden="true"></div>
-    {{/prepend}}
+    {{/content}}
 
 {{/extend}}
