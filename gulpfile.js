@@ -1,9 +1,10 @@
 'use strict';
 
 var gulp = require('gulp'),
-	base = { base: './src/' };
+	base = { base: './src/' },
+	config = { isWatching: false };
 
-gulp.task('default', ['lint', 'markup', 'styles', 'media']);
+gulp.task('default', ['lint', 'markup', 'styles', 'copy']);
 
 gulp.task('lint', function () {
 	var jscs = require('gulp-jscs'),
@@ -25,34 +26,45 @@ gulp.task('markup', function () {
 		.pipe(fm({ property: 'meta' }))
 		.pipe(hb({
 			data: './src/assets/data/**/*.js',
-			helpers: './node_modules/handlebars-layouts',
+			helpers: './node_modules/handlebars-layouts/index.js',
 			partials: './src/assets/partials/**/*.*'
 		}))
 		.pipe(gulp.dest('./web/'));
 });
 
 gulp.task('styles', function () {
-	var minify = require('gulp-minify-css');
+	var autoprefixer = require('gulp-autoprefixer'),
+		minify = require('gulp-minify-css'),
+		sourcemaps = require('gulp-sourcemaps'),
+		when = require('gulp-if');
 
 	return gulp
 		.src('./src/assets/styles/*.css', base)
+		.pipe(when(config.isWatching, sourcemaps.init()))
+		.pipe(autoprefixer({
+			browsers: ['last 2 versions'],
+			cascade: false
+		}))
 		.pipe(minify({
 			keepBreaks: true,
 			processImport: true,
 			relativeTo: './src/assets/styles/'
 		}))
+		.pipe(when(config.isWatching, sourcemaps.write()))
 		.pipe(gulp.dest('./web/'));
 });
 
-gulp.task('media', function () {
+gulp.task('copy', function () {
 	return gulp
-		.src('./src/assets/media/**/*.*', base)
+		.src('./src/{CNAME,LICENSE,README.md,assets/media/**}', base)
 		.pipe(gulp.dest('./web/'));
 });
 
 gulp.task('watch', function () {
 	var watch = require('gulp-watch'),
 		lr = require('gulp-livereload');
+
+	config.isWatching = true;
 
 	watch({ glob: './src/**/*.{hbs,html,txt}' }, function () {
 		gulp.start('markup');
@@ -63,7 +75,7 @@ gulp.task('watch', function () {
 	});
 
 	watch({ glob: './src/assets/media/**/*.*' }, function () {
-		gulp.start('media');
+		gulp.start('copy');
 	});
 
 	watch({ glob: './web/**/*.*' }).pipe(lr());
