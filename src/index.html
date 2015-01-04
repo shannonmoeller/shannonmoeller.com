@@ -27,9 +27,7 @@ external:
         <ul class="external">
             {{#each file.meta.external}}
                 <li>
-                    <a href="{{url}}" rel="external">
-                        <i class="icon icon_{{icon}}">{{title}}</i>
-                    </a>
+					{{> link/external}}
                 </li>
             {{/each}}
         </ul> <!-- /external -->

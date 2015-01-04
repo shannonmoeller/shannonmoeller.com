@@ -1,3 +1,7 @@
 Source code for http://shannonmoeller.com.
 
-©2004-14 Shannon Moeller. Learn, don't loot.
+----
+
+© 2015 Shannon Moeller \<me@shannonmoeller.com\>. All rights reserved.
+
+Learn, don't loot.
