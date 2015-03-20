@@ -1,0 +1,37 @@
+.fridge {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform:
+		translateX(12vw)
+		translateY(50vh)
+		translateZ(-10vmax)
+		rotateY(-22deg)
+		rotateX(8deg);
+	transform-origin: center bottom;
+}
+
+.fridge-face {
+	position: absolute;
+	bottom: 0;
+	right: -30vw;
+	height: 45vh;
+	width: 66vw;
+
+	background-image: url(../media/fridge.svg);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: contain;
+}
+
+@media (orientation: landscape) {
+	.fridge {
+		right: 0;
+	}
+
+	.fridge-face {
+		right: -25vw;
+		height: 75vh;
+		width: 45vw;
+	}
+}

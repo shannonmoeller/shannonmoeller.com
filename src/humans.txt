@@ -3,7 +3,7 @@
 Name: Shannon Moeller
 Email: me@shannonmoeller.com
 Twitter: @shannonmoeller
-Copyright: (c) 2004-2014 Shannon Moeller
+Copyright: (c) 2004-2015 Shannon Moeller
 
 /* SOURCE */
 

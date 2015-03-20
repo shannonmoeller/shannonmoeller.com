@@ -1,0 +1,60 @@
+.room {
+	position: absolute;
+	left: 0;
+	top: 0;
+	transform:
+		translateX(66vw)
+		translateY(50vh)
+		translateZ(-66vmax);
+}
+
+.room-face {
+	position: absolute;
+	transform-origin: left top;
+}
+
+.room-face_back {
+	bottom: 0;
+	right: 0;
+	background-position: right bottom;
+}
+
+.room-face_bottom {
+	right: 0;
+	top: 0;
+	background-position: right top;
+	transform: rotateX(90deg);
+}
+
+.room-face_right {
+	bottom: 0;
+	left: 0;
+	background-position: left bottom;
+	transform: rotateY(-90deg);
+}
+
+.mix-room-face_floor {
+	height: 100vmax;
+	width: 150vmax;
+	background-color: hsl(30, 50%, 60%);
+	background-image:
+		radial-gradient(hsla(30, 3%, 3%, 0) 50%, hsla(30, 6%, 6%, 0.3) 80%, hsla(30, 50%, 20%, 0.6) 93%),
+		url(../media/flooring.jpg);
+	background-size:
+		100%,
+		200vh;
+	backface-visibility: hidden;
+}
+
+.mix-room-face_wall {
+	height: 120vmax;
+	width: 150vmax;
+	background-color: hsl(0, 0%, 22%);
+	background-image:
+		radial-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.3)),
+		url(../media/wallpaper.svg);
+	background-size:
+		100%,
+		30vh;
+	border-bottom: 3vh solid hsl(0, 0%, 22%);
+}

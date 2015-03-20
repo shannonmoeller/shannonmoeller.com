@@ -1,0 +1,45 @@
+*,
+*:after,
+*:before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	overflow: hidden;
+}
+
+html {
+	background:
+		radial-gradient(hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.3)),
+		url(../media/fridge.svg) no-repeat 90% 80%,
+		url(../media/wallpaper.svg),
+		hsl(0, 0%, 20%);
+	color: hsl(0, 0%, 90%);
+	font-family: 'Roboto Slab', sans-serif;
+	font-size: 4vmin;
+	font-weight: 300;
+	line-height: 1.6;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-size-adjust: 100%;
+}
+
+html.preserve3d {
+	background: hsl(0, 0%, 20%);
+}
+
+@media (max-height: 400px) {
+	html {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 400px) {
+	html {
+		font-size: 16px;
+	}
+}

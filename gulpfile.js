@@ -1,10 +1,11 @@
 'use strict';
 
 var gulp = require('gulp'),
+	plumber = require('gulp-plumber'),
 	base = { base: './src/' },
 	config = { isWatching: false };
 
-gulp.task('default', ['lint', 'markup', 'styles', 'copy']);
+gulp.task('default', ['lint', 'html', 'css', 'js', 'copy']);
 
 gulp.task('lint', function () {
 	var jscs = require('gulp-jscs'),
@@ -17,66 +18,63 @@ gulp.task('lint', function () {
 		.pipe(jshint.reporter('jshint-stylish'));
 });
 
-gulp.task('markup', function () {
+gulp.task('html', function () {
 	var fm = require('gulp-front-matter'),
 		hb = require('gulp-hb');
 
 	return gulp
-		.src('./src/*.{html,txt}', base)
-		.pipe(fm({ property: 'meta' }))
+		.src('./src/*.{html,md,txt}', base)
+		.pipe(plumber())
+		.pipe(fm({
+			property: 'meta'
+		}))
 		.pipe(hb({
 			data: './src/assets/data/**/*.js',
 			helpers: './node_modules/handlebars-layouts/index.js',
-			partials: './src/assets/partials/**/*.*'
+			partials: './src/assets/tpl/**/*.*'
 		}))
 		.pipe(gulp.dest('./web/'));
 });
 
-gulp.task('styles', function () {
-	var autoprefixer = require('gulp-autoprefixer'),
-		minify = require('gulp-minify-css'),
-		sourcemaps = require('gulp-sourcemaps'),
-		when = require('gulp-if');
+gulp.task('css', function () {
+	var myth = require('gulp-myth');
 
 	return gulp
-		.src('./src/assets/styles/*.css', base)
-		.pipe(when(config.isWatching, sourcemaps.init()))
-		.pipe(autoprefixer({
+		.src('./src/assets/css/main.css', base)
+		.pipe(plumber())
+		.pipe(myth({
 			browsers: ['last 2 versions'],
-			cascade: false
+			sourceMaps: config.isWatching
 		}))
-		.pipe(minify({
-			keepBreaks: true,
-			processImport: true,
-			relativeTo: './src/assets/styles/'
-		}))
-		.pipe(when(config.isWatching, sourcemaps.write()))
 		.pipe(gulp.dest('./web/'));
+});
+
+gulp.task('js', function () {
+	return gulp
+		.src('./src/assets/js/main.js')
+		.pipe(plumber())
+		.pipe(gulp.dest('./web/assets/js/'));
 });
 
 gulp.task('copy', function () {
 	return gulp
-		.src('./src/{CNAME,LICENSE,README.md,assets/media/**}', base)
+		.src('./src/assets/media/**', base)
+		.pipe(plumber())
 		.pipe(gulp.dest('./web/'));
 });
 
 gulp.task('watch', function () {
-	var watch = require('gulp-watch'),
-		lr = require('gulp-livereload');
+	var watch = require('gulp-watch');
 
-	config.isWatching = true;
-
-	watch({ glob: './src/**/*.{hbs,html,txt}' }, function () {
-		gulp.start('markup');
+	watch('src/{*.html,assets/tpl/**/*.hbs}', function () {
+		gulp.start('html');
 	});
 
-	watch({ glob: './src/**/*.css' }, function () {
-		gulp.start('styles');
+	watch('src/assets/css/**', function () {
+		gulp.start('css');
 	});
 
-	watch({ glob: './src/assets/media/**/*.*' }, function () {
-		gulp.start('copy');
+	watch('src/assets/js/**', function () {
+		gulp.start('js');
 	});
-
-	watch({ glob: './web/**/*.*' }).pipe(lr());
 });

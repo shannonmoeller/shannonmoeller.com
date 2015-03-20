@@ -1,46 +1,42 @@
----
-external:
-  - title: Github
-    url: http://github.com/shannonmoeller
-    icon: github
-  - title: Twitter
-    url: http://twitter.com/shannonmoeller
-    icon: twitter
-  - title: Google+
-    url: http://google.com/+shannonmoeller
-    icon: googleplus
-  - title: LinkedIn
-    url: http://linkedin.com/in/shannonmoeller
-    icon: linkedin
----
 {{#extend "layout"}}
 
-    {{#content "body" mode="append"}}
-        <h2>Howdy.</h2>
+	{{#content "body"}}
+		<div class="content">
+			<h2>Howdy.</h2>
 
-        <p>
-            I&rsquo;m Shannon Moeller, a web and graphics dude in Western New
-            York; with a penchant for clean code, elegant design, and green
-            refrigerators&mdash;especially on t&#8209;shirts.
-        </p>
+			<p>
+				I&rsquo;m Shannon Moeller, a web and graphics dude in Western New
+				York; with a penchant for clean code, elegant design, and green
+				refrigerators&mdash;especially on t&#8209;shirts.
+			</p>
 
-        <ul class="external">
-            {{#each file.meta.external}}
-                <li>
-					{{> link/external}}
-                </li>
-            {{/each}}
-        </ul> <!-- /external -->
-    {{/content}}
+			<nav class="external">
+				<a href="http://github.com/shannonmoeller" rel="external">
+					<i class="icon icon_github">Github</i>
+				</a>
+				<a href="http://twitter.com/shannonmoeller" rel="external">
+					<i class="icon icon_twitter">Twitter</i>
+				</a>
+				<a href="http://linkedin.com/in/shannonmoeller" rel="external">
+					<i class="icon icon_linkedin">LinkedIn</i>
+				</a>
+				<a href="http://dribbble.com/shannonmoeller" rel="external">
+					<i class="icon icon_dribbble">Dribbble</i>
+				</a>
+			</nav> <!-- /external -->
+		</div> <!-- /content -->
 
-    {{#content "foot" mode="prepend"}}
-        <div class="room" aria-hidden="true">
-            <div class="room-floor"></div>
-            <div class="room-wall room-wall_right"></div>
-            <div class="room-wall room-wall_left"></div>
-        </div>
+		<div class="view" aria-hidden="true">
+			<div class="room">
+				<div class="room-face room-face_back mix-room-face_wall"></div>
+				<div class="room-face room-face_right mix-room-face_wall"></div>
+				<div class="room-face room-face_bottom mix-room-face_floor"></div>
+			</div>
 
-        <div class="fridge" aria-hidden="true"></div>
-    {{/content}}
+			<div class="fridge">
+				<a class="fridge-face" href="#"></a>
+			</div>
+		</div> <!-- /view -->
+	{{/content}}
 
 {{/extend}}

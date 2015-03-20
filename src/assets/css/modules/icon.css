@@ -1,0 +1,33 @@
+.icon {
+	font-size: 0;
+}
+
+.icon:before {
+	display: inline-block;
+	font-family: Social;
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.icon_twitter:before {
+	content: '\ea91';
+}
+
+.icon_dribbble:before {
+	content: '\eaa6';
+}
+
+.icon_github:before {
+	content: '\eab1';
+}
+
+.icon_linkedin:before {
+	content: '\eac9';
+}
+
+@media (orientation: landscape) and (min-height: 420px) {
+	.icon:before {
+		font-size: 1.6rem;
+	}
+}
