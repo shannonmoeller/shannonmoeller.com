@@ -66,17 +66,17 @@ gulp.task('watch', function () {
 
 	config.isWatching = true;
 
-	watch({ glob: './src/**/*.{hbs,html,txt}' }, function () {
+	watch('./src/**/*.{hbs,html,txt}', function () {
 		gulp.start('markup');
 	});
 
-	watch({ glob: './src/**/*.css' }, function () {
+	watch('./src/**/*.css', function () {
 		gulp.start('styles');
 	});
 
-	watch({ glob: './src/assets/media/**/*.*' }, function () {
+	watch('./src/assets/media/**/*.*', function () {
 		gulp.start('copy');
 	});
 
-	watch({ glob: './web/**/*.*' }).pipe(lr());
+	watch('./web/**/*.*').pipe(lr());
 });
