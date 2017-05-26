@@ -1,11 +1,10 @@
-
+.nyc_output/
+.vscode/
 coverage/
-docs/
+dist/
 node_modules/
-web/
 
-*.log
-.*.swp
 .DS_Store
-._.DS_Store
-
+.Trash*
+*.log
+*.swp
