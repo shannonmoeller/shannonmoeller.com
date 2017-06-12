@@ -3,7 +3,7 @@ import svgstore from 'gulp-svgstore';
 
 export async function staticsAssets() {
 	return gulp
-		.src('./src/clien*/{assets/media/**/*.*,**/*.html}')
+		.src('./src/clien*/{assets/media/**/*.*,**/*.{html,txt}}')
 		.pipe(gulp.dest('dist'));
 }
 
@@ -21,7 +21,7 @@ export const statics = gulp.parallel(
 
 gulp.task('statics', async () => {
 	if (process.env.NODE_ENV === 'development') {
-		gulp.watch('./src/clien*/{assets/media/**/*.*,**/*.html}', staticsAssets);
+		gulp.watch('./src/clien*/{assets/media/**/*.*,**/*.{html,txt}}', staticsAssets);
 		gulp.watch('./src/client/assets/icons/*.svg', staticsIcons);
 	}
 

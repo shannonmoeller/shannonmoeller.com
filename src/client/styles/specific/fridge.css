@@ -7,7 +7,7 @@
 		/* place fridge */
 		translateX(-6rem)
 		translateZ(10rem)
-		rotateY(-45deg)
+		rotateY(-44.9deg)
 		scale3d(0.9, 0.9, 0.9);
 }
 

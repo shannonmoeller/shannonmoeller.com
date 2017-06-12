@@ -158,12 +158,20 @@
 
 @media (--large) {
 	.semantic h2 + details {
+		margin-top: -1.2rem !important;
+	}
+}
+
+@media (--xlarge) {
+	.semantic h2 + details {
 		margin-top: -0.9rem !important;
 	}
 }
 
 .semantic summary {
+	display: block;
 	position: relative;
+	cursor: pointer;
 }
 
 .semantic summary > * {
@@ -182,6 +190,6 @@
     list-style-type: circle;
 }
 
-.semantic li + li {
+.semantic ul li + li {
 	margin-top: 0.5rem;
 }
