@@ -1,4 +1,5 @@
 .fridge {
+	display: block;
 	transform:
 		/* align with back wall */
 		translateZ(-25rem)
@@ -10,7 +11,7 @@
 		scale3d(0.9, 0.9, 0.9);
 }
 
-@media (orientation: landscape), (min-width: 760px) {
+@media (--large) {
 	.fridge {
 		transform:
 			/* align with back wall */
@@ -113,8 +114,7 @@
 	background-image: url('../../assets/media/fridge-back.svg');
 	border-radius: 0.75rem 0.75rem 0.25rem 0.25rem;
 	transform-origin: left bottom 0;
-	transform:
-		translateX(-5.5rem);
+	transform: translateX(-5.5rem);
 }
 
 .fridge_back-inside {
@@ -154,7 +154,7 @@
 			var(--moe-color-background),
 			color(var(--moe-color-background) l(-20%))
 		);
-		background-size: 100% 100%;
+	background-size: 100% 100%;
 	transform:
 		translateX(3rem)
 		translateY(-7rem)

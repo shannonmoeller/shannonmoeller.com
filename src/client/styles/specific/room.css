@@ -1,12 +1,11 @@
 .room {
-	transform:
-		translateX(1rem);
+	display: block;
+	transform: translateX(1rem);
 }
 
-@media (orientation: landscape), (min-width: 760px) {
+@media (--large) {
 	.room {
-		transform:
-			translateX(4rem);
+		transform: translateX(4rem);
 	}
 }
 

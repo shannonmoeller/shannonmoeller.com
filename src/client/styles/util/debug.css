@@ -24,5 +24,5 @@
 
 .debug .fridge,
 .debug .room {
-	outline: 10px solid white;
+	outline: 10px solid var(--moe-color-white);
 }

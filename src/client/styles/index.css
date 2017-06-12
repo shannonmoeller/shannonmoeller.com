@@ -1,22 +1,27 @@
 @import 'reset-css/reset.css';
 
 /* Config */
+@import './config/media.css';
 @import './config/vars.css';
 
 /* Elements */
 @import './base/html.css';
+@import './base/svg.css';
 @import '../moe-perspective/moe-perspective-element.css';
 
 /* Generics */
-@import './generic/hdg.css';
+@import './generic/aspect.css';
 @import './generic/scene.css';
+@import './generic/semantic.css';
+@import './generic/shadow.css';
 @import './generic/stage.css';
 
 /* Specifics */
+@import './specific/around.css';
 @import './specific/fridge.css';
+@import './specific/intro.css';
 @import './specific/room.css';
 @import './specific/site.css';
-@import './specific/social.css';
 
 /* Utilities */
 @import './util/debug.css';

@@ -6,37 +6,3 @@
 	width: 0;
 	transform: translateX(77.7777vw);
 }
-
-.scene_marker {
-	display: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	outline: 10px solid green;
-}
-
-.debug .scene_marker {
-	display: block;
-}
-
-.scene_marker::before {
-	content: '';
-	position: absolute;
-	left: -50vw;
-	outline: 10px solid red;
-}
-
-.scene_marker::after {
-	content: '';
-	position: absolute;
-	left: 50vw;
-	outline: 10px solid blue;
-}
-
-.scene_marker-back {
-	transform: translateZ(-30rem);
-}
-
-.scene_marker-center {
-	transform: translateZ(-15rem);
-}

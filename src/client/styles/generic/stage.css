@@ -6,8 +6,3 @@
 	width: 100%;
 	overflow: hidden;
 }
-
-.stage ~ * {
-	position: relative;
-	z-index: 1;
-}

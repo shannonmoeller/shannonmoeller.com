@@ -1,0 +1,63 @@
+@media (--large) {
+	.semantic {
+		font-size: 0.9rem;
+		padding-left: 11.1111vw;
+	}
+}
+
+.semantic section + section {
+	margin-top: 5.5555vh;
+}
+
+@media (--large) {
+	.semantic section + section {
+		margin-top: 11.1111vh;
+	}
+}
+
+.semantic h1,
+.semantic h2 {
+	font-weight: 300;
+	text-rendering: optimizeLegibility;
+	margin: 1.6em 0 1em;
+}
+
+.semantic h1 {
+	font-size: 2em;
+	line-height: 1;
+}
+
+.semantic h2 {
+	font-size: 1em;
+	font-weight: 700;
+}
+
+@media (--large) {
+	.semantic h2 {
+		float: left;
+		clear: left;
+		text-align: right;
+		width: 11.1111vw;
+		margin: 0 0 0 -16.6666vw;
+	}
+}
+
+.semantic p {
+	margin: 1em 0;
+}
+
+.semantic hr {
+	margin: 11.1111vh 0 1em;
+	height: 1px;
+    border: none;
+	border-top: 1px solid;
+    line-height: 1px;
+    font-size: 1px;
+	opacity: 0.1;
+}
+
+.semantic small {
+	font-size: 0.6em;
+	letter-spacing: 0.1rem;
+	text-transform: uppercase;
+}

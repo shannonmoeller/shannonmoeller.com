@@ -14,9 +14,10 @@
 
 .site_hd {
 	min-height: 162vw;
+	text-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
 }
 
-@media (orientation: landscape), (min-width: 760px) {
+@media (--large) {
 	.site_hd {
 		min-height: 48vh;
 		padding:
