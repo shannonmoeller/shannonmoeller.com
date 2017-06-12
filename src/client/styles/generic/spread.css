@@ -1,0 +1,21 @@
+.spread {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+}
+
+.spread_rt {
+	justify-content: flex-end;
+}
+
+.spread_tp {
+	align-items: flex-start;
+}
+
+.spread_md {
+	align-items: center;
+}
+
+.spread_bm {
+	align-items: flex-end;
+}

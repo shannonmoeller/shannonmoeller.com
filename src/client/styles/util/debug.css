@@ -1,22 +1,21 @@
 .debug .debug_grid {
-	content: '';
 	pointer-events: none;
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	top: 0;
-	z-index: 1;
+	z-index: 9999;
 	background-image:
-		linear-gradient(
-			to bottom,
-			hsla(0, 0%, 50%, 0.3) 1px,
-			transparent 2px
-		),
 		linear-gradient(
 			to right,
 			hsla(0, 0%, 50%, 0.3) 1px,
-			transparent 2px
+			hsla(0, 0%, 50%, 0) 1px
+		),
+		linear-gradient(
+			to bottom,
+			hsla(0, 0%, 50%, 0.2) 1px,
+			hsla(0, 0%, 50%, 0) 1px
 		);
 	background-position: left top;
 	background-size: 11.1111vw 11.1111vh;

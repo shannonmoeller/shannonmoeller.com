@@ -1,10 +1,42 @@
-@media (--large) {
+/* Clearfix */
+.semantic::before,
+.semantic::after,
+.semantic section::before,
+.semantic section::after {
+    content: ' ';
+    display: table;
+}
+
+.semantic::after,
+.semantic section::after {
+    clear: both;
+}
+
+/* Baseline */
+.semantic {
+	color: inherit;
+	font-family: inherit;
+	font-weight: inherit;
+	word-wrap: break-word;
+}
+
+@media (--xlarge) {
 	.semantic {
-		font-size: 0.9rem;
-		padding-left: 11.1111vw;
+		font-size: 0.75em;
 	}
 }
 
+.semantic > *:first-child,
+.semantic section > *:first-child {
+	margin-top: 0 !important;
+}
+
+.semantic > *:last-child,
+.semantic section > *:last-child {
+	margin-bottom: 0 !important;
+}
+
+/* Sectioning */
 .semantic section + section {
 	margin-top: 5.5555vh;
 }
@@ -15,8 +47,43 @@
 	}
 }
 
+/* Media */
+.semantic img,
+.semantic iframe,
+.semantic embed,
+.semantic object,
+.semantic video,
+.semantic audio,
+.semantic canvas,
+.semantic picture {
+    max-width: 100% !important;
+}
+
+.semantic > img,
+.semantic > iframe,
+.semantic > embed,
+.semantic > object,
+.semantic > video,
+.semantic > audio,
+.semantic > canvas,
+.semantic > picture {
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Blocks */
+.semantic p {
+	margin: 1em 0;
+}
+
+.semantic ol {
+	margin: 2em 0;
+}
+
+/* Headings */
 .semantic h1,
-.semantic h2 {
+.semantic h2,
+.semantic h3 {
 	font-weight: 300;
 	text-rendering: optimizeLegibility;
 	margin: 1.6em 0 1em;
@@ -36,28 +103,85 @@
 	.semantic h2 {
 		float: left;
 		clear: left;
+		margin: 0 0 0 -22.2222vw;
+		padding: 0 1.6rem;
+		width: 22.2222vw;
 		text-align: right;
-		width: 11.1111vw;
-		margin: 0 0 0 -16.6666vw;
+	}
+
+	.semantic h2 + * {
+		margin-top: 0 !important;
 	}
 }
 
-.semantic p {
-	margin: 1em 0;
+.semantic h3 {
+	font-size: 2em;
+	line-height: 1.2;
+	margin: 0;
 }
 
+@media (--large) {
+	.semantic h3 {
+		font-size: 2.4em;
+	}
+}
+
+/* Horizontal Rules */
 .semantic hr {
 	margin: 11.1111vh 0 1em;
 	height: 1px;
-    border: none;
+	background: transparent;
+	border: none;
 	border-top: 1px solid;
-    line-height: 1px;
-    font-size: 1px;
-	opacity: 0.1;
+	line-height: 1px;
+	font-size: 1px;
+	opacity: 0.2;
 }
 
-.semantic small {
+/* Inline Text */
+.semantic strong {
+	font-weight: 700;
+}
+
+.semantic small,
+.semantic time {
 	font-size: 0.6em;
-	letter-spacing: 0.1rem;
+	letter-spacing: 0.1em;
+	line-height: 1em;
 	text-transform: uppercase;
+}
+
+/* Summary */
+.semantic details + details {
+	margin-top: 5.5555vh;
+}
+
+@media (--large) {
+	.semantic h2 + details {
+		margin-top: -0.9rem !important;
+	}
+}
+
+.semantic summary {
+	position: relative;
+}
+
+.semantic summary > * {
+	margin-right: 5.5555vw;
+}
+
+.semantic summary::-webkit-details-marker {
+	position: absolute;
+	right: 0.5em;
+	top: 1.2em;
+}
+
+/* Lists */
+.semantic ul {
+    margin: 1rem 0;
+    list-style-type: circle;
+}
+
+.semantic li + li {
+	margin-top: 0.5rem;
 }

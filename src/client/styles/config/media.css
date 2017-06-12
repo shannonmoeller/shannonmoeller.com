@@ -1,1 +1,2 @@
-@custom-media --large (orientation: landscape), (min-width: 760px);
+@custom-media --large (orientation: landscape), (min-width: 770px);
+@custom-media --xlarge (min-width: 1030px);

@@ -14,6 +14,7 @@
 @import './generic/scene.css';
 @import './generic/semantic.css';
 @import './generic/shadow.css';
+@import './generic/skills.css';
 @import './generic/stage.css';
 
 /* Specifics */
@@ -25,3 +26,4 @@
 
 /* Utilities */
 @import './util/debug.css';
+@import './util/nobr.css';

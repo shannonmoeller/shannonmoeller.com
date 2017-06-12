@@ -1,7 +1,7 @@
 :root {
 	/* Colors */
 	--moe-color-background: hsla(0, 0%, 90%, 1);
-	--moe-color-foreground: hsla(0, 0%, 10%, 1);
+	--moe-color-foreground: hsla(0, 0%, 20%, 1);
 	--moe-color-primary: hsla(87, 24%, 52%, 1);
 	--moe-color-secondary: hsla(205, 92%, 36%, 1);
 	--moe-color-baseboard: hsla(0, 0%, 25%, 1);

@@ -15,7 +15,7 @@ html {
 }
 
 body {
-	background: var(--moe-color-foreground);
+	background-color: var(--moe-color-foreground);
 	color: var(--moe-color-background);
 	font: var(--moe-font);
 	-webkit-font-smoothing: antialiased;
