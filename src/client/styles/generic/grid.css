@@ -1,0 +1,48 @@
+.grid {
+	display: flex;
+}
+
+.grid-vert {
+	flex-direction: column;
+	min-height: 100%;
+}
+
+.grid > * {
+	flex: 1 1 auto;
+}
+
+.grid_1of9 {
+	flex-basis: 11.1111%;
+}
+
+.grid_2of9 {
+	flex-basis: 22.2222%;
+}
+
+.grid_3of9 {
+	flex-basis: 33.3333%;
+}
+
+.grid_4of9 {
+	flex-basis: 44.4444%;
+}
+
+.grid_5of9 {
+	flex-basis: 55.5555%;
+}
+
+.grid_6of9 {
+	flex-basis: 66.6666%;
+}
+
+.grid_7of9 {
+	flex-basis: 77.7777%;
+}
+
+.grid_8of9 {
+	flex-basis: 88.8888%;
+}
+
+.grid_9of9 {
+	flex-basis: 99.9999%;
+}

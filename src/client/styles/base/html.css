@@ -1,13 +1,26 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
 html {
-	font-size: 62.5%;
+	font-size: 4.4vmin;
+}
+
+@media (orientation: landscape), (min-width: 760px) {
+	html {
+		font-size: 2.4vw;
+	}
 }
 
 body {
-	background: var(--todo-color-background);
-	color: var(--todo-color-foreground);
-	font: var(--todo-font);
+	background: var(--moe-color-foreground);
+	color: var(--moe-color-background);
+	font: var(--moe-font);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	text-size-adjust: 100%;
 }
 
 a,
@@ -21,7 +34,6 @@ button {
 	appearance: none;
 	margin: 0;
 	padding: 0;
-	border: 0;
 	background: none;
 	border: 0;
 	font-family: inherit;
@@ -29,8 +41,4 @@ button {
 	font-weight: inherit;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-:focus {
-	outline: 0;
 }

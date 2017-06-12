@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 export function getStatic(path) {
 	return serve(resolve(__dirname, path), {
-		maxAge: '1d',
+		maxAge: process.env.NODE_ENV === 'development' ? 0 : '1d',
 	});
 }
 

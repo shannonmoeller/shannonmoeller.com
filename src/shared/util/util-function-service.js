@@ -1,9 +1,20 @@
-export function debounce(fn, delay = 0) {
+/**
+ * # Function Service
+ *
+ * Methods for manipulating and generating functions.
+ */
+
+/**
+ * @method debounce
+ * @param {Function} fn
+ * @return {Function}
+ */
+export function debounce(fn) {
 	return function debounced() {
-		if (debounced.timeout) {
-			clearTimeout(debounced.timeout);
+		if (debounced.id) {
+			cancelAnimationFrame(debounced.id);
 		}
 
-		debounced.timeout = setTimeout(fn, delay);
+		debounced.id = requestAnimationFrame(fn);
 	};
 }
