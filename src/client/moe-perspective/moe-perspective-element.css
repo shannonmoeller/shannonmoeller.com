@@ -1,4 +1,10 @@
 /* stylelint-disable selector-type-no-unknown */
 moe-perspective {
 	display: block;
+	perspective: 1200px;
+	perspective-origin: 75% 12%;
+}
+
+moe-perspective * {
+	transform-style: preserve-3d;
 }

@@ -11,12 +11,12 @@
 @import './generic/hdg.css';
 @import './generic/scene.css';
 @import './generic/stage.css';
-@import './generic/vlist.css';
 
 /* Specifics */
 @import './specific/fridge.css';
 @import './specific/room.css';
 @import './specific/site.css';
+@import './specific/social.css';
 
 /* Utilities */
 @import './util/debug.css';

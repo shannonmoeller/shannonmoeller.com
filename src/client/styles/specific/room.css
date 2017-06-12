@@ -1,5 +1,4 @@
 .room {
-	z-index: 1;
 	transform:
 		translateX(1rem);
 }
@@ -19,10 +18,9 @@
 .room_wall {
 	height: 300vh;
 	width: 200vw;
-	background-color: var(--moe-color-foreground);
 	background-size:
-		100%,
-		100%,
+		100% 100%,
+		100% 100%,
 		8rem;
 }
 

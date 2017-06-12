@@ -1,5 +1,4 @@
 .fridge {
-	z-index: 2;
 	transform:
 		/* align with back wall */
 		translateZ(-25rem)
@@ -13,7 +12,6 @@
 
 @media (orientation: landscape), (min-width: 760px) {
 	.fridge {
-		outline: 20px solid white;
 		transform:
 			/* align with back wall */
 			translateZ(-25rem)
@@ -28,7 +26,6 @@
 .fridge * {
 	position: absolute;
 	backface-visibility: hidden;
-	/* background-color: ; */
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
@@ -141,3 +138,34 @@
 		rotateX(90deg);
 }
 
+.fridge_handle {
+	left: 50%;
+	bottom: 0;
+	height: 3rem;
+	width: 0.5rem;
+	transform-origin: left bottom 0;
+}
+
+.fridge_handle-front {
+	background-color: var(--moe-color-background);
+	background-image:
+		linear-gradient(
+			to right bottom,
+			var(--moe-color-background),
+			color(var(--moe-color-background) l(-20%))
+		);
+		background-size: 100% 100%;
+	transform:
+		translateX(3rem)
+		translateY(-7rem)
+		translateZ(9.125rem);
+}
+
+.fridge_handle-back {
+	background-color: color(var(--moe-color-background) l(-5%));
+	box-shadow: -0.1rem 0.25rem 0 color(var(--moe-color-foreground) a(0.3));
+	transform:
+		translateX(3rem)
+		translateY(-7rem)
+		translateZ(9rem);
+}

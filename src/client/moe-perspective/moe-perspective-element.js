@@ -3,7 +3,7 @@ import { debounce } from '../../shared/util/util-function-service';
 import { map } from '../../shared/util/util-math-service';
 
 const ORIGIN_LEFT = 0.75;
-const ORIGIN_TOP = 0.25;
+const ORIGIN_TOP = 0.12;
 
 /**
  * Updates an element's perspective origin to adhere to a global origin based
