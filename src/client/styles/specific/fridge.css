@@ -134,7 +134,6 @@
 	transform-origin: left top 0;
 	transform:
 		translateX(-5.5rem)
-		translateZ(1px)
 		rotateX(90deg);
 }
 
