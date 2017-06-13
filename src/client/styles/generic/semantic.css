@@ -120,15 +120,15 @@
 	margin: 0;
 }
 
-.semantic h3 small {
-	display: block;
-	padding-top: 1em;
-}
-
 @media (--large) {
 	.semantic h3 {
 		font-size: 2.4em;
 	}
+}
+
+.semantic h3 small {
+	display: block;
+	padding-top: 1em;
 }
 
 /* Horizontal Rules */
@@ -159,14 +159,14 @@
 @media (--large) {
 	.semantic small,
 	.semantic time {
-		font-size: 0.55rem;
+		font-size: 0.6rem;
 	}
 }
 
 @media (--xlarge) {
 	.semantic small,
 	.semantic time {
-		font-size: 0.45rem;
+		font-size: 0.5rem;
 	}
 }
 
