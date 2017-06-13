@@ -150,10 +150,24 @@
 
 .semantic small,
 .semantic time {
-	font-size: 0.5rem;
+	font-size: 0.7rem;
 	letter-spacing: 0.1em;
-	line-height: 1em;
+	line-height: 1.2em;
 	text-transform: uppercase;
+}
+
+@media (--large) {
+	.semantic small,
+	.semantic time {
+		font-size: 0.55rem;
+	}
+}
+
+@media (--xlarge) {
+	.semantic small,
+	.semantic time {
+		font-size: 0.45rem;
+	}
 }
 
 /* Summary */
