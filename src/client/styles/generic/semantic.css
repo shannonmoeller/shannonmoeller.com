@@ -120,6 +120,11 @@
 	margin: 0;
 }
 
+.semantic h3 small {
+	display: block;
+	padding-top: 1em;
+}
+
 @media (--large) {
 	.semantic h3 {
 		font-size: 2.4em;
@@ -145,7 +150,7 @@
 
 .semantic small,
 .semantic time {
-	font-size: 0.6em;
+	font-size: 0.5rem;
 	letter-spacing: 0.1em;
 	line-height: 1em;
 	text-transform: uppercase;
