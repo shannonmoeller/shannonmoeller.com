@@ -67,7 +67,8 @@
   },
   "browserslist": [
     "last 2 versions",
-    "> 1%"
+    "> 1%",
+    "not ie <= 10"
   ],
   "eslintConfig": {
     "extends": "eslint-config-whim",
