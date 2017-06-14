@@ -106,7 +106,7 @@
 
 .skills_skill {
 	position: relative;
-	top: -0.15em;
+	top: -0.25em;
 	padding: 0 1rem;
 	flex-basis: 44.4444vw;
 	min-width: 44.4444vw;
@@ -115,6 +115,7 @@
 
 @media (--large) {
 	.skills_skill {
+		top: -0.15em;
 		flex-basis: 22.2222vw;
 		min-width: 22.2222vw;
 	}
@@ -122,6 +123,7 @@
 
 @media (--xlarge) {
 	.skills_skill {
+		top: 0;
 		flex-basis: 18vw;
 		min-width: 18vw;
 	}
