@@ -31,7 +31,7 @@
 	padding:
 		11.1111vh
 		11.1111vw
-		0;
+		5.5555vh;
 	background-color: var(--moe-color-background);
 	border-top: 0.3rem solid var(--moe-color-floor);
 	color: var(--moe-color-foreground);
@@ -57,7 +57,7 @@
 /* Footer */
 .site_ft {
 	padding:
-		33.3333vh
+		36.6666vh
 		11.1111vw
 		22.2222vh;
 }

@@ -43,6 +43,7 @@
 		left bottom;
 	transform-origin: left bottom 0;
 	transform:
+		translateX(-1px)
 		translateZ(-22rem)
 		rotateY(-70deg);
 }

@@ -26,7 +26,8 @@
 	bottom: 100%;
 	transform-origin: left bottom 0;
 	transform:
-		translateZ(-5.5555rem)
+		translateX(-1px)
+		translateZ(-6.6666rem)
 		rotateY(-70deg);
 }
 
@@ -36,6 +37,6 @@
 	transform-origin: right bottom 0;
 	transform:
 		translateX(1px)
-		translateZ(-5.5555rem)
+		translateZ(-6.6666rem)
 		rotateY(20deg);
 }
