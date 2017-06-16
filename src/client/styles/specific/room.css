@@ -67,6 +67,7 @@
 		right bottom;
 	transform-origin: right bottom 0;
 	transform:
+		translateX(1px)
 		translateZ(-22rem)
 		rotateY(20deg);
 }

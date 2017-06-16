@@ -1,0 +1,10 @@
+.timeline {
+	margin: 2em 0 2em -11.1111vw;
+	width: 100vw;
+}
+
+@media (--large) {
+	.timeline {
+		margin-left: -22.2222vw;
+	}
+}

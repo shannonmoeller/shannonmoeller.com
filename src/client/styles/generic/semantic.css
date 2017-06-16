@@ -76,10 +76,6 @@
 	margin: 1em 0;
 }
 
-.semantic ol {
-	margin: 2em 0;
-}
-
 /* Headings */
 .semantic h1,
 .semantic h2,
@@ -144,12 +140,7 @@
 }
 
 /* Inline Text */
-.semantic strong {
-	font-weight: 700;
-}
-
-.semantic small,
-.semantic time {
+.semantic small {
 	font-size: 0.7rem;
 	letter-spacing: 0.1em;
 	line-height: 1.2em;
@@ -157,17 +148,19 @@
 }
 
 @media (--large) {
-	.semantic small,
-	.semantic time {
+	.semantic small {
 		font-size: 0.6rem;
 	}
 }
 
 @media (--xlarge) {
-	.semantic small,
-	.semantic time {
+	.semantic small {
 		font-size: 0.5rem;
 	}
+}
+
+.semantic strong {
+	font-weight: 700;
 }
 
 /* Summary */

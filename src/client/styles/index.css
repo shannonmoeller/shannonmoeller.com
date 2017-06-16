@@ -14,11 +14,13 @@
 @import './generic/scene.css';
 @import './generic/semantic.css';
 @import './generic/shadow.css';
-@import './generic/skills.css';
+@import './generic/skill.css';
 @import './generic/stage.css';
+@import './generic/timeline.css';
 
 /* Specifics */
 @import './specific/around.css';
+@import './specific/divider.css';
 @import './specific/fridge.css';
 @import './specific/intro.css';
 @import './specific/room.css';

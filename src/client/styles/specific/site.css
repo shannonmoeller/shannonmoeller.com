@@ -6,15 +6,15 @@
 
 .site > * {
 	position: relative;
-	padding:
-		11.1111vh
-		11.1111vw
-		22.2222vh;
 }
 
 /* Header */
 .site_hd {
 	min-height: 162vw;
+	padding:
+		11.1111vh
+		11.1111vw
+		22.2222vh;
 	text-shadow: 0 2px 3px hsla(0, 0%, 0%, 0.2);
 }
 
@@ -28,22 +28,13 @@
 /* Main */
 .site_bd {
 	position: relative;
-	color: var(--moe-color-foreground);
-}
-
-.site_bd::before {
-	content: '';
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	top: 0;
+	padding:
+		11.1111vh
+		11.1111vw
+		0;
 	background-color: var(--moe-color-background);
-	background-clip: padding-box;
-	border-bottom: 0.3rem solid var(--moe-color-baseboard);
 	border-top: 0.3rem solid var(--moe-color-floor);
-	transform: skewY(3deg);
-	transform-origin: right top;
+	color: var(--moe-color-foreground);
 }
 
 .site_bd > * {
@@ -53,7 +44,6 @@
 
 @media (--large) {
 	.site_bd {
-		padding-bottom: 33.3333vh;
 		padding-left: 22.2222vw;
 	}
 }
@@ -65,6 +55,13 @@
 }
 
 /* Footer */
+.site_ft {
+	padding:
+		33.3333vh
+		11.1111vw
+		22.2222vh;
+}
+
 @media (--large) {
 	.site_ft {
 		padding-left: 22.2222vw;
