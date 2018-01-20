@@ -2,6 +2,6 @@ Source code for http://shannonmoeller.com.
 
 ----
 
-© Shannon Moeller \<me@shannonmoeller.com\>. All rights reserved.
+MIT © [Shannon Moeller](http://shannonmoeller.com)
 
 Learn, don't loot.
