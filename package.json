@@ -2,7 +2,7 @@
   "name": "shannonmoeller.com",
   "private": true,
   "scripts": {
-    "deploy": "npm run prod && now --public && now alias",
+    "deploy": "npm run prod && cd dist/client && now && now alias",
     "start": "NODE_ENV=production node bin/www",
     "dev": "NODE_ENV=development gulp",
     "prod": "NODE_ENV=production gulp",
@@ -41,6 +41,7 @@
     "gulp-bro": "^1.0.2",
     "gulp-eslint": "^4.0.0",
     "gulp-postcss": "^7.0.0",
+    "gulp-sourcemaps": "^2.6.4",
     "gulp-stylelint": "^3.9.0",
     "gulp-svgstore": "^6.1.0",
     "gulp-tape": "0.0.9",
@@ -76,13 +77,6 @@
     "env": {
       "browser": true,
       "node": true
-    }
-  },
-  "now": {
-    "alias": "shannonmoeller",
-    "type": "npm",
-    "env": {
-      "NODE_ENV": "production"
     }
   },
   "nyc": {

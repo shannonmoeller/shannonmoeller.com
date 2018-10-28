@@ -3,7 +3,7 @@ import svgstore from 'gulp-svgstore';
 
 export async function staticsAssets() {
 	return gulp
-		.src('./src/clien*/{assets/media/**/*.*,**/*.{html,txt}}')
+		.src('./src/clien*/{assets/media/**/*.*,**/*.{html,json,txt}}')
 		.pipe(gulp.dest('dist'));
 }
 
