@@ -1,0 +1,255 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: unset;
+	margin: unset;
+
+	background: unset;
+	border: unset;
+	color: unset;
+	font: unset;
+	list-style: unset;
+	outline: unset;
+	text-decoration: unset;
+	vertical-align: baseline;
+}
+
+:where(:focus-visible) {
+	outline: 2px solid;
+	outline-offset: 2px;
+}
+
+html {
+	height: 100%;
+	overflow: hidden;
+}
+
+body {
+	margin: 0;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	perspective: 250vh;
+	perspective-origin: 50% 15%;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+}
+
+body * {
+	transform-style: preserve-3d;
+}
+
+.sm-page {
+	min-height: 100%;
+}
+
+.sm-3d {
+	position: relative;
+	height: 100vh;
+}
+
+.sm-3d-scene {
+	--h: 0;
+	--s: 0%;
+	--l: 50%;
+	--d: 0px;
+	--z: 0px;
+
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	height: 0;
+	width: 0;
+}
+
+.sm-3d :where(b, i),
+.sm-3d :where(b, i)::before,
+.sm-3d :where(b, i)::after {
+	backface-visibility: hidden;
+	display: block;
+	border-radius: 1px;
+}
+
+.sm-3d :where(b, i)::before,
+.sm-3d :where(b, i)::after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+}
+
+.sm-3d :where(b) {
+	position: relative;
+	transform: translatez(calc(var(--d) + var(--z)));
+	background: radial-gradient(
+		at right top,
+		hsl(var(--h) var(--s) calc(var(--l) * 1.2)),
+		hsl(var(--h) var(--s) calc(var(--l) / 1.2))
+	);
+}
+
+.sm-3d :where(b)::before,
+.sm-3d :where(b)::after {
+	left: 0;
+	height: var(--d);
+	width: 100%;
+}
+
+.sm-3d :where(b)::before {
+	top: 0;
+	transform: translatey(-100%) rotatex(0.25turn) translatez(-0.25px);
+	transform-origin: left bottom;
+	background: radial-gradient(
+		at right bottom,
+		hsl(var(--h) var(--s) calc(var(--l) * 1.5)),
+		hsl(var(--h) var(--s) calc(var(--l) * 1.1))
+	);
+}
+
+.sm-3d :where(b)::after {
+	top: 100%;
+	transform: rotatex(-0.25turn) translatez(-0.25px);
+	transform-origin: left top;
+	background: radial-gradient(
+		at right top,
+		hsl(var(--h) var(--s) calc(var(--l) / 2)),
+		hsl(var(--h) var(--s) calc(var(--l) / 2.5))
+	);
+}
+
+.sm-3d :where(i) {
+	position: absolute;
+	inset: 0;
+}
+
+.sm-3d :where(i)::before,
+.sm-3d :where(i)::after {
+	top: 0;
+	height: 100%;
+	width: var(--d);
+}
+
+.sm-3d :where(i)::before {
+	left: 0;
+	transform: translatex(-100%) rotatey(-0.25turn) translatez(-0.25px);
+	transform-origin: right top;
+	background: radial-gradient(
+		at right top,
+		hsl(var(--h) var(--s) calc(var(--l) / 1.1)),
+		hsl(var(--h) var(--s) calc(var(--l) / 1.5))
+	);
+}
+
+.sm-3d :where(i)::after {
+	left: 100%;
+	transform: rotatey(0.25turn) translatez(-0.25px);
+	transform-origin: left top;
+	background: radial-gradient(
+		at left top,
+		hsl(var(--h) var(--s) calc(var(--l) / 1.1)),
+		hsl(var(--h) var(--s) calc(var(--l) / 1.5))
+	);
+}
+
+.sm-3d :where(s) {
+	position: absolute;
+	left: 0;
+	top: 100%;
+	height: var(--d);
+	width: 100%;
+	transform: rotatex(0.25turn);
+	transform-origin: left top;
+	background: hsl(0 0% 0% / 12%);
+}
+
+.sm-fridge {
+	--size: 50vmin;
+	display: grid;
+	grid-template: 3fr 9fr 1fr 9fr 1fr 9fr 9fr 2fr / 1fr 9fr 1fr;
+	aspect-ratio: 2 / 3;
+	width: var(--size);
+	transform: translate(-50%, -50%) rotatey(-0.05turn)
+		translatez(calc(var(--size) / -2));
+	transform-origin: center center;
+}
+
+.sm-fridge-shadow {
+	--d: var(--size);
+}
+
+.sm-chair {
+	--size: 50vmin;
+	display: grid;
+	grid-template: repeat(3, 4fr) 1fr / 1fr 4fr 1fr;
+	aspect-ratio: 5 / 4;
+	width: var(--size);
+	transform: translate(-50%, -50%) rotatey(-0.05turn)
+		translatez(calc(var(--size) / -2));
+	transform-origin: center center;
+}
+
+.sm-chair-arm {
+	--h: 100;
+	--s: 40%;
+	--d: var(--size);
+	grid-row: 2 / span 2;
+}
+
+.sm-chair-arm:where(.sm--left) {
+	grid-column: 1 / span 1;
+}
+
+.sm-chair-arm:where(.sm--right) {
+	grid-column: 3 / span 1;
+}
+
+.sm-chair-back {
+	--h: 100;
+	--s: 40%;
+	--d: calc(var(--size) * 0.25);
+	grid-row: 1 / span 2;
+	grid-column: 2 / span 1;
+}
+
+.sm-chair-foot {
+	--h: 30;
+	--s: 20%;
+	--l: 40%;
+	--d: calc(var(--size) * 0.125);
+	--z: calc(var(--size) * 0.05);
+	grid-row: 4 / span 1;
+	margin: 0 calc(var(--size) * 0.033);
+}
+
+.sm-chair-foot:where(.sm--left) {
+	grid-column: 1 / span 1;
+}
+
+.sm-chair-foot:where(.sm--right) {
+	grid-column: 3 / span 1;
+}
+
+.sm-chair-foot:where(.sm--front) {
+	--z: calc(var(--size) * 0.825);
+}
+
+.sm-chair-seat {
+	--h: 100;
+	--s: 40%;
+	--d: var(--size);
+	grid-row: 3 / span 1;
+	grid-column: 2 / span 1;
+}
+
+.sm-chair-shadow {
+	--d: var(--size);
+}
+
+.sm-content {
+	height: 200vh;
+	background: hsl(0 0% 90%);
+}
