@@ -1,0 +1,19 @@
+@layer sm.tokens {
+	:root {
+		--sm-gradient-planks: linear-gradient(
+			to bottom,
+			oklch(from var(--sm-color-gray) var(--sm-color-700)) 0 2px,
+			oklch(from var(--sm-color-gray) var(--sm-color-200)) 0 5px,
+			transparent 0
+		);
+
+		--sm-gradient-stripes: linear-gradient(
+			to right,
+			oklch(from var(--sm-color-gray) var(--sm-color-50)) 0 20%,
+			oklch(from var(--sm-color-gray) var(--sm-color-800)) 0 40%,
+			oklch(from var(--sm-color-brown) var(--sm-color-400)) 0 60%,
+			oklch(from var(--sm-color-blue) var(--sm-color-400)) 0 80%,
+			oklch(from var(--sm-color-green) var(--sm-color-400)) 0 100%
+		);
+	}
+}

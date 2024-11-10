@@ -1,0 +1,54 @@
+@layer sm.normalize {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+		padding: unset;
+		margin: unset;
+
+		background: unset;
+		border: unset;
+		caret-color: currentcolor;
+		color: inherit;
+		font: inherit;
+		list-style: unset;
+		outline: unset;
+		outline-offset: unset;
+		text-decoration: inherit;
+		vertical-align: baseline;
+
+		backface-visibility: hidden;
+		transform-style: preserve-3d;
+	}
+
+	:where(:focus-visible) {
+		outline: 0.1em solid;
+		outline-offset: 0.1em;
+	}
+
+	:where([hidden]) {
+		display: none;
+	}
+
+	html,
+	body {
+		height: 100%;
+		overflow: hidden;
+	}
+
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-synthesis: none;
+		-webkit-text-size-adjust: 100%;
+		text-size-adjust: 100%;
+	}
+
+	em {
+		font-style: italic;
+	}
+
+	strong {
+		font-weight: 700;
+	}
+}

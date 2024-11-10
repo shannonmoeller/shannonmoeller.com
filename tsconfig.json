@@ -1,6 +1,6 @@
 {
   "include": ["**/*.js"],
-  "exclude": ["**/node_modules", "**/vendor"],
+  "exclude": ["node_modules"],
   "compilerOptions": {
     "target": "esnext",
     "allowJs": true,

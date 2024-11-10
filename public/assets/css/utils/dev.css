@@ -1,0 +1,8 @@
+@layer sm.utils {
+	.sm--dev {
+		&,
+		& * {
+			background-color: #f003;
+		}
+	}
+}
