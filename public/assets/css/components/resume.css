@@ -1,0 +1,10 @@
+@layer sm.components {
+	.sm-resume {
+		display: grid;
+		min-height: 166cqw;
+
+		@media (min-width: 720px) or (orientation: landscape) {
+			min-height: min(66cqw, 100cqh);
+		}
+	}
+}

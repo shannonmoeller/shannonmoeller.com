@@ -1,0 +1,48 @@
+@layer sm.components {
+	.sm-layer {
+		container-type: size;
+		position: relative;
+	}
+
+	.sm-layer-body {
+		position: absolute;
+		inset: 100% 0 auto 0;
+		height: 100cqw;
+		transform: rotatex(0.25turn);
+		transform-origin: center top;
+	}
+}
+
+@layer sm.components {
+	.sm-fridge {
+		display: grid;
+		grid-template: 30fr 3fr 2fr 1fr / 1fr;
+		outline: 10px solid red;
+	}
+
+	.sm-layer-body.-sm-fridge-feet {
+		grid-row: 4;
+		display: grid;
+		grid-template: 1fr 2fr 1fr / 1fr 2fr 1fr;
+	}
+
+	.sm-box.-sm-fridge-foot {
+		--sm-box-color: oklch(from var(--sm-color-green) var(--sm-color-400));
+
+		&.-first {
+			grid-area: 1 / 1;
+		}
+
+		&.-second {
+			grid-area: 1 / 3;
+		}
+
+		&.-third {
+			grid-area: 3 / 1;
+		}
+
+		&.-fourth {
+			grid-area: 3 / 3;
+		}
+	}
+}

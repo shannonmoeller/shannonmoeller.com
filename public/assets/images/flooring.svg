@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+	<filter id="wood-grain">
+		<feTurbulence type="fractalNoise" baseFrequency=".01 .1" numOctaves="2"></feTurbulence>
+		<feColorMatrix values="
+			0 0 0 -1 1
+			0 0 0 -1 1
+			0 0 0 -1 1
+			0 0 0 0 0.5
+		"></feColorMatrix>
+	</filter>
+	<rect x="0" y="0" width="512" height="512" filter="url(#wood-grain)" />
+</svg>

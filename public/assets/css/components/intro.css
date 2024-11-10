@@ -1,0 +1,139 @@
+@layer sm.components {
+	.sm-intro {
+		display: grid;
+		grid-template:
+			'. .     .' minmax(2cqw, 1fr)
+			'. body  .' min-content
+			'. .     .' minmax(2cqw, 1fr)
+			'. aside .' 5fr
+			'. .     .' minmax(2cqw, 3fr)
+			/ 1fr 8fr 1fr;
+		min-height: 166cqw;
+
+		@media (min-width: 720px) or (orientation: landscape) {
+			grid-template:
+				'. .    .     .' minmax(4cqw, 1fr)
+				'. .    aside .' minmax(4cqw, 1fr)
+				'. body aside .' min-content
+				'. .    aside .' minmax(4cqw, 1fr)
+				'. .    .     .' minmax(4cqw, 2fr)
+				/ 1fr 3fr 5fr 1fr;
+			min-height: min(66cqw, 100cqh);
+		}
+	}
+
+	.sm-intro-body {
+		grid-area: body;
+		container-type: inline-size;
+		transform: rotatey(0.03turn);
+	}
+
+	.sm-intro-greeting {
+		font-size: 8cqw;
+	}
+
+	.sm-intro-name {
+		display: inline-block;
+		transform: translatex(-8cqw) translatey(2cqw) translatez(40cqw);
+
+		@media (min-width: 720px) or (orientation: landscape) {
+			transform: translatex(-5cqw) translatey(-2.5cqw) translatez(40cqw);
+		}
+
+		& > strong {
+			color: oklch(from var(--sm-color-green) var(--sm-color-300));
+			font: 400 14cqw / 1 var(--sm-font-display);
+		}
+	}
+
+	.sm-intro-profiles {
+		display: flex;
+		gap: 8cqw;
+		margin-block-start: 8cqw;
+		transform: translatex(-5cqw) translatey(-4cqw) translatez(40cqw);
+
+		@media (min-width: 720px) or (orientation: landscape) {
+			transform: translatex(-3cqw) translatey(-6cqw) translatez(40cqw);
+		}
+	}
+
+	.sm-intro-profiles-icon {
+		display: block;
+		aspect-ratio: 1;
+		width: 10cqw;
+	}
+
+	.sm-intro-aside {
+		grid-area: aside;
+		container-type: size;
+		display: grid;
+		place-content: end center;
+
+		@media (min-width: 720px) or (orientation: landscape) {
+			place-content: center end;
+		}
+	}
+
+	.sm-intro-room {
+		container-type: size;
+		aspect-ratio: 1;
+		width: 100cqmin;
+		transform: rotatey(-0.125turn);
+		transform-origin: center center 50cqmin;
+
+		@media (min-width: 720px) or (orientation: landscape) {
+			transform-origin: right center;
+		}
+	}
+
+	.sm-box.-sm-intro-room-wall {
+		--sm-box-color: oklch(from var(--sm-color-gray) var(--sm-color-800));
+		--sm-box-depth: 3cqmin;
+
+		position: absolute;
+		inset: 0;
+
+		& > .-front {
+			background-image: linear-gradient(
+				to top,
+				oklch(from var(--sm-color-gray) var(--sm-color-50)) 0 5%,
+				transparent 0
+			);
+		}
+
+		& > .-right {
+			background-image: linear-gradient(
+				to top,
+				oklch(from var(--sm-color-gray) var(--sm-color-100)) 0 5%,
+				transparent 0
+			);
+		}
+	}
+
+	.sm-box.-sm-intro-room-floor {
+		--sm-box-color: oklch(from var(--sm-color-brown) var(--sm-color-400));
+		--sm-box-depth: 3cqmin;
+
+		position: absolute;
+		inset: 0;
+		transform: rotatex(-0.25turn);
+		transform-origin: left bottom;
+
+		& > .-back {
+			background-blend-mode: overlay;
+			background:
+				url('../../images/flooring.svg') 0 0 / cover,
+				var(--sm-gradient-planks) -2px -2px / 12.5cqmin 12.5cqmin,
+				oklch(from var(--sm-color-brown) var(--sm-color-300));
+		}
+	}
+
+	.sm-fridge.-sm-intro-fridge {
+		position: absolute;
+		inset: auto auto 0 50%;
+		height: 80cqmin;
+		width: 50cqmin;
+		transform: translatex(-50%) translatez(20cqmin) rotatey(0.05turn);
+		transform-origin: center bottom 25cqmin;
+	}
+}

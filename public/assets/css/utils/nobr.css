@@ -1,0 +1,5 @@
+@layer sm.utils {
+	.sm--nobr {
+		display: inline-block;
+	}
+}
