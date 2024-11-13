@@ -110,9 +110,14 @@
 			--app-box-face-colorShift: var(--app-color-darker);
 		}
 
-		&.-surface {
+		&.-gloss {
 			background-blend-mode: overlay;
-			background-image: var(--app-gradient-surface);
+			background-image: var(--app-gradient-surfaceGloss);
+		}
+
+		&.-matte {
+			background-blend-mode: overlay;
+			background-image: var(--app-gradient-surfaceMatte);
 		}
 	}
 }

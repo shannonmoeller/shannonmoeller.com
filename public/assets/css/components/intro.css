@@ -68,6 +68,7 @@
 		container-type: size;
 		display: grid;
 		place-content: end center;
+
 		-webkit-user-select: none;
 		user-select: none;
 
@@ -100,20 +101,11 @@
 		grid-row: 1 / span 2;
 
 		& > .-front {
-			background-image: radial-gradient(
-					ellipse at 100% 0%,
-					oklch(from var(--app-color-gray) var(--app-color-50) / 5%) 0%,
-					oklch(from var(--app-color-gray) var(--app-color-700) / 0%) 66%
-				),
-				linear-gradient(to top, oklch(from var(--app-color-gray) var(--app-color-50)) 0 5%, transparent 0);
+			background-image: var(--app-gradient-surfaceMatte), var(--app-gradient-floorboard);
 		}
 
 		& > .-right {
-			background-image: linear-gradient(
-				to top,
-				oklch(from var(--app-color-gray) var(--app-color-100)) 0 5%,
-				transparent 0
-			);
+			background-image: var(--app-gradient-floorboardDark);
 		}
 	}
 
