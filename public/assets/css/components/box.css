@@ -2,7 +2,6 @@
 	.app-box {
 		display: block;
 		position: relative;
-		transform: translatez(var(--app-box-z, 0));
 	}
 
 	.app-box-face {
@@ -80,7 +79,7 @@
 			background-color: oklch(from var(--app-box-color) var(--app-box-face-colorShift));
 			transition: background-color var(--app-animation-durationSlow);
 
-			&::after {
+			&::before {
 				content: '';
 				position: absolute;
 				inset: 0.5px;

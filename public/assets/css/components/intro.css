@@ -123,13 +123,13 @@
 				var(--app-gradient-planks) -2px -2px / 12.5cqw 12.5cqw,
 				oklch(from var(--app-color-brown) var(--app-color-300));
 
-			&::after {
+			&::before {
 				content: '';
 				position: absolute;
 				inset: 25.25cqw;
-				transform: translatez(0.5px) rotate(-0.05turn);
+				transform: rotate(-0.05turn) translatez(0.5px);
 				background-color: oklch(from var(--app-color-gray) var(--app-color-800) / 25%);
-				filter: blur(2px);
+				filter: blur(0.3cqw);
 				mix-blend-mode: multiply;
 			}
 		}
