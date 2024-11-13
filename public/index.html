@@ -6,16 +6,16 @@
 
 		<!--
 
-			I don't always leave comments, but when I do, they're for you.
+			I don’t always leave comments, but when I do, they’re for you.
 
-			Stay curious, my friend. Learn, don't loot.
+			Stay curious, my friend. Learn, don’t loot.
 
 			https://github.com/shannonmoeller/shannonmoeller.com
 
 		-->
 
 		<meta name="author" content="Shannon Moeller" />
-		<meta name="description" content="If you've ever used Node.js, you've installed some of my code." />
+		<meta name="description" content="If you’ve ever used Node.js, you’ve installed some of my code." />
 		<meta name="keywords" content="developer, frontend, html, css, javascript, resume" />
 
 		<meta name="CCBot" content="nofollow" />
@@ -55,7 +55,11 @@
 
 		<script>
 			addEventListener('DOMContentLoaded', () => {
+				console.log('domcontentloaded');
 				document.documentElement.classList.remove('app--loading');
+			});
+			document.addEventListener('readystatechange', () => {
+				console.log('readystate:', document.readyState);
 			});
 		</script>
 	</head>
@@ -136,10 +140,10 @@
 
 							<div class="app-box -app-fridge -app-intro-room-fridge app--colorSchemeLight">
 								<label class="app-box -app-fridge-door">
-									<input type="checkbox" class="app--visuallyHidden" aria-label="Toggle fridge" />
+									<input type="checkbox" class="app--visuallyHidden" aria-label="Open fridge" tabindex="-1" />
 
 									<div class="app-box-face -top -fill -lighter"></div>
-									<div class="app-box-face -front -fill -light -toDark -gloss -app-fridge-door-face">
+									<div class="app-box-face -front -fill -light -toDark -gloss">
 										<div class="app-box -app-fridge-door-opener">
 											<div class="app-box-face -top -fill -lighter"></div>
 											<div class="app-box-face -front -fill -dark"></div>
@@ -195,31 +199,29 @@
 														<div class="app-box-face -bottom -fill -darker -toLight"></div>
 													</div>
 													<div class="app-box -app-fridge-bottle-neck">
-														<div class="app-box-face -front -fill -darker -toLighter"></div>
 														<div class="app-box-face -right -fill -darker -toNormal"></div>
-														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-neckLabel"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight"></div>
 													</div>
 													<div class="app-box -app-fridge-bottle-body">
 														<div class="app-box-face -front -fill -darker -toLighter"></div>
 														<div class="app-box-face -right -fill -darker -toNormal"></div>
-														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-bodyLabel"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight"></div>
 													</div>
 												</div>
-												<a class="app-box -app-fridge-bottle" href="https://drinkreeds.com/" aria-label="Drink Reeds">
+												<a class="app-box -app-fridge-bottle" href="https://drinkreeds.com/" aria-label="Drink Reed’s">
 													<div class="app-box -app-fridge-bottle-cap">
 														<div class="app-box-face -front -fill -darker -toLighter"></div>
-														<div class="app-box-face -left -fill -darker -toNormal"></div>
+														<div class="app-box-face -right -fill -darker -toNormal"></div>
 														<div class="app-box-face -bottom -fill -darker -toLight"></div>
 													</div>
 													<div class="app-box -app-fridge-bottle-neck">
-														<div class="app-box-face -front -fill -darker -toLighter"></div>
-														<div class="app-box-face -left -fill -darker -toNormal"></div>
-														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-neckLabel"></div>
+														<div class="app-box-face -right -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight"></div>
 													</div>
 													<div class="app-box -app-fridge-bottle-body">
 														<div class="app-box-face -front -fill -darker -toLighter"></div>
-														<div class="app-box-face -left -fill -darker -toNormal"></div>
-														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-bodyLabel"></div>
+														<div class="app-box-face -right -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight"></div>
 													</div>
 												</a>
 											</div>
@@ -233,8 +235,8 @@
 								</div>
 								<div class="app-box -app-fridge-cabBottom">
 									<div class="app-box-face -top -fill -darker -toLighter">
-										<a class="app-box -app-fridge-pizza" href="https://giordanos.com/" aria-label="Eat Giordanos">
-											<div class="app-box-face -front -fill -darker -toLighter -app-fridge-pizza-cover"></div>
+										<a class="app-box -app-fridge-pizza" href="https://giordanos.com/" aria-label="Eat Giordano’s">
+											<div class="app-box-face -front -fill -darker -toLighter"></div>
 											<div class="app-box-face -right -fill -darker -toNormal"></div>
 											<div class="app-box-face -bottom -fill -darker -toLight"></div>
 										</a>
@@ -244,7 +246,7 @@
 
 								<div class="app-box -app-fridge-panelFront">
 									<div class="app-box-face -top -fill -dark -toLighter"></div>
-									<div class="app-box-face -front -fill -light -gloss"></div>
+									<div class="app-box-face -front -fill -light -toNormal -gloss"></div>
 									<div class="app-box-face -right -fill"></div>
 									<div class="app-box-face -bottom -fill -darker"></div>
 								</div>
@@ -255,15 +257,15 @@
 
 								<div class="app-box -app-fridge-base">
 									<div class="app-box-face -top -fill -dark"></div>
-									<div class="app-box-face -front -fill -light -gloss"></div>
+									<div class="app-box-face -front -fill -light -toNormal -gloss"></div>
 									<div class="app-box-face -right -fill"></div>
-									<div class="app-box-face -bottom -fill -darker -app-fridge-feet">
+									<div class="app-box-face -bottom -fill -darker">
 										<div class="app-box">
-											<div class="app-box-face -top -fill -light"></div>
+											<div class="app-box-face -top -fill -light -toNormal"></div>
 											<div class="app-box-face -right -fill -dark"></div>
 										</div>
 										<div class="app-box">
-											<div class="app-box-face -top -fill -light"></div>
+											<div class="app-box-face -top -fill -light -toNormal"></div>
 											<div class="app-box-face -right -fill"></div>
 										</div>
 										<div class="app-box">
