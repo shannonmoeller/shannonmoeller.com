@@ -201,7 +201,7 @@
 		--app-box-z: 20cqw;
 
 		grid-area: 1 / 1;
-		margin: 25%;
+		margin: 20%;
 	}
 	.app-box-face.-app-fridge-bottle-neckLabel {
 		background-image: var(--app-gradient-surfaceGloss), var(--app-gradient-label);
