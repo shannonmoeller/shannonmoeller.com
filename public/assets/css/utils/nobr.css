@@ -1,5 +1,5 @@
-@layer sm.utils {
-	.sm--nobr {
+@layer app.utils {
+	.app--nobr {
 		display: inline-block;
 	}
 }

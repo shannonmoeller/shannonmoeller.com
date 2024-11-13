@@ -1,10 +1,12 @@
-@layer sm.normalize {
+@layer app.normalize {
 	*,
 	*::before,
 	*::after {
 		box-sizing: border-box;
 		padding: unset;
 		margin: unset;
+		backface-visibility: hidden;
+		transform-style: preserve-3d;
 
 		background: unset;
 		border: unset;
@@ -16,27 +18,26 @@
 		outline-offset: unset;
 		text-decoration: inherit;
 		vertical-align: baseline;
-
-		backface-visibility: hidden;
-		transform-style: preserve-3d;
 	}
 
 	:where(:focus-visible) {
-		outline: 0.1em solid;
-		outline-offset: 0.1em;
+		outline: 0.2em solid;
+		outline-offset: 0.2em;
 	}
 
 	:where([hidden]) {
-		display: none;
+		display: none !important;
 	}
 
-	html,
-	body {
+	html {
 		height: 100%;
 		overflow: hidden;
 	}
 
 	body {
+		height: 100%;
+		overflow: hidden;
+
 		-webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
 		font-synthesis: none;

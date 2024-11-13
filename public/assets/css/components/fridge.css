@@ -1,48 +1,262 @@
-@layer sm.components {
-	.sm-layer {
+@layer app.components {
+	.app-box.-app-fridge {
+		--app-box-depth: 100cqw;
 		container-type: size;
-		position: relative;
-	}
-
-	.sm-layer-body {
-		position: absolute;
-		inset: 100% 0 auto 0;
-		height: 100cqw;
-		transform: rotatex(0.25turn);
-		transform-origin: center top;
-	}
-}
-
-@layer sm.components {
-	.sm-fridge {
 		display: grid;
-		grid-template: 30fr 3fr 2fr 1fr / 1fr;
-		outline: 10px solid red;
+		grid-template: 1fr 1fr 20fr 1fr 1fr 1fr 4fr 1fr 1fr / 1fr 1fr 18fr 1fr 1fr;
+
+		&:has(:checked, a:focus) {
+			.app-box-face.-fill {
+				&.-toLighter {
+					--app-box-face-colorShift: var(--app-color-lighter);
+				}
+
+				&.-toLight {
+					--app-box-face-colorShift: var(--app-color-light);
+				}
+
+				&.-toNormal {
+					--app-box-face-colorShift: var(--app-color-normal);
+				}
+
+				&.-toDark {
+					--app-box-face-colorShift: var(--app-color-dark);
+				}
+
+				&.-toDarker {
+					--app-box-face-colorShift: var(--app-color-darker);
+				}
+			}
+		}
 	}
 
-	.sm-layer-body.-sm-fridge-feet {
+	.app-box.-app-fridge-door {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		--app-box-depth: 19cqw;
+		--app-box-z: 81cqw;
+		z-index: 1;
+		grid-column: 1 / span 5;
+		grid-row: 1 / 6;
+		transition: rotate var(--app-animation-durationSlow);
+		transform-origin: left center var(--app-box-z);
+
+		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+
+		& .app-box-face {
+			transition: background-color var(--app-animation-durationSlow);
+		}
+
+		.app-box.-app-fridge:has(:checked, a:focus) & {
+			rotate: y -0.14turn;
+
+			@media (min-width: 720px) or (orientation: landscape) {
+				rotate: y -0.17turn;
+			}
+		}
+	}
+	.app-box-face.-app-fridge-door-face {
+		display: grid;
+		grid-template: 4fr 1fr 2fr 4fr / 12fr 1fr 2fr;
+	}
+	.app-box.-app-fridge-door-opener {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-200));
+		--app-box-depth: 6cqw;
+		--app-box-z: 0;
+		grid-column: 2;
+		grid-row: 2;
+		transition: box-shadow var(--app-animation-durationFast);
+
+		box-shadow:
+			0 6.4cqw 2px oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+			0 18.2cqw 2px oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+			0 30cqw 2px oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
+
+		.app-box.-app-fridge:not(:has(:checked)):active & {
+			box-shadow:
+				0 9.4cqw 2px oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+				0 21.2cqw 2px oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+				0 33cqw 2px oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
+		}
+	}
+	.app-box.-app-fridge-door-handle {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-200));
+		--app-box-depth: 4cqw;
+		--app-box-z: 6cqw;
+		grid-column: 2;
+		grid-row: 2 / span 2;
+		transition: rotate linear var(--app-animation-durationFast);
+		transform-origin: center top var(--app-box-z);
+
+		.app-box.-app-fridge:not(:has(:checked)):active & {
+			rotate: x 0.025turn;
+		}
+	}
+
+	.app-box.-app-fridge-caseTop {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		--app-box-depth: 80cqw;
+		grid-column: 1 / span 5;
+		grid-row: 1;
+	}
+	.app-box.-app-fridge-caseLeft {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		--app-box-depth: 80cqw;
+		grid-column: 1;
+		grid-row: 1 / span 5;
+	}
+	.app-box.-app-fridge-caseRight {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		--app-box-depth: 80cqw;
+		grid-column: 5;
+		grid-row: 1 / span 5;
+	}
+	.app-box.-app-fridge-caseBottom {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		--app-box-depth: 80cqw;
+		grid-column: 1 / span 5;
+		grid-row: 5 / span 3;
+	}
+
+	.app-box.-app-fridge-cabTop {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+		--app-box-depth: 80cqw;
+		grid-column: 2 / span 3;
+		grid-row: 2;
+	}
+	.app-box.-app-fridge-cabLeft {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+		--app-box-depth: 80cqw;
+		grid-column: 2;
+		grid-row: 2 / span 3;
+	}
+	.app-box.-app-fridge-cabBack {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+		--app-box-depth: 10cqw;
+		grid-column: 3;
+		grid-row: 3;
+	}
+	.app-box.-app-fridge-cabRight {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+		--app-box-depth: 80cqw;
+		grid-column: 4;
+		grid-row: 2 / span 3;
+	}
+	.app-box.-app-fridge-cabBottom {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+		--app-box-depth: 80cqw;
+		grid-column: 2 / span 3;
 		grid-row: 4;
-		display: grid;
-		grid-template: 1fr 2fr 1fr / 1fr 2fr 1fr;
 	}
 
-	.sm-box.-sm-fridge-foot {
-		--sm-box-color: oklch(from var(--sm-color-green) var(--sm-color-400));
+	.app-box.-app-fridge-shelf {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+		--app-box-depth: 75cqw;
+		position: absolute;
+		inset: 60% 0 38% 0;
+	}
+	.app-box.-app-fridge-bottle {
+		position: absolute;
+		display: grid;
+		aspect-ratio: 1;
+		width: 8cqw;
 
-		&.-first {
-			grid-area: 1 / 1;
+		:nth-child(1 of &) {
+			top: 20cqw;
+			left: 20cqw;
+			transform: rotate(0.05turn);
 		}
 
-		&.-second {
-			grid-area: 1 / 3;
+		:nth-child(2 of &) {
+			top: 50cqw;
+			left: 47cqw;
+			transform: rotate(-0.125turn);
 		}
+	}
+	.app-box.-app-fridge-bottle-cap {
+		--app-box-color: oklch(from var(--app-color-yellow) var(--app-color-200));
+		--app-box-depth: 2cqw;
+		--app-box-z: 35cqw;
+		grid-area: 1 / 1;
+		margin: 20%;
+	}
+	.app-box.-app-fridge-bottle-neck {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
+		--app-box-depth: 15cqw;
+		--app-box-z: 20cqw;
+		grid-area: 1 / 1;
+		margin: 25%;
+	}
+	.app-box-face.-app-fridge-bottle-neckLabel {
+		background-image: var(--app-gradient-surface), var(--app-gradient-label);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size:
+			cover,
+			100% 80%;
+	}
+	.app-box.-app-fridge-bottle-body {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
+		--app-box-depth: 20cqw;
+		grid-area: 1 / 1;
+	}
+	.app-box-face.-app-fridge-bottle-bodyLabel {
+		background-image: var(--app-gradient-surface), var(--app-gradient-labelText), var(--app-gradient-label);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size:
+			cover,
+			80% 15%,
+			100% 80%;
+	}
 
-		&.-third {
-			grid-area: 3 / 1;
+	.app-box.-app-fridge-pizza {
+		--app-box-color: oklch(from var(--app-color-brown) var(--app-color-500));
+		--app-box-depth: 10cqw;
+		position: absolute;
+		inset: 15cqw;
+		transform: rotate(-0.02turn);
+	}
+	.app-box-face.-app-fridge-pizza-cover {
+		container-type: size;
+		display: grid;
+		place-content: center;
+
+		&::before {
+			content: 'pizza';
+			color: oklch(from var(--app-color-gray) var(--app-color-800));
+			font: 400 30cqw var(--app-font-display);
 		}
+	}
 
-		&.-fourth {
-			grid-area: 3 / 3;
+	.app-box.-app-fridge-panelFront {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		--app-box-depth: 19cqw;
+		--app-box-z: 81cqw;
+		grid-column: 1 / span 5;
+		grid-row: 6 / span 2;
+		margin-block: 1cqw;
+	}
+	.app-box.-app-fridge-panelBack {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		--app-box-depth: 80cqw;
+		grid-column: 1 / span 5;
+		grid-row: 7;
+	}
+
+	.app-box.-app-fridge-base {
+		--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+		grid-column: 1 / span 5;
+		grid-row: 8;
+	}
+	.app-box-face.-app-fridge-feet {
+		display: grid;
+		grid-template: 1fr 1fr / 1fr 1fr;
+		gap: 50cqw;
+
+		& > .app-box {
+			--app-box-depth: 6cqh;
+			--app-box-z: -1px;
 		}
 	}
 }

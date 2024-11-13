@@ -1,4 +1,4 @@
-@layer sm.tokens {
+@layer app.tokens {
 	@font-face {
 		font-display: fallback;
 		font-family: 'aleo';
@@ -19,7 +19,7 @@
 	}
 
 	:root {
-		--sm-font-body: 'aleo', ui-sans-serif, system-ui, sans-serif;
-		--sm-font-display: 'marker', ui-sans-serif, system-ui, sans-serif;
+		--app-font-body: 'aleo', ui-sans-serif, system-ui, sans-serif;
+		--app-font-display: 'marker', ui-sans-serif, system-ui, sans-serif;
 	}
 }

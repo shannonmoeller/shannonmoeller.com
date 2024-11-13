@@ -1,78 +1,84 @@
-@layer sm.tokens {
-	.sm-box {
-		--sm-box-color: oklch(from var(--sm-color-gray) var(--sm-color-400));
-		--sm-box-depth: calc(100cqh + 1px);
-	}
-}
-
-@layer sm.components {
-	.sm-box {
+@layer app.components {
+	.app-box {
 		display: block;
 		position: relative;
-		height: 100%;
-		width: 100%;
+		transform: translatez(var(--app-box-z, 0));
+	}
 
-		& > * {
-			display: block;
-			position: absolute;
-			height: 100%;
-			width: 100%;
+	.app-box-face {
+		--app-box-face-colorShift: var(--app-color-normal);
 
-			background: var(--sm-box-color);
+		display: block;
+		position: absolute;
+		inset: 0;
 
-			&.-top {
-				inset: 0 auto auto 0;
-				height: var(--sm-box-depth);
-				transform: rotatex(0.25turn);
-				transform-origin: top left;
-			}
+		&.-top {
+			inset: 0 0 auto 0;
+			height: var(--app-box-depth);
+			transform: rotatex(0.25turn);
+			transform-origin: top left;
 
-			&.-bottom {
-				inset: auto auto 0 0;
-				height: var(--sm-box-depth);
-				transform: rotatex(-0.25turn);
+			&.-inner {
+				transform: translatey(-100%) rotatex(-0.25turn);
 				transform-origin: bottom left;
 			}
+		}
 
-			&.-left {
-				inset: 0 auto auto 0;
-				width: var(--sm-box-depth);
-				transform: rotatey(-0.25turn);
-				transform-origin: top left;
+		&.-front {
+			transform: translatez(var(--app-box-depth));
+
+			&.-inner {
+				transform: translatez(var(--app-box-depth)) rotatex(0.5turn);
 			}
+		}
 
-			&.-right {
-				inset: 0 0 auto auto;
-				width: var(--sm-box-depth);
-				transform: rotatey(0.25turn);
+		&.-left {
+			inset: 0 auto 0 0;
+			width: var(--app-box-depth);
+			transform: rotatey(-0.25turn);
+			transform-origin: top left;
+
+			&.-inner {
+				transform: translatex(-100%) rotatey(0.25turn);
 				transform-origin: top right;
 			}
+		}
 
-			&.-front {
-				inset: 0;
-				transform: translatez(var(--sm-box-depth));
-			}
+		&.-right {
+			inset: 0 0 0 auto;
+			width: var(--app-box-depth);
+			transform: rotatey(0.25turn);
+			transform-origin: top right;
 
-			&.-back {
-				inset: 0;
-				transform: rotatey(0.5turn);
+			&.-inner {
+				transform: translatex(100%) rotatey(-0.25turn);
+				transform-origin: top left;
 			}
+		}
 
-			&.-lighter {
-				background: oklch(from var(--sm-box-color) var(--sm-color-lighter));
-			}
+		&.-back {
+			transform: rotatey(0.5turn);
 
-			&.-light {
-				background: oklch(from var(--sm-box-color) var(--sm-color-light));
+			&.-inner {
+				transform: unset;
 			}
+		}
 
-			&.-dark {
-				background: oklch(from var(--sm-box-color) var(--sm-color-dark));
-			}
+		&.-bottom {
+			inset: auto 0 0 0;
+			height: var(--app-box-depth);
+			transform: rotatex(-0.25turn);
+			transform-origin: bottom left;
 
-			&.-darker {
-				background: oklch(from var(--sm-box-color) var(--sm-color-darker));
+			&.-inner {
+				transform: translatey(100%) rotatex(0.25turn);
+				transform-origin: top left;
 			}
+		}
+
+		&.-fill {
+			background-color: oklch(from var(--app-box-color) var(--app-box-face-colorShift));
+			transition: background-color var(--app-animation-durationSlow);
 
 			&::after {
 				content: '';
@@ -80,8 +86,33 @@
 				inset: 0.5px;
 				transform: translatez(-1px);
 
-				background: inherit;
+				background-color: inherit;
 			}
+		}
+
+		&.-lighter {
+			--app-box-face-colorShift: var(--app-color-lighter);
+		}
+
+		&.-light {
+			--app-box-face-colorShift: var(--app-color-light);
+		}
+
+		&.-normal {
+			--app-box-face-colorShift: var(--app-color-normal);
+		}
+
+		&.-dark {
+			--app-box-face-colorShift: var(--app-color-dark);
+		}
+
+		&.-darker {
+			--app-box-face-colorShift: var(--app-color-darker);
+		}
+
+		&.-surface {
+			background-blend-mode: overlay;
+			background-image: var(--app-gradient-surface);
 		}
 	}
 }

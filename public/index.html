@@ -1,8 +1,8 @@
 <!doctype html>
-<html class="sm--colorSchemeDark" lang="en">
+<html class="app--loading" lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<title>Shannon Moeller’s Site</title>
+		<title>Shannon Moeller: A web and graphics dude in Denver.</title>
 
 		<!--
 
@@ -14,15 +14,18 @@
 
 		-->
 
-		<meta name="theme-color" content="oklch(60% 0.125 136)" />
-		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-
 		<meta name="author" content="Shannon Moeller" />
-		<meta name="description" content="I'm a web and graphics dude in Denver." />
-		<meta name="keywords" content="developer, full stack, front end, javascript, resume" />
+		<meta name="description" content="If you've ever used Node.js, you've installed some of my code." />
+		<meta name="keywords" content="developer, frontend, html, css, javascript, resume" />
 
 		<meta name="CCBot" content="nofollow" />
 		<meta name="robots" content="noai, noimageai" />
+
+		<meta name="theme-color" content="oklch(60% 0.125 136)" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+
+		<link rel="shortcut icon" href="./assets/images/favicon.ico" />
+		<link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
 
 		<script type="module">
 			import './assets/js/components/color-scheme.js';
@@ -33,70 +36,82 @@
 			@import './assets/css/normalize/layers.css';
 			@import './assets/css/normalize/html.css';
 
+			@import './assets/css/tokens/animation.css';
 			@import './assets/css/tokens/color.css';
 			@import './assets/css/tokens/font.css';
 			@import './assets/css/tokens/gradient.css';
 
-			@import './assets/css/components/app.css';
 			@import './assets/css/components/box.css';
 			@import './assets/css/components/fridge.css';
 			@import './assets/css/components/intro.css';
+			@import './assets/css/components/page.css';
 			@import './assets/css/components/resume.css';
+			@import './assets/css/components/story.css';
 
 			@import './assets/css/utils/dev.css';
 			@import './assets/css/utils/nobr.css';
 			@import './assets/css/utils/visually-hidden.css';
 		</style>
+
+		<script>
+			addEventListener('DOMContentLoaded', () => {
+				document.documentElement.classList.remove('app--loading');
+			});
+		</script>
 	</head>
 
 	<body>
-		<div class="sm-app">
-			<header class="sm--visuallyHidden">
+		<div class="app-page">
+			<header class="app--visuallyHidden">
 				<h1>Shannon Moeller’s Site</h1>
+
 				<nav aria-label="Page navigation">
 					<a href="#intro">Intro</a>
 					<a href="#resume">Resume</a>
+					<a href="#fridge">Fridge</a>
 				</nav>
 			</header>
 
 			<main>
-				<article class="sm-intro">
-					<div class="sm-intro-body">
-						<p class="sm-intro-greeting">
-							Hello. I’m <span class="sm-intro-name"><strong>Shannon</strong>,</span>
-							<span class="sm--nobr">a web and graphics</span> dude in Denver
-							<span class="sm--nobr">with a penchant</span> for <span class="sm--nobr">clean code,</span>
-							<span class="sm--nobr">elegant design,</span> and
-							<span class="sm--nobr">green refrigerators.</span>
+				<article class="app-intro">
+					<div class="app-intro-body">
+						<p class="app-intro-greeting">
+							Hello. I’m
+							<span class="app-intro-name"><strong>Shannon</strong>,</span>
+							<span class="app--nobr">a web and graphics</span> dude in Denver
+							<span class="app--nobr">with a penchant</span> for
+							<span class="app--nobr">clean code,</span>
+							<span class="app--nobr">elegant design,</span> and
+							<span class="app--nobr">green refrigerators.</span>
 						</p>
 
-						<nav class="sm-intro-profiles" aria-label="Online profiles">
+						<nav class="app-intro-profiles" aria-label="Where to find me online">
 							<a href="https://github.com/shannonmoeller">
-								<svg class="sm-intro-profiles-icon">
+								<svg class="app-intro-profiles-icon">
 									<title>GitHub</title>
 									<use href="#github"></use>
 								</svg>
 							</a>
 							<a href="https://linkedin.com/in/shannonmoeller">
-								<svg class="sm-intro-profiles-icon">
+								<svg class="app-intro-profiles-icon">
 									<title>LinkedIn</title>
 									<use href="#linkedin"></use>
 								</svg>
 							</a>
 							<a href="https://codepen.io/shannonmoeller">
-								<svg class="sm-intro-profiles-icon">
+								<svg class="app-intro-profiles-icon">
 									<title>Codepen</title>
 									<use href="#codepen"></use>
 								</svg>
 							</a>
 							<a href="https://npmjs.com/~shannonmoeller">
-								<svg class="sm-intro-profiles-icon">
+								<svg class="app-intro-profiles-icon">
 									<title>npm</title>
 									<use href="#npm"></use>
 								</svg>
 							</a>
 							<a href="https://dribbble.com/shannonmoeller">
-								<svg class="sm-intro-profiles-icon">
+								<svg class="app-intro-profiles-icon">
 									<title>Dribbble</title>
 									<use href="#dribbble"></use>
 								</svg>
@@ -104,101 +119,178 @@
 						</nav>
 					</div>
 
-					<div class="sm-intro-aside" aria-hidden="true">
-						<div class="sm-intro-room">
-							<b class="sm-box -sm-intro-room-wall">
-								<i class="-top -lighter"></i>
-								<i class="-bottom -darker"></i>
-								<i class="-left"></i>
-								<i class="-right"></i>
-								<i class="-front -light"></i>
-								<i class="-back -dark"></i>
-							</b>
-							<b class="sm-box -sm-intro-room-floor">
-								<i class="-top -light"></i>
-								<i class="-bottom -dark"></i>
-								<i class="-left"></i>
-								<i class="-right"></i>
-								<i class="-front -dark"></i>
-								<i class="-back -lighter"></i>
-							</b>
-							<div class="sm-fridge -sm-intro-fridge">
-								<div></div>
-								<div class="sm-layer">
-									<div class="sm-layer-body">
-										<b class="sm-box">
-											<i class="-top"></i>
-											<i class="-bottom"></i>
-											<i class="-left"></i>
-											<i class="-right"></i>
-											<i class="-front"></i>
-											<i class="-back"></i>
-										</b>
+					<div class="app-intro-aside">
+						<nav class="app-box -app-intro-room" aria-label="Favorite late-night snacks">
+							<div class="app-box -app-intro-room-wall">
+								<div class="app-box-face -top -fill -lighter"></div>
+								<div class="app-box-face -front -fill -light"></div>
+								<div class="app-box-face -right -fill"></div>
+							</div>
+
+							<div class="app-box -app-intro-room-floor">
+								<div class="app-box-face -top -fill -lighter"></div>
+								<div class="app-box-face -front -fill -light"></div>
+								<div class="app-box-face -right -fill"></div>
+								<div class="app-box-face -bottom -fill -darker"></div>
+							</div>
+
+							<div class="app-box -app-fridge -app-intro-room-fridge app--colorSchemeLight">
+								<label class="app-box -app-fridge-door">
+									<input type="checkbox" class="app--visuallyHidden" aria-label="Toggle fridge" />
+
+									<div class="app-box-face -top -fill -lighter"></div>
+									<div class="app-box-face -front -fill -light -toDark -surface -app-fridge-door-face">
+										<div class="app-box -app-fridge-door-opener">
+											<div class="app-box-face -top -fill -lighter"></div>
+											<div class="app-box-face -front -fill -dark"></div>
+											<div class="app-box-face -right -fill -toLight"></div>
+											<div class="app-box-face -bottom -fill -darker"></div>
+										</div>
+										<div class="app-box -app-fridge-door-handle">
+											<div class="app-box-face -top -fill -lighter"></div>
+											<div class="app-box-face -front -fill -light -toDark -surface"></div>
+											<div class="app-box-face -right -fill -toLight"></div>
+											<div class="app-box-face -bottom -fill -darker"></div>
+										</div>
+									</div>
+									<div class="app-box-face -right -fill -toLighter"></div>
+									<div class="app-box-face -bottom -fill -darker"></div>
+								</label>
+
+								<div class="app-box -app-fridge-caseTop">
+									<div class="app-box-face -top -fill -lighter"></div>
+									<div class="app-box-face -front -fill -darker -toLight"></div>
+								</div>
+								<div class="app-box -app-fridge-caseLeft">
+									<div class="app-box-face -top -fill -lighter"></div>
+									<div class="app-box-face -front -fill -darker -toLight"></div>
+									<div class="app-box-face -right -fill"></div>
+								</div>
+								<div class="app-box -app-fridge-caseRight">
+									<div class="app-box-face -top -fill -lighter"></div>
+									<div class="app-box-face -front -fill -darker -toLight"></div>
+									<div class="app-box-face -right -fill"></div>
+								</div>
+								<div class="app-box -app-fridge-caseBottom">
+									<div class="app-box-face -front -fill -darker -toLight"></div>
+									<div class="app-box-face -right -fill"></div>
+								</div>
+
+								<div class="app-box -app-fridge-cabTop">
+									<div class="app-box-face -front -fill -darker -toLight"></div>
+									<div class="app-box-face -bottom -fill -darker"></div>
+								</div>
+								<div class="app-box -app-fridge-cabLeft">
+									<div class="app-box-face -front -fill -darker -toLight"></div>
+									<div class="app-box-face -right -fill -darker -toNormal"></div>
+								</div>
+								<div class="app-box -app-fridge-cabBack">
+									<div class="app-box-face -front -fill -darker -toDark">
+										<div class="app-box -app-fridge-shelf">
+											<div class="app-box-face -top -fill -darker -toLighter">
+												<div class="app-box -app-fridge-bottle">
+													<div class="app-box -app-fridge-bottle-cap">
+														<div class="app-box-face -front -fill -darker -toLighter"></div>
+														<div class="app-box-face -right -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight"></div>
+													</div>
+													<div class="app-box -app-fridge-bottle-neck">
+														<div class="app-box-face -front -fill -darker -toLighter"></div>
+														<div class="app-box-face -right -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-neckLabel"></div>
+													</div>
+													<div class="app-box -app-fridge-bottle-body">
+														<div class="app-box-face -front -fill -darker -toLighter"></div>
+														<div class="app-box-face -right -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-bodyLabel"></div>
+													</div>
+												</div>
+												<a class="app-box -app-fridge-bottle" href="https://drinkreeds.com/" aria-label="Drink Reeds">
+													<div class="app-box -app-fridge-bottle-cap">
+														<div class="app-box-face -front -fill -darker -toLighter"></div>
+														<div class="app-box-face -left -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight"></div>
+													</div>
+													<div class="app-box -app-fridge-bottle-neck">
+														<div class="app-box-face -front -fill -darker -toLighter"></div>
+														<div class="app-box-face -left -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-neckLabel"></div>
+													</div>
+													<div class="app-box -app-fridge-bottle-body">
+														<div class="app-box-face -front -fill -darker -toLighter"></div>
+														<div class="app-box-face -left -fill -darker -toNormal"></div>
+														<div class="app-box-face -bottom -fill -darker -toLight -app-fridge-bottle-bodyLabel"></div>
+													</div>
+												</a>
+											</div>
+											<div class="app-box-face -front -fill -darker -toLight"></div>
+											<div class="app-box-face -bottom -fill -darker"></div>
+										</div>
 									</div>
 								</div>
-								<div class="sm-layer">
-									<div class="sm-layer-body">
-										<b class="sm-box">
-											<i class="-top"></i>
-											<i class="-bottom"></i>
-											<i class="-left"></i>
-											<i class="-right"></i>
-											<i class="-front"></i>
-											<i class="-back"></i>
-										</b>
-									</div>
+								<div class="app-box -app-fridge-cabRight">
+									<div class="app-box-face -front -fill -darker -toLight"></div>
 								</div>
-								<div class="sm-layer">
-									<div class="sm-layer-body -sm-fridge-feet">
-										<b class="sm-box -sm-fridge-foot -first">
-											<i class="-top"></i>
-											<i class="-bottom"></i>
-											<i class="-left"></i>
-											<i class="-right"></i>
-											<i class="-front"></i>
-											<i class="-back"></i>
-										</b>
-										<b class="sm-box -sm-fridge-foot -second">
-											<i class="-top"></i>
-											<i class="-bottom"></i>
-											<i class="-left"></i>
-											<i class="-right"></i>
-											<i class="-front"></i>
-											<i class="-back"></i>
-										</b>
-										<b class="sm-box -sm-fridge-foot -third">
-											<i class="-top"></i>
-											<i class="-bottom"></i>
-											<i class="-left"></i>
-											<i class="-right"></i>
-											<i class="-front"></i>
-											<i class="-back"></i>
-										</b>
-										<b class="sm-box -sm-fridge-foot -fourth">
-											<i class="-top"></i>
-											<i class="-bottom"></i>
-											<i class="-left"></i>
-											<i class="-right"></i>
-											<i class="-front"></i>
-											<i class="-back"></i>
-										</b>
+								<div class="app-box -app-fridge-cabBottom">
+									<div class="app-box-face -top -fill -darker -toLighter">
+										<a class="app-box -app-fridge-pizza" href="https://giordanos.com/" aria-label="Eat Giordanos">
+											<div class="app-box-face -front -fill -darker -toLighter -app-fridge-pizza-cover"></div>
+											<div class="app-box-face -right -fill -darker -toNormal"></div>
+											<div class="app-box-face -bottom -fill -darker -toLight"></div>
+										</a>
+									</div>
+									<div class="app-box-face -front -fill -darker -toLight"></div>
+								</div>
+
+								<div class="app-box -app-fridge-panelFront">
+									<div class="app-box-face -top -fill -dark -toLighter"></div>
+									<div class="app-box-face -front -fill -light -surface"></div>
+									<div class="app-box-face -right -fill"></div>
+									<div class="app-box-face -bottom -fill -darker"></div>
+								</div>
+								<div class="app-box -app-fridge-panelBack">
+									<div class="app-box-face -front -fill -darker"></div>
+									<div class="app-box-face -right -fill"></div>
+								</div>
+
+								<div class="app-box -app-fridge-base">
+									<div class="app-box-face -top -fill -dark"></div>
+									<div class="app-box-face -front -fill -light -surface"></div>
+									<div class="app-box-face -right -fill"></div>
+									<div class="app-box-face -bottom -fill -darker -app-fridge-feet">
+										<div class="app-box">
+											<div class="app-box-face -top -fill -light"></div>
+											<div class="app-box-face -right -fill -dark"></div>
+										</div>
+										<div class="app-box">
+											<div class="app-box-face -top -fill -light"></div>
+											<div class="app-box-face -right -fill"></div>
+										</div>
+										<div class="app-box">
+											<div class="app-box-face -top -fill -darker"></div>
+											<div class="app-box-face -right -fill -darker"></div>
+										</div>
+										<div class="app-box">
+											<div class="app-box-face -top -fill -dark"></div>
+											<div class="app-box-face -right -fill"></div>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
+						</nav>
 					</div>
 				</article>
 
-				<article id="resume" class="sm-resume sm--dev"></article>
+				<article id="resume" class="app-resume app--dev"></article>
 
-				<article id="fridge" class="sm-fridge sm--dev"></article>
+				<article id="fridge" class="app-story app--dev"></article>
 			</main>
 
 			<footer>
-				<sm-color-scheme></sm-color-scheme>
+				<app-color-scheme></app-color-scheme>
 
 				<p>
-					<small>© <sm-copyright>2004</sm-copyright> Shannon Moeller</small>
+					<small>© <app-copyright>2004</app-copyright> Shannon Moeller</small>
 				</p>
 			</footer>
 		</div>

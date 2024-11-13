@@ -1,5 +1,5 @@
-@layer sm.utils {
-	.sm--visuallyHidden {
+@layer app.utils {
+	.app--visuallyHidden {
 		position: absolute;
 		height: 1px;
 		width: 1px;
