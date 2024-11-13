@@ -1,7 +1,7 @@
-@layer sm.components {
-	.sm-intro {
+@layer app.components {
+	.app-intro {
 		display: grid;
-		grid-template:
+		grid:
 			'. .     .' minmax(2cqw, 1fr)
 			'. body  .' min-content
 			'. .     .' minmax(2cqw, 1fr)
@@ -11,7 +11,7 @@
 		min-height: 166cqw;
 
 		@media (min-width: 720px) or (orientation: landscape) {
-			grid-template:
+			grid:
 				'. .    .     .' minmax(4cqw, 1fr)
 				'. .    aside .' minmax(4cqw, 1fr)
 				'. body aside .' min-content
@@ -22,17 +22,17 @@
 		}
 	}
 
-	.sm-intro-body {
+	.app-intro-body {
 		grid-area: body;
 		container-type: inline-size;
 		transform: rotatey(0.03turn);
 	}
 
-	.sm-intro-greeting {
+	.app-intro-greeting {
 		font-size: 8cqw;
 	}
 
-	.sm-intro-name {
+	.app-intro-name {
 		display: inline-block;
 		transform: translatex(-8cqw) translatey(2cqw) translatez(40cqw);
 
@@ -41,12 +41,12 @@
 		}
 
 		& > strong {
-			color: oklch(from var(--sm-color-green) var(--sm-color-300));
-			font: 400 14cqw / 1 var(--sm-font-display);
+			color: oklch(from var(--app-color-green) var(--app-color-300));
+			font: 400 14cqw / 1 var(--app-font-display);
 		}
 	}
 
-	.sm-intro-profiles {
+	.app-intro-profiles {
 		display: flex;
 		gap: 8cqw;
 		margin-block-start: 8cqw;
@@ -57,83 +57,97 @@
 		}
 	}
 
-	.sm-intro-profiles-icon {
+	.app-intro-profiles-icon {
 		display: block;
 		aspect-ratio: 1;
 		width: 10cqw;
 	}
 
-	.sm-intro-aside {
+	.app-intro-aside {
 		grid-area: aside;
 		container-type: size;
 		display: grid;
 		place-content: end center;
+		-webkit-user-select: none;
+		user-select: none;
 
 		@media (min-width: 720px) or (orientation: landscape) {
 			place-content: center end;
 		}
 	}
 
-	.sm-intro-room {
+	.app-box.-app-intro-room {
+		--app-box-depth: 100cqh;
+
 		container-type: size;
+		display: grid;
+		grid: 1fr 6fr 3cqh / 1fr 2fr 1fr;
 		aspect-ratio: 1;
-		width: 100cqmin;
+		width: 100cqh;
 		transform: rotatey(-0.125turn);
-		transform-origin: center center 50cqmin;
+		transform-origin: center center 50cqh;
 
 		@media (min-width: 720px) or (orientation: landscape) {
 			transform-origin: right center;
 		}
 	}
 
-	.sm-box.-sm-intro-room-wall {
-		--sm-box-color: oklch(from var(--sm-color-gray) var(--sm-color-800));
-		--sm-box-depth: 3cqmin;
+	.app-box.-app-intro-room-wall {
+		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-800));
+		--app-box-depth: 3cqw;
 
-		position: absolute;
-		inset: 0;
+		grid-column: 1 / span 3;
+		grid-row: 1 / span 2;
 
 		& > .-front {
-			background-image: linear-gradient(
-				to top,
-				oklch(from var(--sm-color-gray) var(--sm-color-50)) 0 5%,
-				transparent 0
-			);
+			background-image: radial-gradient(
+					ellipse at 100% 0%,
+					oklch(from var(--app-color-gray) var(--app-color-50) / 5%) 0%,
+					oklch(from var(--app-color-gray) var(--app-color-700) / 0%) 66%
+				),
+				linear-gradient(to top, oklch(from var(--app-color-gray) var(--app-color-50)) 0 5%, transparent 0);
 		}
 
 		& > .-right {
 			background-image: linear-gradient(
 				to top,
-				oklch(from var(--sm-color-gray) var(--sm-color-100)) 0 5%,
+				oklch(from var(--app-color-gray) var(--app-color-100)) 0 5%,
 				transparent 0
 			);
 		}
 	}
 
-	.sm-box.-sm-intro-room-floor {
-		--sm-box-color: oklch(from var(--sm-color-brown) var(--sm-color-400));
-		--sm-box-depth: 3cqmin;
+	.app-box.-app-intro-room-floor {
+		--app-box-color: oklch(from var(--app-color-brown) var(--app-color-400));
+		--app-box-depth: 100cqw;
 
-		position: absolute;
-		inset: 0;
-		transform: rotatex(-0.25turn);
-		transform-origin: left bottom;
+		grid-column: 1 / span 3;
+		grid-row: 3 / 3;
 
-		& > .-back {
+		& > .-top {
 			background-blend-mode: overlay;
 			background:
 				url('../../images/flooring.svg') 0 0 / cover,
-				var(--sm-gradient-planks) -2px -2px / 12.5cqmin 12.5cqmin,
-				oklch(from var(--sm-color-brown) var(--sm-color-300));
+				var(--app-gradient-planks) -2px -2px / 12.5cqw 12.5cqw,
+				oklch(from var(--app-color-brown) var(--app-color-300));
+
+			&::after {
+				content: '';
+				position: absolute;
+				inset: 25.25cqw;
+				transform: translatez(0.5px) rotate(-0.05turn);
+				background-color: oklch(from var(--app-color-gray) var(--app-color-800) / 25%);
+				filter: blur(2px);
+				mix-blend-mode: multiply;
+			}
 		}
 	}
 
-	.sm-fridge.-sm-intro-fridge {
-		position: absolute;
-		inset: auto auto 0 50%;
-		height: 80cqmin;
-		width: 50cqmin;
-		transform: translatex(-50%) translatez(20cqmin) rotatey(0.05turn);
-		transform-origin: center bottom 25cqmin;
+	.app-box.-app-intro-room-fridge {
+		grid-column: 2;
+		grid-row: 2;
+
+		transform: translatez(25cqw) rotatey(0.05turn);
+		transform-origin: center bottom 25cqw;
 	}
 }

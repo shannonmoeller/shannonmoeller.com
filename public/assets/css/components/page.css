@@ -1,15 +1,15 @@
-@layer sm.components {
-	.sm-app {
+@layer app.components {
+	.app-page {
 		height: 100%;
 		overflow: hidden auto;
 		perspective: calc(1000px + 100vmax);
 		perspective-origin: 30vw 30vw;
 
-		background: var(--sm-color-background);
+		background: var(--app-color-background);
 		border-top: 0.5vmax solid;
-		border-image: var(--sm-gradient-stripes) 1;
-		color: var(--sm-color-foreground);
-		font: 300 1rem / 1.3 var(--sm-font-body);
+		border-image: var(--app-gradient-stripes) 1;
+		color: var(--app-color-foreground);
+		font: 300 1rem / 1.3 var(--app-font-body);
 
 		@media (min-width: 720px) or (orientation: landscape) {
 			perspective-origin: 30vw 5vw;

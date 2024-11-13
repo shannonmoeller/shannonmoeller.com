@@ -1,81 +1,47 @@
 import { define } from '../utils/define.js';
 
-let COLOR_SCHEME_KEY = '@shannonmoeller/shannonmoeller.com:COLOR_SCHEME';
+let COLOR_SCHEME_KEY = 'COLOR_SCHEME';
 
-let ColorScheme = {
+let ColorScheme = /** @type {const} */ ({
 	LIGHT: 'LIGHT',
 	DARK: 'DARK',
 	SYSTEM: 'SYSTEM',
-};
-
-let ColorSchemeClass = {
-	LIGHT: 'sm--colorSchemeLight',
-	DARK: 'sm--colorSchemeDark',
-};
-
-let mediaPrefersDark = matchMedia('(prefers-color-scheme: dark)');
+});
 
 function getColorScheme() {
-	let prevColorScheme = localStorage.getItem(COLOR_SCHEME_KEY);
+	let value = localStorage.getItem(COLOR_SCHEME_KEY);
 
-	return ColorScheme[prevColorScheme] ?? ColorScheme.SYSTEM;
+	return Object.values(ColorScheme).find((x) => x === value) ?? ColorScheme.SYSTEM;
 }
 
-function setColorScheme(colorScheme) {
-	let nextColorScheme = ColorScheme[colorScheme] ?? ColorScheme.SYSTEM;
+/**
+ * @param {string} value
+ */
+function setColorScheme(value) {
+	let scheme = Object.values(ColorScheme).find((x) => x === value) ?? ColorScheme.SYSTEM;
 
-	return localStorage.setItem(COLOR_SCHEME_KEY, nextColorScheme);
+	return localStorage.setItem(COLOR_SCHEME_KEY, scheme);
 }
 
 function updateColorScheme() {
 	let { classList } = document.documentElement;
 	let colorScheme = getColorScheme();
 
-	switch (colorScheme) {
-		case ColorScheme.DARK: {
-			setColorScheme(ColorScheme.DARK);
-
-			classList.remove(ColorSchemeClass.LIGHT);
-			classList.add(ColorSchemeClass.DARK);
-
-			break;
-		}
-
-		case ColorScheme.LIGHT: {
-			setColorScheme(ColorScheme.LIGHT);
-
-			classList.remove(ColorSchemeClass.DARK);
-			classList.add(ColorSchemeClass.LIGHT);
-
-			break;
-		}
-
-		default: {
-			setColorScheme(ColorScheme.SYSTEM);
-
-			if (mediaPrefersDark.matches) {
-				classList.remove(ColorSchemeClass.LIGHT);
-				classList.add(ColorSchemeClass.DARK);
-			} else {
-				classList.remove(ColorSchemeClass.DARK);
-				classList.add(ColorSchemeClass.LIGHT);
-			}
-
-			break;
-		}
-	}
+	classList.toggle('app--colorSchemeLight', colorScheme === ColorScheme.LIGHT);
+	classList.toggle('app--colorSchemeDark', colorScheme === ColorScheme.DARK);
 }
 
 updateColorScheme();
 
-mediaPrefersDark.addEventListener('change', () => {
-	updateColorScheme();
-});
-
-define('sm-color-scheme', (el) => {
+define('app-color-scheme', (el) => {
 	el.addEventListener('click', (event) => {
-		setColorScheme(event.target.closest('button').value);
-		updateColorScheme();
+		let target = event.target instanceof Element ? event.target : null;
+		let value = target && target.closest('button')?.value;
+
+		if (value) {
+			setColorScheme(value);
+			updateColorScheme();
+		}
 	});
 
 	el.innerHTML = /* html */ `

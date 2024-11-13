@@ -1,5 +1,5 @@
 @layer app.components {
-	.app-resume {
+	.app-story {
 		display: grid;
 		min-height: 166cqw;
 
