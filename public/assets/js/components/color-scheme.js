@@ -36,16 +36,20 @@ function updateColorScheme() {
 updateColorScheme();
 
 define('app-color-scheme', (el) => {
-	let currentColorScheme = getColorScheme();
 	let input = el.querySelector('input');
 
 	if (!input) return;
 
-	// prettier-ignore
-	input.checked =
-		currentColorScheme === ColorScheme.LIGHT ? true :
-		currentColorScheme === ColorScheme.DARK ? false :
-		lightColorSchemeMedia.matches;
+	switch (getColorScheme()) {
+		case ColorScheme.LIGHT:
+			input.checked = true;
+			break;
+		case ColorScheme.DARK:
+			input.checked = false;
+			break;
+		default:
+			input.checked = lightColorSchemeMedia.matches;
+	}
 
 	el.addEventListener('click', (event) => {
 		if (!(event instanceof MouseEvent)) return;
@@ -58,5 +62,11 @@ define('app-color-scheme', (el) => {
 		}
 
 		updateColorScheme();
+	});
+
+	lightColorSchemeMedia.addEventListener('change', () => {
+		if (getColorScheme() === ColorScheme.SYSTEM) {
+			input.checked = lightColorSchemeMedia.matches;
+		}
 	});
 });
