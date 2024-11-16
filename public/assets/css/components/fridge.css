@@ -224,16 +224,16 @@
 
 		grid-area: 1 / 1;
 		margin: 20%;
-		transform: translatez(35cqw);
+		transform: translatez(36cqw);
 	}
 
 	.app-box.-app-fridge-bottle-neck {
 		--app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
-		--app-box-depth: 10cqw;
+		--app-box-depth: 12cqw;
 
 		grid-area: 1 / 1;
 		margin: 20%;
-		transform: translatez(25cqw);
+		transform: translatez(24cqw);
 
 		& > .-bottom {
 			background-image: var(--app-gradient-surfaceGloss), var(--app-gradient-label);
@@ -247,7 +247,7 @@
 
 	.app-box.-app-fridge-bottle-body {
 		--app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
-		--app-box-depth: 25cqw;
+		--app-box-depth: 24cqw;
 
 		grid-area: 1 / 1;
 

@@ -1,0 +1,15 @@
+/* TEAM */
+
+Name: Shannon Moeller
+Email: me@shannonmoeller.com
+Location: Denver, CO
+
+/* THANKS */
+
+Name: Alessio Laiso
+Reason: "Aleo" font
+License: https://fonts.google.com/specimen/Aleo/license
+
+Name: Font Diner
+Reason: "Permenant Marker" font
+License: https://fonts.google.com/specimen/Permanent+Marker/license
