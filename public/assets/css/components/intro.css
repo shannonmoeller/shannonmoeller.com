@@ -29,7 +29,7 @@
 	}
 
 	.app-intro-greeting {
-		font-size: 8cqw;
+		font-size: max(1rem, 0.75rem, 8cqw);
 	}
 
 	.app-intro-name {
@@ -41,8 +41,8 @@
 		}
 
 		& > strong {
-			color: oklch(from var(--app-color-green) var(--app-color-300));
-			font: 400 14cqw / 1 var(--app-font-display);
+			color: var(--app-color-foregroundAccent);
+			font: 400 max(1em, 14cqw) / 1 var(--app-font-display);
 		}
 	}
 
@@ -81,6 +81,7 @@
 		--app-box-depth: 100cqh;
 
 		container-type: size;
+		position: relative;
 		display: grid;
 		grid: 1fr 6fr 3cqh / 1fr 2fr 1fr;
 		aspect-ratio: 1;

@@ -8,6 +8,8 @@ let ColorScheme = /** @type {const} */ ({
 	SYSTEM: 'SYSTEM',
 });
 
+let lightColorSchemeMedia = matchMedia('(prefers-color-scheme: light)');
+
 function getColorScheme() {
 	let value = localStorage.getItem(COLOR_SCHEME_KEY);
 
@@ -34,19 +36,27 @@ function updateColorScheme() {
 updateColorScheme();
 
 define('app-color-scheme', (el) => {
+	let currentColorScheme = getColorScheme();
+	let input = el.querySelector('input');
+
+	if (!input) return;
+
+	// prettier-ignore
+	input.checked =
+		currentColorScheme === ColorScheme.LIGHT ? true :
+		currentColorScheme === ColorScheme.DARK ? false :
+		lightColorSchemeMedia.matches;
+
 	el.addEventListener('click', (event) => {
-		let target = event.target instanceof Element ? event.target : null;
-		let value = target && target.closest('button')?.value;
+		if (!(event instanceof MouseEvent)) return;
 
-		if (value) {
-			setColorScheme(value);
-			updateColorScheme();
+		if (event.altKey || event.metaKey || event.shiftKey) {
+			input.checked = lightColorSchemeMedia.matches;
+			setColorScheme(ColorScheme.SYSTEM);
+		} else {
+			setColorScheme(input.checked ? ColorScheme.LIGHT : ColorScheme.DARK);
 		}
-	});
 
-	el.innerHTML = /* html */ `
-		<button value="${ColorScheme.LIGHT}">light</button>
-		<button value="${ColorScheme.DARK}">dark</button>
-		<button value="${ColorScheme.SYSTEM}">system</button>
-	`;
+		updateColorScheme();
+	});
 });

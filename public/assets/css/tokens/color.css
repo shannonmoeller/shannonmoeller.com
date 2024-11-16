@@ -3,9 +3,10 @@
 		--app-color-gray: oklch(60% 0 0);
 		--app-color-brown: oklch(60% 0.1 66);
 		--app-color-yellow: oklch(60% 0.3 116);
-		--app-color-green: oklch(60% 0.125 136);
+		--app-color-green: oklch(60% 0.15 136);
 		--app-color-blue: oklch(60% 0.15 246);
 
+		--app-color-0: 100% 0 h;
 		--app-color-50: 100% calc(c * 0.2) h;
 		--app-color-100: 90% calc(c * 0.4) h;
 		--app-color-200: 80% calc(c * 0.7) h;
@@ -23,14 +24,19 @@
 		--app-color-darker: calc(l - 0.08) c h;
 
 		--app-color-background: light-dark(
-			oklch(from var(--app-color-gray) var(--app-color-100)),
+			oklch(from var(--app-color-gray) var(--app-color-0)),
 			oklch(from var(--app-color-gray) var(--app-color-700))
+		);
+		--app-color-backgroundSecondary: light-dark(
+			oklch(from var(--app-color-gray) var(--app-color-50)),
+			oklch(from var(--app-color-gray) var(--app-color-800))
 		);
 
 		--app-color-foreground: light-dark(
 			oklch(from var(--app-color-gray) var(--app-color-700)),
 			oklch(from var(--app-color-gray) var(--app-color-100))
 		);
+		--app-color-foregroundAccent: oklch(from var(--app-color-green) var(--app-color-300));
 
 		color-scheme: light dark;
 	}

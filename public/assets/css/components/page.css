@@ -5,14 +5,33 @@
 		perspective: calc(1000px + 100vmax);
 		perspective-origin: 30vw 30vw;
 
-		background: var(--app-color-background);
 		border-top: 0.5vmax solid;
 		border-image: var(--app-gradient-stripes) 1;
-		color: var(--app-color-foreground);
-		font: 300 1rem / 1.3 var(--app-font-body);
 
 		@media (min-width: 720px) or (orientation: landscape) {
-			perspective-origin: 30vw 5vw;
+			perspective-origin: 30vw 5vmin;
+		}
+
+		& * {
+			pointer-events: none;
+		}
+
+		& a,
+		& button,
+		& h1,
+		& h2,
+		& h3,
+		& h4,
+		& h5,
+		& h6,
+		& input,
+		& label,
+		& p,
+		& summary {
+			&,
+			& * {
+				pointer-events: auto;
+			}
 		}
 	}
 }

@@ -1,0 +1,6 @@
+@layer app.tokens {
+	:root {
+		--app-size-safeInline: max(env(safe-area-inset-left), env(safe-area-inset-right));
+		--app-size-safeBlock: max(env(safe-area-inset-top), env(safe-area-inset-bottom));
+	}
+}
