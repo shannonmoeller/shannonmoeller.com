@@ -54,7 +54,7 @@
 		.app-box.-app-fridge:has(:checked, a:focus) & {
 			rotate: y -0.14turn;
 
-			@media (min-width: 720px) or (orientation: landscape) {
+			@media (min-width: 45rem) {
 				rotate: y -0.17turn;
 			}
 		}
@@ -208,13 +208,12 @@
 		:nth-child(1 of &) {
 			top: 20cqw;
 			left: 24cqw;
-			transform: rotate(0.04turn);
+			transform: rotate(0.05turn);
 		}
 
 		:nth-child(2 of &) {
 			top: 45cqw;
 			left: 48cqw;
-			transform: rotate(-0.02turn);
 		}
 	}
 

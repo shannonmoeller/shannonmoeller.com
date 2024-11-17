@@ -1,5 +1,0 @@
-@layer app.components {
-	.app-footer {
-		margin: 3em calc(3em + var(--app-size-safeInline));
-	}
-}

@@ -1,4 +1,4 @@
-/* TEAM */
+/* SELF */
 
 Name: Shannon Moeller
 Email: me@shannonmoeller.com
