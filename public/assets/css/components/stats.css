@@ -1,32 +1,32 @@
 @layer app.components {
-	.app-stats {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: baseline;
-		gap: 0 1ch;
+  .app-stats {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    gap: 0 1ch;
 
-		font-size: max(0.75rem, 0.75em);
-	}
+    font-size: max(0.75rem, 0.75em);
+  }
 
-	.app-stats-pair {
-		display: flex;
-		flex-flow: row wrap;
-		align-items: baseline;
-		gap: 0 0.25ch;
-	}
+  .app-stats-pair {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: baseline;
+    gap: 0 0.25ch;
+  }
 
-	.app-stats-key {
-		font-size: max(0.5rem, 0.5em);
-		font-weight: 700;
-		letter-spacing: 0.25ch;
-		text-transform: uppercase;
+  .app-stats-key {
+    font-size: max(0.5rem, 0.5em);
+    font-weight: 700;
+    letter-spacing: 0.25ch;
+    text-transform: uppercase;
 
-		.app-stats-value + & {
-			margin-inline-start: 1ch;
-		}
-	}
+    .app-stats-value + & {
+      margin-inline-start: 1ch;
+    }
+  }
 
-	.app-stats-value {
-		font-size: max(0.75rem, 0.75em);
-	}
+  .app-stats-value {
+    font-size: max(0.75rem, 0.75em);
+  }
 }

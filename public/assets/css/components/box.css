@@ -1,122 +1,122 @@
 @layer app.components {
-	.app-box {
-		display: block;
-		position: relative;
-	}
+  .app-box {
+    display: block;
+    position: relative;
+  }
 
-	.app-box-face {
-		--app-box-face-colorShift: var(--app-color-normal);
+  .app-box-face {
+    --app-box-face-colorShift: var(--app-color-normal);
 
-		display: block;
-		position: absolute;
-		inset: 0;
+    display: block;
+    position: absolute;
+    inset: 0;
 
-		&.-top {
-			inset: 0 0 auto 0;
-			height: var(--app-box-depth);
-			transform: rotatex(0.25turn);
-			transform-origin: top left;
+    &.-top {
+      inset: 0 0 auto 0;
+      height: var(--app-box-depth);
+      transform: rotatex(0.25turn);
+      transform-origin: top left;
 
-			&.-inner {
-				transform: translatey(-100%) rotatex(-0.25turn);
-				transform-origin: bottom left;
-			}
-		}
+      &.-inner {
+        transform: translatey(-100%) rotatex(-0.25turn);
+        transform-origin: bottom left;
+      }
+    }
 
-		&.-front {
-			transform: translatez(var(--app-box-depth));
+    &.-front {
+      transform: translatez(var(--app-box-depth));
 
-			&.-inner {
-				transform: translatez(var(--app-box-depth)) rotatex(0.5turn);
-			}
-		}
+      &.-inner {
+        transform: translatez(var(--app-box-depth)) rotatex(0.5turn);
+      }
+    }
 
-		&.-left {
-			inset: 0 auto 0 0;
-			width: var(--app-box-depth);
-			transform: rotatey(-0.25turn);
-			transform-origin: top left;
+    &.-left {
+      inset: 0 auto 0 0;
+      width: var(--app-box-depth);
+      transform: rotatey(-0.25turn);
+      transform-origin: top left;
 
-			&.-inner {
-				transform: translatex(-100%) rotatey(0.25turn);
-				transform-origin: top right;
-			}
-		}
+      &.-inner {
+        transform: translatex(-100%) rotatey(0.25turn);
+        transform-origin: top right;
+      }
+    }
 
-		&.-right {
-			inset: 0 0 0 auto;
-			width: var(--app-box-depth);
-			transform: rotatey(0.25turn);
-			transform-origin: top right;
+    &.-right {
+      inset: 0 0 0 auto;
+      width: var(--app-box-depth);
+      transform: rotatey(0.25turn);
+      transform-origin: top right;
 
-			&.-inner {
-				transform: translatex(100%) rotatey(-0.25turn);
-				transform-origin: top left;
-			}
-		}
+      &.-inner {
+        transform: translatex(100%) rotatey(-0.25turn);
+        transform-origin: top left;
+      }
+    }
 
-		&.-back {
-			transform: rotatey(0.5turn);
+    &.-back {
+      transform: rotatey(0.5turn);
 
-			&.-inner {
-				transform: unset;
-			}
-		}
+      &.-inner {
+        transform: unset;
+      }
+    }
 
-		&.-bottom {
-			inset: auto 0 0 0;
-			height: var(--app-box-depth);
-			transform: rotatex(-0.25turn);
-			transform-origin: bottom left;
+    &.-bottom {
+      inset: auto 0 0 0;
+      height: var(--app-box-depth);
+      transform: rotatex(-0.25turn);
+      transform-origin: bottom left;
 
-			&.-inner {
-				transform: translatey(100%) rotatex(0.25turn);
-				transform-origin: top left;
-			}
-		}
+      &.-inner {
+        transform: translatey(100%) rotatex(0.25turn);
+        transform-origin: top left;
+      }
+    }
 
-		&.-fill {
-			background-color: oklch(from var(--app-box-color) var(--app-box-face-colorShift));
-			transition: background-color var(--app-animation-durationSlow);
+    &.-fill {
+      background-color: oklch(from var(--app-box-color) var(--app-box-face-colorShift));
+      transition: background-color var(--app-animation-durationSlow);
 
-			&::before {
-				content: '';
-				position: absolute;
-				inset: 0.5px;
-				transform: translatez(-1px);
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0.5px;
+        transform: translatez(-1px);
 
-				background: inherit;
-			}
-		}
+        background: inherit;
+      }
+    }
 
-		&.-lighter {
-			--app-box-face-colorShift: var(--app-color-lighter);
-		}
+    &.-lighter {
+      --app-box-face-colorShift: var(--app-color-lighter);
+    }
 
-		&.-light {
-			--app-box-face-colorShift: var(--app-color-light);
-		}
+    &.-light {
+      --app-box-face-colorShift: var(--app-color-light);
+    }
 
-		&.-normal {
-			--app-box-face-colorShift: var(--app-color-normal);
-		}
+    &.-normal {
+      --app-box-face-colorShift: var(--app-color-normal);
+    }
 
-		&.-dark {
-			--app-box-face-colorShift: var(--app-color-dark);
-		}
+    &.-dark {
+      --app-box-face-colorShift: var(--app-color-dark);
+    }
 
-		&.-darker {
-			--app-box-face-colorShift: var(--app-color-darker);
-		}
+    &.-darker {
+      --app-box-face-colorShift: var(--app-color-darker);
+    }
 
-		&.-gloss {
-			background-blend-mode: overlay;
-			background-image: var(--app-gradient-surfaceGloss);
-		}
+    &.-gloss {
+      background-blend-mode: overlay;
+      background-image: var(--app-gradient-surfaceGloss);
+    }
 
-		&.-matte {
-			background-blend-mode: overlay;
-			background-image: var(--app-gradient-surfaceMatte);
-		}
-	}
+    &.-matte {
+      background-blend-mode: overlay;
+      background-image: var(--app-gradient-surfaceMatte);
+    }
+  }
 }

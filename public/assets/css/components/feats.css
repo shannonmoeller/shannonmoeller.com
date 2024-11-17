@@ -1,105 +1,105 @@
 @layer app.components {
-	.app-feats {
-		display: flex;
-		flex-flow: column;
-		gap: 5cqw;
-		padding: 0 calc(5cqw + var(--app-size-safeInline)) 20cqw;
+  .app-feats {
+    display: flex;
+    flex-flow: column;
+    gap: 5cqw;
+    padding: 0 calc(5cqw + var(--app-size-safeInline)) 20cqw;
 
-		@media (min-width: 45rem) {
-			flex-flow: row;
-			justify-content: space-around;
-			padding: 0 calc(5cqw + var(--app-size-safeInline)) 12cqw;
-		}
+    @media (min-width: 45rem) {
+      flex-flow: row;
+      justify-content: space-around;
+      padding: 0 calc(5cqw + var(--app-size-safeInline)) 12cqw;
+    }
 
-		@media (min-width: 64rem) {
-			padding: 0 calc(7.5cqw + var(--app-size-safeInline)) 10cqw;
-		}
-	}
+    @media (min-width: 64rem) {
+      padding: 0 calc(7.5cqw + var(--app-size-safeInline)) 10cqw;
+    }
+  }
 
-	.app-feats-section {
-		container-type: inline-size;
-		display: grid;
-		grid-template-columns: 1fr 9fr;
-		width: 66%;
+  .app-feats-section {
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    width: 66%;
 
-		background-color: var(--app-color-backgroundSecondary);
+    background-color: var(--app-color-backgroundSecondary);
 
-		:nth-child(1 of &) {
-			align-self: start;
-			transform: rotatey(0.03turn);
-		}
+    :nth-child(1 of &) {
+      align-self: start;
+      transform: rotatey(0.03turn);
+    }
 
-		:nth-child(2 of &) {
-			align-self: center;
-			transform: rotatey(0turn);
-		}
+    :nth-child(2 of &) {
+      align-self: center;
+      transform: rotatey(0turn);
+    }
 
-		:nth-child(3 of &) {
-			align-self: end;
-			transform: rotatey(-0.03turn);
-		}
+    :nth-child(3 of &) {
+      align-self: end;
+      transform: rotatey(-0.03turn);
+    }
 
-		@media (min-width: 45rem) {
-			align-self: center;
+    @media (min-width: 45rem) {
+      align-self: center;
 
-			:nth-child(1 of &) {
-				transform: translatex(1.6cqw) translatey(-8cqw) translatez(24cqw) rotatey(0.03turn);
-				transform-origin: right center;
-			}
+      :nth-child(1 of &) {
+        transform: translatex(1.6cqw) translatey(-8cqw) translatez(24cqw) rotatey(0.03turn);
+        transform-origin: right center;
+      }
 
-			:nth-child(2 of &) {
-				transform: translatex(0cqw) translatey(-4cqw) translatez(12cqw) rotatey(0turn);
-				transform-origin: center center;
-			}
+      :nth-child(2 of &) {
+        transform: translatex(0cqw) translatey(-4cqw) translatez(12cqw) rotatey(0turn);
+        transform-origin: center center;
+      }
 
-			:nth-child(3 of &) {
-				transform: translatex(0cqw) translatey(0cqw) translatez(0cqw) rotatey(-0.03turn);
-				transform-origin: left center;
-			}
-		}
+      :nth-child(3 of &) {
+        transform: translatex(0cqw) translatey(0cqw) translatez(0cqw) rotatey(-0.03turn);
+        transform-origin: left center;
+      }
+    }
 
-		@media (min-width: 64rem) {
-			width: 25%;
-		}
-	}
+    @media (min-width: 64rem) {
+      width: 25%;
+    }
+  }
 
-	.app-box.-app-feats-section-head {
-		--app-box-depth: 10cqw;
+  .app-box.-app-feats-section-head {
+    --app-box-depth: 10cqw;
 
-		color: var(--app-color-foregroundOnColor);
-		font-size: max(0.75rem, 4cqw);
+    color: var(--app-color-foregroundOnColor);
+    font-size: max(0.75rem, 4cqw);
 
-		&.-green {
-			--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
-		}
+    &.-green {
+      --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    }
 
-		&.-blue {
-			--app-box-color: oklch(from var(--app-color-blue) var(--app-color-400));
-		}
+    &.-blue {
+      --app-box-color: oklch(from var(--app-color-blue) var(--app-color-400));
+    }
 
-		&.-gray {
-			--app-box-color: oklch(from var(--app-color-gray) var(--app-color-400));
-		}
+    &.-gray {
+      --app-box-color: oklch(from var(--app-color-gray) var(--app-color-400));
+    }
 
-		& > .-front {
-			padding: 25% 0;
-			text-align: center;
+    & > .-front {
+      padding: 25% 0;
+      text-align: center;
 
-			& > svg {
-				transform: translatez(1px);
-			}
-		}
-	}
+      & > svg {
+        transform: translatez(1px);
+      }
+    }
+  }
 
-	.app-feats-item {
-		display: block;
-		margin: 4cqw;
+  .app-feats-item {
+    display: block;
+    margin: 4cqw;
 
-		font-size: max(0.75rem, 6cqw);
-		text-wrap: balance;
+    font-size: max(0.75rem, 6cqw);
+    text-wrap: balance;
 
-		&:hover {
-			color: var(--app-color-foregroundLink);
-		}
-	}
+    &:hover {
+      color: var(--app-color-foregroundLink);
+    }
+  }
 }

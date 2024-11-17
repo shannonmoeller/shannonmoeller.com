@@ -1,0 +1,5 @@
+@layer app.components {
+  .app-graph {
+    display: contents;
+  }
+}

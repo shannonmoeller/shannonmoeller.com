@@ -1,5 +1,5 @@
 @layer app.utils {
-	.app--nobr {
-		display: inline-block;
-	}
+  .app--nobr {
+    display: inline-block;
+  }
 }

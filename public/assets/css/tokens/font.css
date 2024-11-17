@@ -1,25 +1,25 @@
 @layer app.tokens {
-	@font-face {
-		font-display: fallback;
-		font-family: 'aleo';
-		src: url('../../fonts/aleo.ttf');
-	}
+  @font-face {
+    font-display: fallback;
+    font-family: 'aleo';
+    src: url('../../fonts/aleo.ttf');
+  }
 
-	@font-face {
-		font-display: fallback;
-		font-family: 'aleo';
-		font-style: italic;
-		src: url('../../fonts/aleo-italic.ttf');
-	}
+  @font-face {
+    font-display: fallback;
+    font-family: 'aleo';
+    font-style: italic;
+    src: url('../../fonts/aleo-italic.ttf');
+  }
 
-	@font-face {
-		font-display: fallback;
-		font-family: 'marker';
-		src: url('../../fonts/marker.ttf');
-	}
+  @font-face {
+    font-display: fallback;
+    font-family: 'marker';
+    src: url('../../fonts/marker.ttf');
+  }
 
-	:root {
-		--app-font-body: 'aleo', ui-sans-serif, system-ui, sans-serif;
-		--app-font-display: 'marker', ui-sans-serif, system-ui, sans-serif;
-	}
+  :root {
+    --app-font-body: 'aleo', ui-sans-serif, system-ui, sans-serif;
+    --app-font-display: 'marker', ui-sans-serif, system-ui, sans-serif;
+  }
 }

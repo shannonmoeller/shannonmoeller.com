@@ -1,40 +1,41 @@
 @layer app.components {
-	.app-page {
-		height: 100%;
-		overflow: hidden auto;
-		perspective: calc(1000px + 100vmax);
-		perspective-origin: 30vw 30vw;
+  .app-page {
+    height: 100%;
+    overflow: hidden auto;
+    perspective: calc(1000px + 100vmax);
+    perspective-origin: 30vw 30vw;
 
-		border-top: 0.5vmax solid;
-		border-image: var(--app-gradient-stripes) 1;
+    border-top: 0.5vmax solid;
+    border-image: var(--app-gradient-stripes) 1;
 
-		@media (min-width: 45rem) {
-			perspective-origin: 30vw 5vmin;
-		}
+    @media (min-width: 45rem) {
+      perspective-origin: 30vw 5vmin;
+    }
 
-		& * {
-			pointer-events: none;
-		}
+    & * {
+      pointer-events: none;
+    }
 
-		& a,
-		& button,
-		& h1,
-		& h2,
-		& h3,
-		& h4,
-		& h5,
-		& h6,
-		& input,
-		& label,
-		& ol,
-		& p,
-		& summary,
-		& table,
-		& ul {
-			&,
-			& * {
-				pointer-events: auto;
-			}
-		}
-	}
+    & a,
+    & button,
+    & figure,
+    & h1,
+    & h2,
+    & h3,
+    & h4,
+    & h5,
+    & h6,
+    & input,
+    & label,
+    & ol,
+    & p,
+    & summary,
+    & table,
+    & ul {
+      &,
+      & * {
+        pointer-events: auto;
+      }
+    }
+  }
 }

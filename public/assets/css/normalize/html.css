@@ -1,73 +1,76 @@
 @layer app.normalize {
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-		padding: unset;
-		margin: unset;
-		backface-visibility: hidden;
-		transform-style: preserve-3d;
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    padding: unset;
+    margin: unset;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 
-		background: unset;
-		border: unset;
-		caret-color: currentcolor;
-		color: inherit;
-		font: inherit;
-		list-style: none;
-		outline: unset;
-		outline-offset: unset;
-		text-decoration: inherit;
-		vertical-align: baseline;
-	}
+    background: unset;
+    border: unset;
+    caret-color: currentcolor;
+    color: inherit;
+    font: inherit;
+    outline: unset;
+    outline-offset: unset;
+    text-decoration: inherit;
+    vertical-align: baseline;
+  }
 
-	:where(:focus-visible) {
-		outline: 0.2em solid;
-		outline-offset: 0.2em;
-	}
+  :where(:focus-visible) {
+    outline: 0.2em solid;
+    outline-offset: 0.2em;
+  }
 
-	:where([hidden]) {
-		display: none !important;
-	}
+  :where([hidden]) {
+    display: none !important;
+  }
 
-	html {
-		height: 100%;
-		overflow: hidden;
-	}
+  :where(dl, ol, ul) {
+    list-style: none;
+  }
 
-	body {
-		height: 100%;
-		overflow: hidden;
+  html {
+    height: 100%;
+    overflow: hidden;
+  }
 
-		background: var(--app-color-background);
-		background-image: var(--app-gradient-background);
-		background-blend-mode: multiply;
-		color: var(--app-color-foreground);
-		font: 300 1rem / 1.3 var(--app-font-body);
+  body {
+    height: 100%;
+    overflow: hidden;
 
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		font-synthesis: none;
-		-webkit-text-size-adjust: 100%;
-		text-size-adjust: 100%;
-	}
+    background: var(--app-color-background);
+    background-image: var(--app-gradient-background);
+    background-blend-mode: multiply;
+    color: var(--app-color-foreground);
+    font: 300 1rem / 1.3 var(--app-font-body);
 
-	em:where(:not([class])) {
-		font-style: italic;
-	}
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-synthesis: none;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
 
-	strong:where(:not([class])) {
-		font-weight: 700;
-	}
+  em:where(:not([class])) {
+    font-style: italic;
+  }
 
-	svg:where(:not([class])) {
-		display: inline-block;
-		aspect-ratio: 1;
-		width: 1lh;
-		vertical-align: middle;
-	}
+  strong:where(:not([class])) {
+    font-weight: 700;
+  }
 
-	app-color-scheme,
-	app-copyright {
-		display: contents;
-	}
+  svg:where(:not([class])) {
+    display: inline-block;
+    aspect-ratio: 1;
+    width: 1lh;
+    vertical-align: middle;
+  }
+
+  app-color-scheme,
+  app-copyright {
+    display: contents;
+  }
 }
