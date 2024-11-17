@@ -36,6 +36,10 @@
 			oklch(from var(--app-color-gray) var(--app-color-700)),
 			oklch(from var(--app-color-gray) var(--app-color-100))
 		);
+		--app-color-foregroundSecondary: light-dark(
+			oklch(from var(--app-color-gray) var(--app-color-500)),
+			oklch(from var(--app-color-gray) var(--app-color-300))
+		);
 		--app-color-foregroundAccent: light-dark(
 			oklch(from var(--app-color-green) var(--app-color-300)),
 			oklch(from var(--app-color-green) var(--app-color-300))

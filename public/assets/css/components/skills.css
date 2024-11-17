@@ -1,0 +1,79 @@
+@layer app.components {
+	.app-skills {
+		grid-column: 1 / span 9;
+		display: grid;
+		grid-template-columns: subgrid;
+
+		font-size: max(0.75rem, 1.5cqw);
+
+		&::before,
+		&::after {
+			padding-block-end: 0.5ch;
+
+			color: var(--app-color-foregroundSecondary);
+			font-size: max(0.625rem, 1cqw);
+			font-weight: 700;
+			letter-spacing: 0.25ch;
+			text-transform: uppercase;
+		}
+
+		&::before {
+			content: attr(data-year-start);
+			grid-column: 1;
+			grid-row: 1;
+			margin-left: calc((100vw - 100cqw) / -2);
+			padding-inline-start: 1ch;
+		}
+
+		&::after {
+			content: attr(data-year-end);
+			grid-column: 6;
+			grid-row: 1;
+
+			text-align: right;
+
+			@media (min-width: 45rem) {
+				grid-column: 7;
+			}
+
+			@media (min-width: 64rem) {
+				grid-column: 8;
+			}
+		}
+
+		& > li {
+			display: contents;
+		}
+	}
+
+	.app-timeline.-app-skills-timeline {
+		grid-column: 1 / span 6;
+
+		@media (min-width: 45rem) {
+			grid-column: 1 / span 7;
+		}
+
+		@media (min-width: 64rem) {
+			grid-column: 1 / span 8;
+			margin-left: calc((100vw - 100cqw) / -2);
+		}
+	}
+
+	.app-skills-item {
+		grid-column: 7 / span 3;
+		align-self: center;
+		padding: 0.75ch 2ch 0.25ch;
+
+		font-weight: 700;
+		letter-spacing: 0.25ch;
+		text-transform: uppercase;
+
+		@media (min-width: 45rem) {
+			grid-column: 8 / span 2;
+		}
+
+		@media (min-width: 64rem) {
+			grid-column: 9;
+		}
+	}
+}

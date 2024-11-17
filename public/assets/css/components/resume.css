@@ -15,12 +15,12 @@
 		container-type: inline-size;
 		display: grid;
 		grid-template-columns: repeat(10, minmax(0, 1fr));
-		gap: 1em 0;
+		gap: max(1rem, 5cqw) 0;
 
-		& > * {
+		& > :where(:not([class])) {
 			grid-column: 2 / span 8;
 
-			font-size: max(1rem, 4cqw);
+			font-size: max(1rem, 2.5cqw);
 		}
 
 		& > h2 {
@@ -31,7 +31,7 @@
 		}
 
 		@media (min-width: 45rem) {
-			& > * {
+			& > :where(:not([class])) {
 				grid-column: 3 / span 7;
 
 				font-size: max(1rem, 2.5cqw);
@@ -46,7 +46,7 @@
 		}
 
 		@media (min-width: 64rem) {
-			& > * {
+			& > :where(:not([class])) {
 				grid-column: 3 / span 6;
 
 				font-size: max(1rem, 2cqw);
@@ -56,6 +56,21 @@
 				grid-column: 1 / span 2;
 				text-align: right;
 			}
+		}
+	}
+
+	.app-resume-aside {
+		grid-column: 2 / span 8;
+
+		font-size: max(0.75rem, 1.5cqw);
+		color: var(--app-color-foregroundSecondary);
+
+		@media (min-width: 45rem) {
+			grid-column: 3 / span 7;
+		}
+
+		@media (min-width: 64rem) {
+			grid-column: 3 / span 6;
 		}
 	}
 }

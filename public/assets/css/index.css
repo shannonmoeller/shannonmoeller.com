@@ -13,10 +13,13 @@
 @import './components/intro.css';
 @import './components/page.css';
 @import './components/resume.css';
+@import './components/skills.css';
 @import './components/stats.css';
 @import './components/story.css';
 @import './components/switch.css';
+@import './components/timeline.css';
 
 @import './utils/dev.css';
+@import './utils/hidden.css';
 @import './utils/nobr.css';
 @import './utils/visually-hidden.css';

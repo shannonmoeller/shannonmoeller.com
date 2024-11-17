@@ -51,15 +51,15 @@
 		text-size-adjust: 100%;
 	}
 
-	em:not([class]) {
+	em:where(:not([class])) {
 		font-style: italic;
 	}
 
-	strong:not([class]) {
+	strong:where(:not([class])) {
 		font-weight: 700;
 	}
 
-	svg:not([class]) {
+	svg:where(:not([class])) {
 		display: inline-block;
 		aspect-ratio: 1;
 		width: 1lh;

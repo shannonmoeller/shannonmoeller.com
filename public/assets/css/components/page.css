@@ -26,8 +26,11 @@
 		& h6,
 		& input,
 		& label,
+		& ol,
 		& p,
-		& summary {
+		& summary,
+		& table,
+		& ul {
 			&,
 			& * {
 				pointer-events: auto;
