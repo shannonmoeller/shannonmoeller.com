@@ -3,14 +3,11 @@
 		display: flex;
 		flex-flow: column;
 		gap: 5cqw;
-		margin-inline: calc(5cqw + var(--app-size-safeInline));
-		padding: 0 0 10cqw;
+		padding: 0 calc(5cqw + var(--app-size-safeInline)) 10cqw;
 
 		@media (min-width: 45rem) {
 			flex-flow: row;
 			justify-content: space-around;
-			margin-inline: var(--app-size-safeInline);
-			padding: 0 5cqw 10cqw;
 		}
 
 		@media (min-width: 64rem) {
@@ -21,11 +18,10 @@
 	.app-feats-section {
 		container-type: inline-size;
 		display: grid;
-		grid-template-columns: 2em auto;
-		width: 75%;
+		grid-template-columns: 1fr 9fr;
+		width: 66%;
 
 		background-color: var(--app-color-backgroundSecondary);
-		font-size: max(0.75rem, 1.2cqw);
 
 		:nth-child(1 of &) {
 			align-self: start;
@@ -44,7 +40,6 @@
 
 		@media (min-width: 45rem) {
 			align-self: center;
-			width: 33%;
 
 			:nth-child(1 of &) {
 				transform: translatex(1.6cqw) translatey(-8cqw) translatez(24cqw) rotatey(0.03turn);
@@ -71,6 +66,7 @@
 		--app-box-depth: 10cqw;
 
 		color: var(--app-color-foregroundOnColor);
+		font-size: max(0.75rem, 4cqw);
 
 		&.-green {
 			--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
@@ -85,7 +81,7 @@
 		}
 
 		& > .-front {
-			padding: 0.4em 0;
+			padding: 25% 0;
 			text-align: center;
 
 			& > svg {
@@ -94,10 +90,11 @@
 		}
 	}
 
-	.app-feats-feat {
+	.app-feats-item {
 		display: block;
-		margin: 0.75em 1em;
+		margin: 4cqw;
 
+		font-size: max(0.75rem, 6cqw);
 		text-wrap: balance;
 
 		&:hover {

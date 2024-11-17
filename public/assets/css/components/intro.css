@@ -51,6 +51,7 @@
 
 	.app-intro-profiles {
 		display: flex;
+		flex-flow: row wrap;
 		gap: 8cqw;
 		margin-block-start: 8cqw;
 		transform: translatex(3cqw) translatey(-3cqw) translatez(40cqw);
@@ -67,6 +68,7 @@
 		container-type: size;
 		display: grid;
 		place-content: end center;
+		min-height: 5rem;
 
 		-webkit-user-select: none;
 		user-select: none;
