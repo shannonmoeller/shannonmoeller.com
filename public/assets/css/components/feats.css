@@ -2,25 +2,49 @@
 	.app-feats {
 		display: flex;
 		flex-flow: column;
-		margin-inline: var(--app-size-safeInline);
+		gap: 5cqw;
+		margin-inline: calc(5cqw + var(--app-size-safeInline));
+		padding: 0 0 10cqw;
 
 		@media (min-width: 45rem) {
 			flex-flow: row;
 			justify-content: space-around;
+			margin-inline: var(--app-size-safeInline);
 			padding: 0 5cqw 10cqw;
+		}
+
+		@media (min-width: 64rem) {
+			margin-inline: calc(2.5cqw + var(--app-size-safeInline));
 		}
 	}
 
 	.app-feats-section {
 		container-type: inline-size;
 		display: grid;
-		grid-template-columns: min-content auto;
+		grid-template-columns: 2em auto;
+		width: 75%;
 
 		background-color: var(--app-color-backgroundSecondary);
 		font-size: max(0.75rem, 1.2cqw);
 
+		:nth-child(1 of &) {
+			align-self: start;
+			transform: rotatey(0.03turn);
+		}
+
+		:nth-child(2 of &) {
+			align-self: center;
+			transform: rotatey(0turn);
+		}
+
+		:nth-child(3 of &) {
+			align-self: end;
+			transform: rotatey(-0.03turn);
+		}
+
 		@media (min-width: 45rem) {
-			width: 28%;
+			align-self: center;
+			width: 33%;
 
 			:nth-child(1 of &) {
 				transform: translatex(1.6cqw) translatey(-8cqw) translatez(24cqw) rotatey(0.03turn);
@@ -43,27 +67,38 @@
 		}
 	}
 
-	.app-feats-section-head {
-		padding: 0.75em 0.5em;
+	.app-box.-app-feats-section-head {
+		--app-box-depth: 10cqw;
 
 		color: var(--app-color-foregroundOnColor);
 
 		&.-green {
-			background-color: oklch(from var(--app-color-green) var(--app-color-400));
+			--app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
 		}
 
 		&.-blue {
-			background-color: oklch(from var(--app-color-blue) var(--app-color-400));
+			--app-box-color: oklch(from var(--app-color-blue) var(--app-color-400));
 		}
 
 		&.-gray {
-			background-color: oklch(from var(--app-color-gray) var(--app-color-400));
+			--app-box-color: oklch(from var(--app-color-gray) var(--app-color-400));
+		}
+
+		& > .-front {
+			padding: 0.4em 0;
+			text-align: center;
+
+			& > svg {
+				transform: translatez(1px);
+			}
 		}
 	}
 
 	.app-feats-feat {
 		display: block;
-		margin: 0.75em;
+		margin: 0.75em 1em;
+
+		text-wrap: balance;
 
 		&:hover {
 			color: var(--app-color-foregroundLink);
