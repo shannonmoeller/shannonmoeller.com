@@ -3,15 +3,16 @@
 		display: flex;
 		flex-flow: column;
 		gap: 5cqw;
-		padding: 0 calc(5cqw + var(--app-size-safeInline)) 10cqw;
+		padding: 0 calc(5cqw + var(--app-size-safeInline)) 20cqw;
 
 		@media (min-width: 45rem) {
 			flex-flow: row;
 			justify-content: space-around;
+			padding: 0 calc(5cqw + var(--app-size-safeInline)) 12cqw;
 		}
 
 		@media (min-width: 64rem) {
-			margin-inline: calc(2.5cqw + var(--app-size-safeInline));
+			padding: 0 calc(7.5cqw + var(--app-size-safeInline)) 10cqw;
 		}
 	}
 
