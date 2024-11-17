@@ -15,7 +15,7 @@
 		container-type: inline-size;
 		display: grid;
 		grid-template-columns: repeat(10, minmax(0, 1fr));
-		gap: max(1rem, 5cqw) 0;
+		gap: max(1rem, 4cqw) 0;
 
 		& > :where(:not([class])) {
 			grid-column: 2 / span 8;
@@ -24,8 +24,6 @@
 		}
 
 		& > h2 {
-			transform: translatez(5cqw);
-
 			color: var(--app-color-foregroundAccent);
 			font: 400 max(1rem, 2cqw) / 1 var(--app-font-display);
 		}
@@ -40,6 +38,7 @@
 			& > h2 {
 				grid-column: 1 / span 2;
 				margin-right: 2ch;
+				transform: translatez(5cqw);
 
 				text-align: right;
 			}
