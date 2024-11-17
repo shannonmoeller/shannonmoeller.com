@@ -1,5 +1,5 @@
 @layer app.utils {
-	.app--hidden {
-		display: none;
-	}
+  .app--hidden {
+    display: none;
+  }
 }

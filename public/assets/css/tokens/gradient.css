@@ -1,60 +1,60 @@
 @layer app.tokens {
-	:root {
-		--app-gradient-background: radial-gradient(
-			at 50% 30%,
-			oklch(from var(--app-color-green) var(--app-color-800) / 0%) 50%,
-			oklch(from var(--app-color-green) var(--app-color-800) / 20%) 100%
-		);
+  :root {
+    --app-gradient-background: radial-gradient(
+      at 50% 30%,
+      oklch(from var(--app-color-green) var(--app-color-800) / 0%) 50%,
+      oklch(from var(--app-color-green) var(--app-color-800) / 20%) 100%
+    );
 
-		--app-gradient-floorboard: linear-gradient(
-			to top,
-			oklch(from var(--app-color-gray) var(--app-color-50)) 0 5%,
-			transparent 0
-		);
-		--app-gradient-floorboardDark: linear-gradient(
-			to top,
-			oklch(from var(--app-color-gray) var(--app-color-100)) 0 5%,
-			transparent 0
-		);
+    --app-gradient-floorboard: linear-gradient(
+      to top,
+      oklch(from var(--app-color-gray) var(--app-color-50)) 0 5%,
+      transparent 0
+    );
+    --app-gradient-floorboardDark: linear-gradient(
+      to top,
+      oklch(from var(--app-color-gray) var(--app-color-100)) 0 5%,
+      transparent 0
+    );
 
-		--app-gradient-label: radial-gradient(
-			ellipse,
-			oklch(from var(--app-color-yellow) var(--app-color-200)) 0 40%,
-			oklch(from var(--app-color-green) var(--app-color-400)) 0 60%,
-			transparent 0
-		);
+    --app-gradient-label: radial-gradient(
+      ellipse,
+      oklch(from var(--app-color-yellow) var(--app-color-200)) 0 40%,
+      oklch(from var(--app-color-green) var(--app-color-400)) 0 60%,
+      transparent 0
+    );
 
-		--app-gradient-labelText: linear-gradient(
-			oklch(from var(--app-color-yellow) var(--app-color-100)),
-			oklch(from var(--app-color-yellow) var(--app-color-100))
-		);
+    --app-gradient-labelText: linear-gradient(
+      oklch(from var(--app-color-yellow) var(--app-color-100)),
+      oklch(from var(--app-color-yellow) var(--app-color-100))
+    );
 
-		--app-gradient-planks: linear-gradient(
-			to bottom,
-			oklch(from var(--app-color-gray) var(--app-color-200)) 0 3px,
-			oklch(from var(--app-color-gray) var(--app-color-700)) 0 5px,
-			transparent 0
-		);
+    --app-gradient-planks: linear-gradient(
+      to bottom,
+      oklch(from var(--app-color-gray) var(--app-color-200)) 0 3px,
+      oklch(from var(--app-color-gray) var(--app-color-700)) 0 5px,
+      transparent 0
+    );
 
-		--app-gradient-stripes: linear-gradient(
-			to right,
-			oklch(from var(--app-color-gray) var(--app-color-200)) 0 20%,
-			oklch(from var(--app-color-green) var(--app-color-400)) 0 40%,
-			oklch(from var(--app-color-blue) var(--app-color-400)) 0 60%,
-			oklch(from var(--app-color-brown) var(--app-color-400)) 0 80%,
-			oklch(from var(--app-color-gray) var(--app-color-800)) 0 100%
-		);
+    --app-gradient-stripes: linear-gradient(
+      to right,
+      oklch(from var(--app-color-gray) var(--app-color-200)) 0 20%,
+      oklch(from var(--app-color-green) var(--app-color-400)) 0 40%,
+      oklch(from var(--app-color-blue) var(--app-color-400)) 0 60%,
+      oklch(from var(--app-color-brown) var(--app-color-400)) 0 80%,
+      oklch(from var(--app-color-gray) var(--app-color-800)) 0 100%
+    );
 
-		--app-gradient-surfaceGloss: radial-gradient(
-			ellipse at 100% 0%,
-			oklch(from var(--app-color-gray) var(--app-color-50) / 25%) 0%,
-			oklch(from var(--app-color-gray) var(--app-color-700) / 0%) 66%
-		);
+    --app-gradient-surfaceGloss: radial-gradient(
+      ellipse at 100% 0%,
+      oklch(from var(--app-color-gray) var(--app-color-50) / 25%) 0%,
+      oklch(from var(--app-color-gray) var(--app-color-700) / 0%) 66%
+    );
 
-		--app-gradient-surfaceMatte: radial-gradient(
-			ellipse at 100% 0%,
-			oklch(from var(--app-color-gray) var(--app-color-50) / 5%) 0%,
-			oklch(from var(--app-color-gray) var(--app-color-700) / 0%) 66%
-		);
-	}
+    --app-gradient-surfaceMatte: radial-gradient(
+      ellipse at 100% 0%,
+      oklch(from var(--app-color-gray) var(--app-color-50) / 5%) 0%,
+      oklch(from var(--app-color-gray) var(--app-color-700) / 0%) 66%
+    );
+  }
 }

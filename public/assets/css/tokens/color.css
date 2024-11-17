@@ -1,68 +1,68 @@
 @layer app.tokens {
-	:root {
-		--app-color-gray: oklch(60% 0 0);
-		--app-color-brown: oklch(60% 0.1 66);
-		--app-color-yellow: oklch(60% 0.3 116);
-		--app-color-green: oklch(60% 0.15 136);
-		--app-color-blue: oklch(60% 0.15 246);
+  :root {
+    --app-color-gray: oklch(60% 0 0);
+    --app-color-brown: oklch(60% 0.1 66);
+    --app-color-yellow: oklch(60% 0.3 116);
+    --app-color-green: oklch(60% 0.15 136);
+    --app-color-blue: oklch(60% 0.15 246);
 
-		--app-color-0: 100% 0 h;
-		--app-color-50: 100% calc(c * 0.2) h;
-		--app-color-100: 90% calc(c * 0.4) h;
-		--app-color-200: 80% calc(c * 0.7) h;
-		--app-color-300: 70% calc(c * 0.9) h;
-		--app-color-400: 60% c h;
-		--app-color-500: 50% calc(c * 0.9) h;
-		--app-color-600: 40% calc(c * 0.7) h;
-		--app-color-700: 30% calc(c * 0.4) h;
-		--app-color-800: 20% calc(c * 0.2) h;
+    --app-color-0: 100% 0 h;
+    --app-color-50: 100% calc(c * 0.2) h;
+    --app-color-100: 90% calc(c * 0.4) h;
+    --app-color-200: 80% calc(c * 0.7) h;
+    --app-color-300: 70% calc(c * 0.9) h;
+    --app-color-400: 60% c h;
+    --app-color-500: 50% calc(c * 0.9) h;
+    --app-color-600: 40% calc(c * 0.7) h;
+    --app-color-700: 30% calc(c * 0.4) h;
+    --app-color-800: 20% calc(c * 0.2) h;
 
-		--app-color-lighter: calc(l + 0.08) c h;
-		--app-color-light: calc(l + 0.04) c h;
-		--app-color-normal: l c h;
-		--app-color-dark: calc(l - 0.04) c h;
-		--app-color-darker: calc(l - 0.08) c h;
+    --app-color-lighter: calc(l + 0.08) c h;
+    --app-color-light: calc(l + 0.04) c h;
+    --app-color-normal: l c h;
+    --app-color-dark: calc(l - 0.04) c h;
+    --app-color-darker: calc(l - 0.08) c h;
 
-		--app-color-background: light-dark(
-			oklch(from var(--app-color-gray) var(--app-color-0)),
-			oklch(from var(--app-color-gray) var(--app-color-700))
-		);
-		--app-color-backgroundSecondary: light-dark(
-			oklch(from var(--app-color-gray) var(--app-color-100) / 40%),
-			oklch(from var(--app-color-gray) var(--app-color-800) / 40%)
-		);
+    --app-color-background: light-dark(
+      oklch(from var(--app-color-gray) var(--app-color-0)),
+      oklch(from var(--app-color-gray) var(--app-color-700))
+    );
+    --app-color-backgroundSecondary: light-dark(
+      oklch(from var(--app-color-gray) var(--app-color-100) / 40%),
+      oklch(from var(--app-color-gray) var(--app-color-800) / 40%)
+    );
 
-		--app-color-foreground: light-dark(
-			oklch(from var(--app-color-gray) var(--app-color-700)),
-			oklch(from var(--app-color-gray) var(--app-color-100))
-		);
-		--app-color-foregroundSecondary: light-dark(
-			oklch(from var(--app-color-gray) var(--app-color-500)),
-			oklch(from var(--app-color-gray) var(--app-color-300))
-		);
-		--app-color-foregroundAccent: light-dark(
-			oklch(from var(--app-color-green) var(--app-color-300)),
-			oklch(from var(--app-color-green) var(--app-color-300))
-		);
-		--app-color-foregroundLink: light-dark(
-			oklch(from var(--app-color-blue) var(--app-color-500)),
-			oklch(from var(--app-color-blue) var(--app-color-300))
-		);
-		--app-color-foregroundOnColor: light-dark(
-			oklch(from var(--app-color-gray) var(--app-color-50)),
-			oklch(from var(--app-color-gray) var(--app-color-50))
-		);
+    --app-color-foreground: light-dark(
+      oklch(from var(--app-color-gray) var(--app-color-700)),
+      oklch(from var(--app-color-gray) var(--app-color-100))
+    );
+    --app-color-foregroundSecondary: light-dark(
+      oklch(from var(--app-color-gray) var(--app-color-500)),
+      oklch(from var(--app-color-gray) var(--app-color-300))
+    );
+    --app-color-foregroundAccent: light-dark(
+      oklch(from var(--app-color-green) var(--app-color-300)),
+      oklch(from var(--app-color-green) var(--app-color-300))
+    );
+    --app-color-foregroundLink: light-dark(
+      oklch(from var(--app-color-blue) var(--app-color-500)),
+      oklch(from var(--app-color-blue) var(--app-color-300))
+    );
+    --app-color-foregroundOnColor: light-dark(
+      oklch(from var(--app-color-gray) var(--app-color-50)),
+      oklch(from var(--app-color-gray) var(--app-color-50))
+    );
 
-		color-scheme: light dark;
-	}
+    color-scheme: light dark;
+  }
 
-	.app--colorSchemeDark {
-		color-scheme: dark;
-		color: var(--app-color-foreground);
-	}
+  .app--colorSchemeDark {
+    color-scheme: dark;
+    color: var(--app-color-foreground);
+  }
 
-	.app--colorSchemeLight {
-		color-scheme: light;
-		color: var(--app-color-foreground);
-	}
+  .app--colorSchemeLight {
+    color-scheme: light;
+    color: var(--app-color-foreground);
+  }
 }

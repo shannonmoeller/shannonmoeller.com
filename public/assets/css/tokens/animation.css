@@ -1,15 +1,15 @@
 @layer app.tokens {
-	:root {
-		--app-animation-durationFast: 100ms;
-		--app-animation-durationSlow: 1s;
-	}
+  :root {
+    --app-animation-durationFast: 100ms;
+    --app-animation-durationSlow: 1s;
+  }
 
-	.app--loading {
-		& *,
-		& ::before,
-		& ::after {
-			--app-animation-durationFast: 0s;
-			--app-animation-durationSlow: 0s;
-		}
-	}
+  .app--loading {
+    & *,
+    & ::before,
+    & ::after {
+      --app-animation-durationFast: 0s;
+      --app-animation-durationSlow: 0s;
+    }
+  }
 }

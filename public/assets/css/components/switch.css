@@ -1,72 +1,72 @@
 @layer app.components {
-	.app-box.-app-switch {
-		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-600));
-		--app-box-depth: 1cqw;
+  .app-box.-app-switch {
+    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-600));
+    --app-box-depth: 1cqw;
 
-		grid-column: 3;
-		grid-row: 1 / 3;
-		place-self: center;
-		aspect-ratio: 3 / 5;
-		width: 5cqw;
-		transform: translatez(calc(3cqw + 1px));
+    grid-column: 3;
+    grid-row: 1 / 3;
+    place-self: center;
+    aspect-ratio: 3 / 5;
+    width: 5cqw;
+    transform: translatez(calc(3cqw + 1px));
 
-		box-shadow: 0 1cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 30%);
-		cursor: pointer;
-		-webkit-tap-highlight-color: transparent;
+    box-shadow: 0 1cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 30%);
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
 
-		&::before {
-			content: '';
-			position: absolute;
-			inset: -20px;
-			transform: translatez(1px);
-		}
+    &::before {
+      content: '';
+      position: absolute;
+      inset: -20px;
+      transform: translatez(1px);
+    }
 
-		& > .-front {
-			display: grid;
-			place-content: center;
-		}
-	}
+    & > .-front {
+      display: grid;
+      place-content: center;
+    }
+  }
 
-	.app-box.-app-switch-knob {
-		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
-		--app-box-depth: 1cqw;
+  .app-box.-app-switch-knob {
+    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-depth: 1cqw;
 
-		grid-column: 1;
-		grid-row: 1;
-		margin: auto;
-		aspect-ratio: 1 / 2;
-		width: 1cqw;
-		transition: box-shadow var(--app-animation-durationFast);
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto;
+    aspect-ratio: 1 / 2;
+    width: 1cqw;
+    transition: box-shadow var(--app-animation-durationFast);
 
-		box-shadow: 0 2cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
+    box-shadow: 0 2cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
 
-		.app-box.-app-switch:has(:checked) & {
-			box-shadow: 0 1cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
-		}
-	}
+    .app-box.-app-switch:has(:checked) & {
+      box-shadow: 0 1cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
+    }
+  }
 
-	.app-box.-app-switch-lever {
-		--app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
-		--app-box-depth: 2.5cqw;
+  .app-box.-app-switch-lever {
+    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-depth: 2.5cqw;
 
-		grid-column: 1;
-		grid-row: 1;
-		margin: auto;
-		aspect-ratio: 1;
-		width: 1cqw;
-		transition: transform var(--app-animation-durationFast);
-		transform: rotatex(-0.125turn);
+    grid-column: 1;
+    grid-row: 1;
+    margin: auto;
+    aspect-ratio: 1;
+    width: 1cqw;
+    transition: transform var(--app-animation-durationFast);
+    transform: rotatex(-0.125turn);
 
-		.app-box.-app-switch:active & {
-			transform: rotatex(-0.1turn);
-		}
+    .app-box.-app-switch:active & {
+      transform: rotatex(-0.1turn);
+    }
 
-		.app-box.-app-switch:has(:checked) & {
-			transform: rotatex(0.125turn);
-		}
+    .app-box.-app-switch:has(:checked) & {
+      transform: rotatex(0.125turn);
+    }
 
-		.app-box.-app-switch:has(:checked):active & {
-			transform: rotatex(0.1turn);
-		}
-	}
+    .app-box.-app-switch:has(:checked):active & {
+      transform: rotatex(0.1turn);
+    }
+  }
 }

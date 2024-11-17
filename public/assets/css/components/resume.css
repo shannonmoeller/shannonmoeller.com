@@ -1,75 +1,199 @@
 @layer app.components {
-	.app-resume {
-		display: flex;
-		flex-direction: column;
-		gap: 10cqw;
-		margin-inline: var(--app-size-safeInline);
+  .app-resume {
+    display: flex;
+    flex-direction: column;
+    gap: 10cqw;
+    margin-inline: var(--app-size-safeInline);
 
-		@media (min-width: 64rem) {
-			margin-inline: auto;
-			max-width: 100rem;
-		}
-	}
+    @media (min-width: 64rem) {
+      margin-inline: auto;
+      max-width: 100rem;
+    }
+  }
 
-	.app-resume-section {
-		container-type: inline-size;
-		display: grid;
-		grid-template-columns: repeat(10, minmax(0, 1fr));
-		gap: max(1rem, 4cqw) 0;
+  .app-resume-section {
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: max(1rem, 4cqw) 0;
 
-		& > :where(:not([class])) {
-			grid-column: 2 / span 8;
+    & > :where(:not([class])) {
+      grid-column: 2 / span 8;
 
-			font-size: max(1rem, 2.5cqw);
-		}
+      font-size: max(1rem, 2.5cqw);
+    }
 
-		& > h2 {
-			color: var(--app-color-foregroundAccent);
-			font: 400 max(1rem, 2cqw) / 1 var(--app-font-display);
-		}
+    & > h2 {
+      color: var(--app-color-foregroundAccent);
+      font: 400 max(1rem, 2cqw) / 1 var(--app-font-display);
+    }
 
-		@media (min-width: 45rem) {
-			& > :where(:not([class])) {
-				grid-column: 3 / span 7;
+    @media (min-width: 45rem) {
+      & > :where(:not([class])) {
+        grid-column: 3 / span 7;
 
-				font-size: max(1rem, 2.5cqw);
-			}
+        font-size: max(1rem, 2.5cqw);
+      }
 
-			& > h2 {
-				grid-column: 1 / span 2;
-				margin-right: 2ch;
-				transform: translatez(5cqw);
+      & > h2 {
+        grid-column: 1 / span 2;
+        margin-right: 2ch;
+        transform: translatey(-0.5cqw) translatez(5cqw);
 
-				text-align: right;
-			}
-		}
+        text-align: right;
+      }
+    }
 
-		@media (min-width: 64rem) {
-			& > :where(:not([class])) {
-				grid-column: 3 / span 6;
+    @media (min-width: 64rem) {
+      & > :where(:not([class])) {
+        grid-column: 3 / span 6;
 
-				font-size: max(1rem, 2cqw);
-			}
+        font-size: max(1rem, 2cqw);
+      }
 
-			& > h2 {
-				grid-column: 1 / span 2;
-				text-align: right;
-			}
-		}
-	}
+      & > h2 {
+        grid-column: 1 / span 2;
+        text-align: right;
+      }
+    }
+  }
 
-	.app-resume-aside {
-		grid-column: 2 / span 8;
+  .app-resume-graph {
+    grid-column: 1 / span 10;
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: 1.5cqw;
 
-		font-size: max(0.75rem, 1.5cqw);
-		color: var(--app-color-foregroundSecondary);
+    @media (min-width: 45rem) {
+      grid-column: 1 / span 8;
+    }
 
-		@media (min-width: 45rem) {
-			grid-column: 3 / span 7;
-		}
+    @media (min-width: 64rem) {
+      grid-column: 1 / span 10;
+    }
+  }
 
-		@media (min-width: 64rem) {
-			grid-column: 3 / span 6;
-		}
-	}
+  .app-resume-graph-legend {
+    grid-column: 2 / span 8;
+
+    @media (min-width: 45rem) {
+      grid-column: 3 / span 5;
+    }
+
+    @media (min-width: 64rem) {
+      grid-column: 3 / span 6;
+    }
+  }
+
+  .app-stats.-app-resume-graph-legend-stats {
+    @media (min-width: 45rem) {
+      justify-content: end;
+    }
+  }
+
+  .app-resume-skills {
+    grid-column: 1 / span 10;
+    display: grid;
+    grid-template-columns: subgrid;
+    row-gap: 1px;
+
+    font-size: max(0.75rem, 1.5cqw);
+
+    & > li {
+      display: contents;
+    }
+  }
+
+  .app-timeline.-app-resume-skills-timeline {
+    grid-column: 1 / span 6;
+
+    @media (min-width: 45rem) {
+      grid-column: 1 / span 7;
+    }
+
+    @media (min-width: 64rem) {
+      grid-column: 1 / span 8;
+      margin-left: calc((100vw - 100cqw) / -2);
+    }
+  }
+
+  .app-resume-skills-item {
+    grid-column: 7 / span 4;
+    align-self: center;
+    padding: 0.75ch 2ch 0.25ch;
+
+    font-weight: 700;
+    letter-spacing: 0.25ch;
+    text-transform: uppercase;
+
+    @media (min-width: 45rem) {
+      grid-column: 8 / span 3;
+    }
+
+    @media (min-width: 64rem) {
+      grid-column: 9 / span 2;
+    }
+  }
+
+  .app-resume-aside {
+    grid-column: 2 / span 8;
+
+    font-size: max(0.75rem, 1.5cqw);
+    color: var(--app-color-foregroundSecondary);
+
+    @media (min-width: 45rem) {
+      grid-column: 3 / span 7;
+    }
+
+    @media (min-width: 64rem) {
+      grid-column: 3 / span 6;
+    }
+  }
+
+  .app-resume-job {
+    grid-column: 2 / span 8;
+    display: flex;
+    flex-flow: column;
+    gap: 2cqw;
+
+    @media (min-width: 45rem) {
+      grid-column: 3 / span 7;
+    }
+
+    @media (min-width: 64rem) {
+      grid-column: 3 / span 6;
+    }
+  }
+
+  .app-resume-job-company {
+    font-size: max(1rem, 3cqw);
+  }
+
+  .app-resume-job-role {
+    font-size: max(0.75rem, 1cqw);
+    font-weight: 700;
+    letter-spacing: 0.25ch;
+    text-transform: uppercase;
+  }
+
+  .app-resume-job-highlights {
+    margin-block-start: 1em;
+
+    font-size: max(0.75rem, 1.5cqw);
+    list-style: square outside;
+
+    & > li + li {
+      margin-block-start: 1em;
+      text-wrap: pretty;
+    }
+
+    @media (min-width: 45rem) {
+      columns: 2;
+      column-gap: 2em;
+
+      & > li {
+        break-inside: avoid;
+      }
+    }
+  }
 }

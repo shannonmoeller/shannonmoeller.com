@@ -1,9 +1,9 @@
 @layer app.utils {
-	.app--dev {
-		&,
-		& * {
-			background-color: #f003;
-			backface-visibility: visible;
-		}
-	}
+  .app--dev {
+    &,
+    & * {
+      background-color: #f003;
+      backface-visibility: visible;
+    }
+  }
 }

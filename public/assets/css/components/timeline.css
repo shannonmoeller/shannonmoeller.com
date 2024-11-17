@@ -1,78 +1,79 @@
 @layer app.components {
-	.app-timeline {
-		display: grid;
-		grid-template-columns: repeat(25, 1fr);
-	}
+  .app-timeline {
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    column-gap: 1px;
+  }
 
-	.app-timeline-year {
-		background-color: oklch(from var(--app-color-green) var(--app-color-400));
+  .app-timeline-year {
+    background-color: oklch(from var(--app-color-green) var(--app-color-400));
 
-		&.-xp0 {
-			opacity: 0%;
-		}
-		&.-xp10 {
-			opacity: 10%;
-		}
-		&.-xp20 {
-			opacity: 20%;
-		}
-		&.-xp30 {
-			opacity: 30%;
-		}
-		&.-xp40 {
-			opacity: 40%;
-		}
-		&.-xp50 {
-			opacity: 50%;
-		}
-		&.-xp60 {
-			opacity: 60%;
-		}
-		&.-xp70 {
-			opacity: 70%;
-		}
-		&.-xp80 {
-			opacity: 80%;
-		}
-		&.-xp90 {
-			opacity: 90%;
-		}
-		&.-xp100 {
-			opacity: 100%;
-		}
+    &.-xp0 {
+      opacity: 0%;
+    }
+    &.-xp10 {
+      opacity: 10%;
+    }
+    &.-xp20 {
+      opacity: 20%;
+    }
+    &.-xp30 {
+      opacity: 30%;
+    }
+    &.-xp40 {
+      opacity: 40%;
+    }
+    &.-xp50 {
+      opacity: 50%;
+    }
+    &.-xp60 {
+      opacity: 60%;
+    }
+    &.-xp70 {
+      opacity: 70%;
+    }
+    &.-xp80 {
+      opacity: 80%;
+    }
+    &.-xp90 {
+      opacity: 90%;
+    }
+    &.-xp95 {
+      opacity: 100%;
+    }
 
-		&.-use0 {
-			transform: scale(0);
-		}
-		&.-use10 {
-			transform: scale(0.1);
-		}
-		&.-use20 {
-			transform: scale(0.2);
-		}
-		&.-use30 {
-			transform: scale(0.3);
-		}
-		&.-use40 {
-			transform: scale(0.4);
-		}
-		&.-use50 {
-			transform: scale(0.5);
-		}
-		&.-use60 {
-			transform: scale(0.6);
-		}
-		&.-use70 {
-			transform: scale(0.7);
-		}
-		&.-use80 {
-			transform: scale(0.8);
-		}
-		&.-use90 {
-			transform: scale(0.9);
-		}
-		&.-use100 {
-			transform: scale(1);
-		}
-	}
+    &.-use0 {
+      transform: scale(0);
+    }
+    &.-use10 {
+      transform: scale(0.11);
+    }
+    &.-use20 {
+      transform: scale(0.21);
+    }
+    &.-use30 {
+      transform: scale(0.31);
+    }
+    &.-use40 {
+      transform: scale(0.41);
+    }
+    &.-use50 {
+      transform: scale(0.51);
+    }
+    &.-use60 {
+      transform: scale(0.61);
+    }
+    &.-use70 {
+      transform: scale(0.71);
+    }
+    &.-use80 {
+      transform: scale(0.81);
+    }
+    &.-use90 {
+      transform: scale(0.91);
+    }
+    &.-use95 {
+      transform: scale(1);
+    }
+  }
 }
