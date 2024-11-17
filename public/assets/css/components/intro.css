@@ -10,7 +10,7 @@
 			/ 1fr 8fr 1fr;
 		min-height: 166cqw;
 
-		@media (min-width: 720px) or (orientation: landscape) {
+		@media (min-width: 45rem) {
 			grid:
 				'. .    .     .' minmax(4cqw, 1fr)
 				'. .    aside .' minmax(4cqw, 1fr)
@@ -18,14 +18,17 @@
 				'. .    aside .' minmax(4cqw, 1fr)
 				'. .    .     .' minmax(4cqw, 2fr)
 				/ 1fr 3fr 5fr 1fr;
-			min-height: min(66cqw, 100cqh);
+			min-height: min(66cqw, 95cqh);
 		}
 	}
 
 	.app-intro-body {
 		grid-area: body;
 		container-type: inline-size;
-		transform: rotatey(0.03turn);
+
+		@media (min-width: 45rem) {
+			transform: rotatey(0.04turn);
+		}
 	}
 
 	.app-intro-greeting {
@@ -34,10 +37,10 @@
 
 	.app-intro-name {
 		display: inline-block;
-		transform: translatex(-8cqw) translatey(2cqw) translatez(40cqw);
+		transform: translatey(2cqw) translatez(40cqw);
 
-		@media (min-width: 720px) or (orientation: landscape) {
-			transform: translatex(-5cqw) translatey(-2.5cqw) translatez(40cqw);
+		@media (min-width: 45rem) {
+			transform: translatex(-7cqw) translatey(-2.5cqw) translatez(40cqw);
 		}
 
 		& > strong {
@@ -50,17 +53,13 @@
 		display: flex;
 		gap: 8cqw;
 		margin-block-start: 8cqw;
-		transform: translatex(-5cqw) translatey(-4cqw) translatez(40cqw);
+		transform: translatex(3cqw) translatey(-3cqw) translatez(40cqw);
 
-		@media (min-width: 720px) or (orientation: landscape) {
-			transform: translatex(-3cqw) translatey(-6cqw) translatez(40cqw);
+		font-size: max(1rem, 0.75rem, 8cqw);
+
+		@media (min-width: 45rem) {
+			transform: translatex(-6cqw) translatey(-6cqw) translatez(40cqw);
 		}
-	}
-
-	.app-intro-profiles-icon {
-		display: block;
-		aspect-ratio: 1;
-		width: 10cqw;
 	}
 
 	.app-intro-aside {
@@ -72,7 +71,7 @@
 		-webkit-user-select: none;
 		user-select: none;
 
-		@media (min-width: 720px) or (orientation: landscape) {
+		@media (min-width: 45rem) {
 			place-content: center end;
 		}
 	}
@@ -86,10 +85,11 @@
 		grid: 1fr 6fr 3cqh / 1fr 2fr 1fr;
 		aspect-ratio: 1;
 		width: 100cqh;
-		transform: rotatey(-0.125turn);
+		transform: translatex(-2.5cqw) rotatey(-0.125turn);
 		transform-origin: center center 50cqh;
 
-		@media (min-width: 720px) or (orientation: landscape) {
+		@media (min-width: 45rem) {
+			transform: rotatey(-0.125turn);
 			transform-origin: right center;
 		}
 	}

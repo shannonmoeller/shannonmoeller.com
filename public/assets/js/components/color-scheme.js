@@ -41,14 +41,18 @@ define('app-color-scheme', (el) => {
 	if (!input) return;
 
 	switch (getColorScheme()) {
-		case ColorScheme.LIGHT:
+		case ColorScheme.LIGHT: {
 			input.checked = true;
 			break;
-		case ColorScheme.DARK:
+		}
+		case ColorScheme.DARK: {
 			input.checked = false;
 			break;
-		default:
+		}
+		default: {
 			input.checked = lightColorSchemeMedia.matches;
+			break;
+		}
 	}
 
 	el.addEventListener('click', (event) => {

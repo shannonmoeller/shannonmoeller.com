@@ -51,11 +51,23 @@
 		text-size-adjust: 100%;
 	}
 
-	em {
+	em:not([class]) {
 		font-style: italic;
 	}
 
-	strong {
+	strong:not([class]) {
 		font-weight: 700;
+	}
+
+	svg:not([class]) {
+		display: inline-block;
+		aspect-ratio: 1;
+		width: 1lh;
+		vertical-align: middle;
+	}
+
+	app-color-scheme,
+	app-copyright {
+		display: contents;
 	}
 }

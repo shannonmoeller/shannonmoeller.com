@@ -28,32 +28,11 @@
 		<link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
 
 		<script type="module">
-			import './assets/js/components/color-scheme.js';
-			import './assets/js/components/copyright.js';
+			import './assets/js/index.js';
 		</script>
 
 		<style>
-			@import './assets/css/normalize/layers.css';
-			@import './assets/css/normalize/html.css';
-
-			@import './assets/css/tokens/animation.css';
-			@import './assets/css/tokens/color.css';
-			@import './assets/css/tokens/font.css';
-			@import './assets/css/tokens/gradient.css';
-			@import './assets/css/tokens/size.css';
-
-			@import './assets/css/components/box.css';
-			@import './assets/css/components/footer.css';
-			@import './assets/css/components/fridge.css';
-			@import './assets/css/components/intro.css';
-			@import './assets/css/components/page.css';
-			@import './assets/css/components/resume.css';
-			@import './assets/css/components/story.css';
-			@import './assets/css/components/switch.css';
-
-			@import './assets/css/utils/dev.css';
-			@import './assets/css/utils/nobr.css';
-			@import './assets/css/utils/visually-hidden.css';
+			@import './assets/css/index.css';
 		</style>
 
 		<script>
@@ -65,18 +44,8 @@
 
 	<body>
 		<div class="app-page">
-			<header class="app--visuallyHidden">
-				<h1>Shannon Moeller</h1>
-
-				<!-- <nav aria-label="Page navigation">
-					<a href="#intro">Intro</a>
-					<a href="#resume">Resume</a>
-					<a href="#fridge">Fridge</a>
-				</nav> -->
-			</header>
-
-			<main>
-				<article class="app-intro">
+			<main class="app-page-main">
+				<article id="intro" class="app-intro">
 					<div class="app-intro-body">
 						<p class="app-intro-greeting">
 							Hello. I’m
@@ -90,31 +59,31 @@
 
 						<nav class="app-intro-profiles" aria-label="Online profiles">
 							<a href="https://github.com/shannonmoeller">
-								<svg class="app-intro-profiles-icon">
+								<svg>
 									<title>GitHub</title>
 									<use href="#github"></use>
 								</svg>
 							</a>
 							<a href="https://linkedin.com/in/shannonmoeller">
-								<svg class="app-intro-profiles-icon">
+								<svg>
 									<title>LinkedIn</title>
 									<use href="#linkedin"></use>
 								</svg>
 							</a>
 							<a href="https://codepen.io/shannonmoeller">
-								<svg class="app-intro-profiles-icon">
+								<svg>
 									<title>Codepen</title>
 									<use href="#codepen"></use>
 								</svg>
 							</a>
 							<a href="https://npmjs.com/~shannonmoeller">
-								<svg class="app-intro-profiles-icon">
+								<svg>
 									<title>npm</title>
 									<use href="#npm"></use>
 								</svg>
 							</a>
 							<a href="https://dribbble.com/shannonmoeller">
-								<svg class="app-intro-profiles-icon">
+								<svg>
 									<title>Dribbble</title>
 									<use href="#dribbble"></use>
 								</svg>
@@ -305,6 +274,139 @@
 					</div>
 				</article>
 
+				<article id="feats" class="app-feats">
+					<h2 class="app--visuallyHidden">Accomplishments</h2>
+
+					<section class="app-feats-section">
+						<h3 class="app-feats-section-head -green">
+							<a href="https://codepen.io/shannonmoeller">
+								<svg>
+									<title>Codepen</title>
+									<use href="#codepen"></use>
+								</svg>
+							</a>
+						</h3>
+
+						<ol>
+							<li>
+								<a class="app-feats-feat" href="https://codepen.io/shannonmoeller/pen/MWpWJGB">
+									<div>Hello (HTML/CSS-only scroll-snap and parallax)</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Likes</dt>
+										<dd class="app-stats-value">+1K</dd>
+										<dt class="app-stats-key">Views</dt>
+										<dd class="app-stats-value">+25K</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a class="app-feats-feat" href="https://codepen.io/shannonmoeller/pen/OJMRrdo">
+									<div>cassidoo #148: combobox</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Likes</dt>
+										<dd class="app-stats-value">+45</dd>
+										<dt class="app-stats-key">Views</dt>
+										<dd class="app-stats-value">+20K</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a class="app-feats-feat" href="https://codepen.io/shannonmoeller/pen/eYZgObK">
+									<div>CSS Grid Fret Chords</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Likes</dt>
+										<dd class="app-stats-value">+45</dd>
+										<dt class="app-stats-key">Views</dt>
+										<dd class="app-stats-value">+1K</dd>
+									</dl>
+								</a>
+							</li>
+						</ol>
+					</section>
+
+					<section class="app-feats-section">
+						<h3 class="app-feats-section-head -blue">
+							<a href="https://npm.im/~shannonmoeller">
+								<svg>
+									<title>npm</title>
+									<use href="#npm"></use>
+								</svg>
+							</a>
+						</h3>
+
+						<ol>
+							<li>
+								<a class="app-feats-feat" href="https://npm.im/cli-columns">
+									<div>cli-columns</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Downloads</dt>
+										<dd class="app-stats-value">3.2M/month</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a class="app-feats-feat" href="https://npm.im/stylelint-config-prettier">
+									<div>stylelint-config-prettier</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Downloads</dt>
+										<dd class="app-stats-value">3.1M/month</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a class="app-feats-feat" href="https://npm.im/find-config">
+									<div>find-config</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Downloads</dt>
+										<dd class="app-stats-value">+780k/month</dd>
+									</dl>
+								</a>
+							</li>
+						</ol>
+					</section>
+
+					<section class="app-feats-section">
+						<h3 class="app-feats-section-head -gray">
+							<a href="https://github.com/shannonmoeller">
+								<svg>
+									<title>GitHub</title>
+									<use href="#github"></use>
+								</svg>
+							</a>
+						</h3>
+
+						<ol>
+							<li>
+								<a class="app-feats-feat" href="https://github.com/shannonmoeller/reset-css">
+									<div>reset-css</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Stars</dt>
+										<dd class="app-stats-value">+360</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a class="app-feats-feat" href="https://github.com/shannonmoeller/handlebars-layouts">
+									<div>handlebars-layouts</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Stars</dt>
+										<dd class="app-stats-value">+360</dd>
+									</dl>
+								</a>
+							</li>
+							<li>
+								<a class="app-feats-feat" href="https://github.com/shannonmoeller/up">
+									<div>up</div>
+									<dl class="app-stats">
+										<dt class="app-stats-key">Stars</dt>
+										<dd class="app-stats-value">+170</dd>
+									</dl>
+								</a>
+							</li>
+						</ol>
+					</section>
+				</article>
+
 				<article id="resume" class="app-resume">
 					<section id="objective" class="app-resume-section">
 						<h2>Objective</h2>
@@ -327,7 +429,7 @@
 							<strong>vanilla</strong> tastes better.
 						</p>
 
-						<ol>
+						<ul>
 							<li>HTML</li>
 							<li>CSS</li>
 							<li>JavaScript</li>
@@ -338,7 +440,7 @@
 							<li>Git</li>
 							<li>Docker</li>
 							<li>Vagrant</li>
-						</ol>
+						</ul>
 
 						<p>
 							Even with a primary career focus on development, I often flex the right side of my brain. Drawing on my
@@ -347,20 +449,12 @@
 							<strong>data visualization</strong>.
 						</p>
 
-						<ol class="timeline">
-							<li class="skill">
-								<div class="skill_type">Figma</div>
-							</li>
-							<li class="skill">
-								<div class="skill_type">Photoshop</div>
-							</li>
-							<li class="skill">
-								<div class="skill_type">Illustrator</div>
-							</li>
-							<li class="skill">
-								<div class="skill_type">InDesign</div>
-							</li>
-						</ol>
+						<ul>
+							<li>Figma</li>
+							<li>Photoshop</li>
+							<li>Illustrator</li>
+							<li>InDesign</li>
+						</ul>
 
 						<p>
 							I've also worked with Accessibility, SEO, TypeScript, Web Components, Backbone, jQuery, Gulp, Grunt,
@@ -454,18 +548,17 @@
 								<ul>
 									<li>
 										Worked directly with clients on over 30 projects including product customization, content management
-										systems, e&#8209;commerce sites, data visualizations, admin interfaces, kiosks, and more.
+										systems, e-commerce sites, data visualizations, admin interfaces, kiosks, and more.
 									</li>
 									<li>
-										Architected multiple high&#8209;volume Node.js applications and APIs with full test coverage and a
+										Architected multiple high-volume Node.js applications and APIs with full test coverage and a
 										composable project structure.
 									</li>
 									<li>Pioneered and advocated internal adoption of budding JavaScript, HTML, and CSS standards.</li>
 									<li>
-										Responsible for creating internal front&#8209;end boilerplate with a web&#8209;based GUI and Yeoman
-										generator API.
+										Responsible for creating internal front-end boilerplate with a web-based GUI and Yeoman generator.
 									</li>
-									<li>Officially and unoffically served as a mentor to lower&#8209;level developers and peers.</li>
+									<li>Officially and unoffically served as a mentor to lower-level developers and peers.</li>
 								</ul>
 							</details>
 						</section>
@@ -483,8 +576,8 @@
 								<ul>
 									<li>Worked directly with clients on the design of several websites and iOS applications.</li>
 									<li>
-										Provided front&#8209;end web development of designs and integrated them with the company’s
-										in&#8209;house content management system.
+										Provided front-end web development of designs and integrated them with the company’s in-house
+										content management system.
 									</li>
 									<li>Implemented custom integrations with Facebook and YouTube.</li>
 								</ul>
@@ -503,22 +596,22 @@
 
 								<ul>
 									<li>
-										Instrumental in rearchitecting the front&#8209;end of the company’s flagship TV Everywhere product
-										while remaining compatible with their legacy in&#8209;house PHP framework.
+										Instrumental in rearchitecting the front-end of the company’s flagship TV Everywhere product while
+										remaining compatible with their legacy in-house PHP framework.
 									</li>
 									<li>
-										Evangelized the treatment and use of JavaScript as a first&#8209;class citizen by demystifying
-										prototypal inheritance, function scope, and event&#8209;driven programming through presentations and
-										one‑on‑one training.
+										Evangelized the treatment and use of JavaScript as a first-class citizen by demystifying prototypal
+										inheritance, function scope, and event-driven programming through presentations and one‑on‑one
+										training.
 									</li>
 									<li>Led a standards group to update and refine internal code and formatting standards.</li>
 									<li>
-										Built a cross&#8209;domain Ajax proxy and in&#8209;page admin tool for editing and publishing data
-										to a RESTful feed API.
+										Built a cross-domain Ajax proxy and in-page admin tool for editing and publishing data to a RESTful
+										feed API.
 									</li>
 									<li>
-										Created a visual in&#8209;browser IDE which enabled non&#8209;technical personnel to configure,
-										merge, and manipulate asynchronous data sources.
+										Created a visual in-browser IDE which enabled non-technical personnel to configure, merge, and
+										manipulate asynchronous data sources.
 									</li>
 								</ul>
 							</details>
@@ -537,9 +630,9 @@
 								<ul>
 									<li>
 										Developed several jQuery plugins including a library for working with HTML5’s canvas element that
-										provides chainable access to the native 2D&#8209;context object’s methods and properties, several
-										helper methods for common canvas tasks not natively supported, and extensibility via
-										jQuery&#8209;like plugin patterns.
+										provides chainable access to the native 2D-context object’s methods and properties, several helper
+										methods for common canvas tasks not natively supported, and extensibility via jQuery-like plugin
+										patterns.
 									</li>
 									<li>
 										Created a .NET controller to combine multiple images into one file using data URIs and MHTML,
@@ -550,8 +643,8 @@
 										of CSS and JavaScript to resolve issues others could not.
 									</li>
 									<li>
-										Collaborated on the client and server&#8209;side architecture of an internal .NET MVC framework for
-										the rapid development of financial analysis and news reporting products and services.
+										Collaborated on the client and server-side architecture of an internal .NET MVC framework for the
+										rapid development of financial analysis and news reporting products and services.
 									</li>
 									<li>Solely responsible for the design and development of an internal admin utility.</li>
 								</ul>
@@ -574,17 +667,17 @@
 										store.
 									</li>
 									<li>
-										Built a custom content management system to control the flow of an alternate&#8209;reality treasure
-										hunt, including clue&#8209;based regular expressions to match a variety of valid user input, in less
-										than two weeks to meet a stiff deadline.
+										Built a custom content management system to control the flow of an alternate-reality treasure hunt,
+										including clue-based regular expressions to match a variety of valid user input, in less than two
+										weeks to meet a stiff deadline.
 									</li>
 									<li>
 										Developed a means of manipulating URLs in ASP.NET 1.1 similar to the functionality of Apache’s
 										mod_rewrite.
 									</li>
-									<li>Programmed a 36KB object&#8209;oriented PHP5 MVC framework.</li>
-									<li>Led a team of five designers in the layout of a 116&#8209;page catalog.</li>
-									<li>Designed the cover for, and typeset, a 430&#8209;page novel.</li>
+									<li>Programmed a 36KB object-oriented PHP5 MVC framework.</li>
+									<li>Led a team of five designers in the layout of a 116-page catalog.</li>
+									<li>Designed the cover for, and typeset, a 430-page novel.</li>
 								</ul>
 							</details>
 						</section>
@@ -611,11 +704,10 @@
 									<li>Collaborated on the design and layout of five annual catalogs.</li>
 									<li>Created and maintained the branding for multiple events.</li>
 									<li>
-										Designed eight book covers, seven DVDs and boxed sets, and over twenty&#8209;five CDs and boxed
-										sets.
+										Designed eight book covers, seven DVDs and boxed sets, and over twenty-five CDs and boxed sets.
 									</li>
 									<li>
-										Designed an HTML email newsletter template and over seventy&#8209;five of the newsletter’s graphical
+										Designed an HTML email newsletter template and over seventy-five of the newsletter’s graphical
 										banners.
 									</li>
 								</ul>
@@ -637,7 +729,7 @@
 				</article>
 			</main>
 
-			<footer class="app-footer">
+			<footer class="app-page-footer" hidden>
 				<p>
 					<small>© <app-copyright>2004</app-copyright> Shannon Moeller</small>
 				</p>
@@ -650,10 +742,10 @@
 				<symbol id="codepen" fill="currentcolor" viewBox="0 0 16 16">
 					<path d="M15.988 5.443c-.004-.02-.007-.04-.012-.058l-.01-.033c-.006-.017-.012-.034-.02-.05-.003-.012-.01-.023-.014-.034l-.023-.045-.02-.032-.03-.04-.03-.03-.04-.03-.03-.02-.04-.03-.03-.02-.01-.01L8.38.12a.683.683 0 0 0-.76 0L.302 4.99.292 5l-.03.023-.04.032-.025.027-.034.037-.024.03-.03.04c-.01.01-.02.02-.02.03l-.03.04-.01.04c-.01.01-.01.03-.02.05l-.01.03c-.01.02-.01.04-.01.06v.03C0 5.5 0 5.53 0 5.56v4.875c0 .03.002.06.006.09l.007.03c.003.02.006.04.013.058l.01.033c.006.018.01.035.018.05l.015.033c0 .01.01.03.02.04l.02.03c.01.01.02.03.03.04l.02.03.03.03c.01.01.01.02.02.02l.04.03.03.02.01.01 7.31 4.88c.11.08.25.11.38.11s.26-.04.38-.12L15.68 11l.01-.01.03-.022.04-.03.03-.026.035-.037.024-.03.03-.04.02-.032.02-.046.01-.036.02-.05.01-.03.02-.05v-5c0-.03 0-.06-.01-.09l-.01-.03zM8 9.626 5.568 8 8 6.374 10.432 8 8 9.626zM7.312 5.18l-2.98 1.993-2.406-1.61 5.386-3.59V5.18zM3.095 8l-1.72 1.15v-2.3L3.095 8zm1.237.828 2.98 1.993v3.21l-5.386-3.59 2.406-1.61zm4.355 1.993 2.98-1.99 2.407 1.61-5.387 3.59v-3.2zM12.905 8l1.72-1.15v2.3L12.905 8zm-1.237-.827L8.688 5.18V1.97l5.386 3.59-2.406 1.61z" />
 				</symbol>
-				<symbol id="dribbble" fill="currentcolor" viewBox="0 0 16 16">
+				<symbol id="dribbble" fill="currentcolor" viewBox="0 0 16.1 16.1">
 					<path d="M8 16c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm6.747-6.905c-.234-.074-2.115-.635-4.257-.292.894 2.456 1.258 4.456 1.328 4.872a6.856 6.856 0 0 0 2.93-4.58zM10.67 14.3c-.102-.6-.5-2.688-1.46-5.18l-.044.014C5.312 10.477 3.93 13.15 3.806 13.4A6.788 6.788 0 0 0 8 14.844c.947 0 1.85-.194 2.67-.543zm-7.747-1.72c.155-.266 2.03-3.37 5.555-4.51.09-.03.18-.056.27-.08-.173-.39-.36-.778-.555-1.16-3.413 1.02-6.723.977-7.023.97l-.003.208c0 1.755.665 3.358 1.756 4.57zM1.31 6.61c.307.005 3.122.017 6.318-.832a43.733 43.733 0 0 0-2.533-3.952 6.86 6.86 0 0 0-3.784 4.785zM6.4 1.368c.188.253 1.43 1.943 2.548 4 2.43-.91 3.46-2.293 3.582-2.468A6.797 6.797 0 0 0 6.4 1.366zm6.89 2.322c-.145.194-1.29 1.662-3.816 2.694a20.578 20.578 0 0 1 .6 1.342c2.274-.286 4.533.172 4.758.22a6.794 6.794 0 0 0-1.543-4.257z" />
 				</symbol>
-				<symbol id="github" fill="currentcolor" viewBox="0 0 16 16">
+				<symbol id="github" fill="currentcolor" viewBox="0 0 16.1 16.1">
 					<path d="M8 0a8 8 0 0 0-8 8 8 8 0 0 0 5.47 7.59c.4.075.547-.172.547-.385 0-.19-.007-.693-.01-1.36-2.226.483-2.695-1.073-2.695-1.073-.364-.924-.89-1.17-.89-1.17-.725-.496.056-.486.056-.486.803.056 1.225.824 1.225.824.714 1.223 1.873.87 2.33.665.072-.517.278-.87.507-1.07-1.777-.2-3.644-.888-3.644-3.953 0-.873.31-1.587.823-2.147-.09-.202-.36-1.015.07-2.117 0 0 .67-.215 2.2.82a7.67 7.67 0 0 1 2-.27 7.67 7.67 0 0 1 2 .27c1.52-1.035 2.19-.82 2.19-.82.43 1.102.16 1.915.08 2.117a3.1 3.1 0 0 1 .82 2.147c0 3.073-1.87 3.75-3.65 3.947.28.24.54.73.54 1.48 0 1.07-.01 1.93-.01 2.19 0 .21.14.46.55.38A7.972 7.972 0 0 0 16 8a8 8 0 0 0-8-8" />
 				</symbol>
 				<symbol id="linkedin" fill="currentcolor" viewBox="0 0 16 16">

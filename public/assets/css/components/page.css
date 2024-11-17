@@ -8,7 +8,7 @@
 		border-top: 0.5vmax solid;
 		border-image: var(--app-gradient-stripes) 1;
 
-		@media (min-width: 720px) or (orientation: landscape) {
+		@media (min-width: 45rem) {
 			perspective-origin: 30vw 5vmin;
 		}
 

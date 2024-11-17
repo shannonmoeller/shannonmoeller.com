@@ -7,7 +7,6 @@ export function define(name, init) {
 		name,
 		class extends HTMLElement {
 			connectedCallback() {
-				this.style.display = 'contents';
 				init(this);
 			}
 		},

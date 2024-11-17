@@ -1,0 +1,72 @@
+@layer app.components {
+	.app-feats {
+		display: flex;
+		flex-flow: column;
+		margin-inline: var(--app-size-safeInline);
+
+		@media (min-width: 45rem) {
+			flex-flow: row;
+			justify-content: space-around;
+			padding: 0 5cqw 10cqw;
+		}
+	}
+
+	.app-feats-section {
+		container-type: inline-size;
+		display: grid;
+		grid-template-columns: min-content auto;
+
+		background-color: var(--app-color-backgroundSecondary);
+		font-size: max(0.75rem, 1.2cqw);
+
+		@media (min-width: 45rem) {
+			width: 28%;
+
+			:nth-child(1 of &) {
+				transform: translatex(1.6cqw) translatey(-8cqw) translatez(24cqw) rotatey(0.03turn);
+				transform-origin: right center;
+			}
+
+			:nth-child(2 of &) {
+				transform: translatex(0cqw) translatey(-4cqw) translatez(12cqw) rotatey(0turn);
+				transform-origin: center center;
+			}
+
+			:nth-child(3 of &) {
+				transform: translatex(0cqw) translatey(0cqw) translatez(0cqw) rotatey(-0.03turn);
+				transform-origin: left center;
+			}
+		}
+
+		@media (min-width: 64rem) {
+			width: 25%;
+		}
+	}
+
+	.app-feats-section-head {
+		padding: 0.75em 0.5em;
+
+		color: var(--app-color-foregroundOnColor);
+
+		&.-green {
+			background-color: oklch(from var(--app-color-green) var(--app-color-400));
+		}
+
+		&.-blue {
+			background-color: oklch(from var(--app-color-blue) var(--app-color-400));
+		}
+
+		&.-gray {
+			background-color: oklch(from var(--app-color-gray) var(--app-color-400));
+		}
+	}
+
+	.app-feats-feat {
+		display: block;
+		margin: 0.75em;
+
+		&:hover {
+			color: var(--app-color-foregroundLink);
+		}
+	}
+}
