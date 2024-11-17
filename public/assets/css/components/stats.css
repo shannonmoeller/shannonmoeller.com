@@ -1,10 +1,18 @@
 @layer app.components {
 	.app-stats {
 		display: flex;
+		flex-flow: row wrap;
 		align-items: baseline;
-		gap: 0.5ch;
+		gap: 1ch;
 
 		font-size: max(0.75rem, 0.75em);
+	}
+
+	.app-stats-pair {
+		display: flex;
+		flex-flow: row wrap;
+		align-items: baseline;
+		gap: 0.5ch;
 	}
 
 	.app-stats-key {
