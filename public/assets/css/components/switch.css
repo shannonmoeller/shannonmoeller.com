@@ -8,7 +8,7 @@
     place-self: center;
     aspect-ratio: 3 / 5;
     width: 5cqw;
-    transform: translatez(calc(3cqw + 1px));
+    transform: translateZ(calc(3cqw + 1px));
 
     box-shadow: 0 1cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 30%);
     cursor: pointer;
@@ -18,7 +18,7 @@
       content: '';
       position: absolute;
       inset: -20px;
-      transform: translatez(1px);
+      transform: translateZ(1px);
     }
 
     & > .-front {
@@ -55,18 +55,18 @@
     aspect-ratio: 1;
     width: 1cqw;
     transition: transform var(--app-animation-durationFast);
-    transform: rotatex(-0.125turn);
+    transform: rotateX(-0.125turn);
 
     .app-box.-app-switch:active & {
-      transform: rotatex(-0.1turn);
+      transform: rotateX(-0.1turn);
     }
 
     .app-box.-app-switch:has(:checked) & {
-      transform: rotatex(0.125turn);
+      transform: rotateX(0.125turn);
     }
 
     .app-box.-app-switch:has(:checked):active & {
-      transform: rotatex(0.1turn);
+      transform: rotateX(0.1turn);
     }
   }
 }

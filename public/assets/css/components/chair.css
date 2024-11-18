@@ -8,7 +8,7 @@
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 4fr 1fr;
     aspect-ratio: 1;
-    transform: translatez(10cqw) rotatey(0.05turn);
+    transform: translateZ(10cqw) rotateY(0.05turn);
     transform-origin: left bottom;
 
     @media (min-width: 45rem) {
@@ -23,10 +23,11 @@
 
   .app-box.-app-chair-back {
     --app-box-depth: 20cqw;
+
     grid-column: 2;
     grid-row: 1 / span 4;
 
-    transform: rotatex(0.02turn);
+    transform: rotateX(0.02turn);
     transform-origin: center bottom;
   }
 
@@ -50,13 +51,22 @@
       display: grid;
       grid-template: 1fr 1fr / 1fr 1fr;
       gap: 50cqw;
-
-      & > .app-box {
-        --app-box-color: oklch(from var(--app-color-brown) var(--app-color-700));
-        --app-box-depth: 6cqh;
-        transform: translatez(-1px);
-        margin: 2cqw;
-      }
     }
+  }
+
+  .app-box.-app-chair-foot {
+    --app-box-color: oklch(from var(--app-color-brown) var(--app-color-600));
+    --app-box-depth: 6cqh;
+
+    transform: translateZ(-1px);
+    margin: 2cqw;
+  }
+
+  .app-box.-app-chair-shadow {
+    --app-box-depth: 1px;
+
+    position: absolute;
+    inset: 0;
+    transform: translateZ(6cqh);
   }
 }

@@ -45,7 +45,7 @@
     grid-column: 1 / span 5;
     grid-row: 1 / 6;
     transition: rotate var(--app-animation-durationSlow);
-    transform: translatez(81cqw);
+    transform: translateZ(81cqw);
     transform-origin: left center 81cqw;
 
     cursor: pointer;
@@ -93,11 +93,11 @@
     grid-column: 2;
     grid-row: 2 / span 2;
     transition: transform linear var(--app-animation-durationFast);
-    transform: translatez(6cqw);
+    transform: translateZ(6cqw);
     transform-origin: center top;
 
     .app-box.-app-fridge-door:not(:has(:checked)):active & {
-      transform: translatez(6cqw) rotatex(0.025turn);
+      transform: translateZ(6cqw) rotateX(0.025turn);
     }
   }
 
@@ -223,7 +223,7 @@
 
     grid-area: 1 / 1;
     margin: 20%;
-    transform: translatez(36cqw);
+    transform: translateZ(36cqw);
   }
 
   .app-box.-app-fridge-bottle-neck {
@@ -232,7 +232,7 @@
 
     grid-area: 1 / 1;
     margin: 20%;
-    transform: translatez(24cqw);
+    transform: translateZ(24cqw);
 
     & > .-bottom {
       background-image: var(--app-gradient-surfaceGloss), var(--app-gradient-label);
@@ -304,7 +304,7 @@
     grid-column: 1 / span 5;
     grid-row: 6 / span 2;
     margin-block: 1cqw;
-    transform: translatez(81cqw);
+    transform: translateZ(81cqw);
   }
 
   .app-box.-app-fridge-panelBack {
@@ -329,11 +329,12 @@
       display: grid;
       grid-template: 1fr 1fr / 1fr 1fr;
       gap: 50cqw;
-
-      & > .app-box {
-        --app-box-depth: 6cqh;
-        transform: translatez(-1px);
-      }
     }
+  }
+
+  .app-box.-app-fridge-foot {
+    --app-box-depth: 6cqh;
+
+    transform: translateZ(-1px);
   }
 }
