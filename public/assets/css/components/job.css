@@ -7,7 +7,6 @@
   .app-job-summary {
     display: flex;
     flex-flow: column;
-    cursor: pointer;
   }
 
   .app-job-title {
