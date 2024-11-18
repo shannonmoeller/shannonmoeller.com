@@ -11,5 +11,9 @@
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	}
+	},
+	"cSpell.words": [
+    "lockdowns",
+    "rearchitected"
+  ]
 }

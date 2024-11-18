@@ -19,8 +19,7 @@
   }
 
   .app-job-highlights {
-    margin-block-start: 1em;
-
+    padding-block: 0.5lh;
     list-style: square outside;
     transform-style: flat;
 
@@ -30,6 +29,8 @@
     }
 
     & > li {
+      padding-block: 0.5lh;
+
       @media (min-width: 45rem) {
         break-inside: avoid;
       }
@@ -41,11 +42,6 @@
 
     & > li::marker {
       color: var(--app-color-foregroundAccentSecondary);
-    }
-
-    & > li + li {
-      margin-block-start: 1em;
-      text-wrap: pretty;
     }
   }
 }

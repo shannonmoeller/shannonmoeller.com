@@ -26,34 +26,34 @@
 
     :nth-child(1 of &) {
       align-self: start;
-      transform: rotatey(0.03turn);
+      transform: rotateY(0.03turn);
     }
 
     :nth-child(2 of &) {
       align-self: center;
-      transform: rotatey(0turn);
+      transform: rotateY(0turn);
     }
 
     :nth-child(3 of &) {
       align-self: end;
-      transform: rotatey(-0.03turn);
+      transform: rotateY(-0.03turn);
     }
 
     @media (min-width: 45rem) {
       align-self: center;
 
       :nth-child(1 of &) {
-        transform: translatex(1.6cqw) translatey(-8cqw) translatez(24cqw) rotatey(0.03turn);
+        transform: translateX(1.6cqw) translateY(-8cqw) translateZ(24cqw) rotateY(0.03turn);
         transform-origin: right center;
       }
 
       :nth-child(2 of &) {
-        transform: translatex(0cqw) translatey(-4cqw) translatez(12cqw) rotatey(0turn);
+        transform: translateX(0cqw) translateY(-4cqw) translateZ(12cqw) rotateY(0turn);
         transform-origin: center center;
       }
 
       :nth-child(3 of &) {
-        transform: translatex(0cqw) translatey(0cqw) translatez(0cqw) rotatey(-0.03turn);
+        transform: translateX(0cqw) translateY(0cqw) translateZ(0cqw) rotateY(-0.03turn);
         transform-origin: left center;
       }
     }
@@ -86,7 +86,7 @@
       text-align: center;
 
       & > svg {
-        transform: translatez(1px);
+        transform: translateZ(1px);
       }
     }
   }
