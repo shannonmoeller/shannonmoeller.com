@@ -1,0 +1,72 @@
+@layer app.components {
+  .app-article {
+    display: flex;
+    flex-direction: column;
+    gap: 10cqw;
+    margin-inline: var(--app-size-safeInline);
+    padding-block: 10cqw;
+    max-width: 100rem;
+
+    @media (min-width: 64rem) {
+      margin-inline: auto;
+    }
+
+    &.-secondary::before {
+      content: '';
+      position: absolute;
+      inset: 0 -50vw;
+      pointer-events: none;
+      background-color: var(--app-color-backgroundSecondary);
+    }
+  }
+
+  .app-article-section {
+    --app-article-section-headCol: 2 / span 8;
+    --app-article-section-bodyCol: 2 / span 8;
+    --app-article-section-fontSize: max(1rem, 2.5cqw);
+
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: repeat(10, minmax(0, 1fr));
+    gap: max(1rem, 4cqw) 0;
+
+    @media (min-width: 45rem) {
+      --app-article-section-headCol: 1 / span 2;
+      --app-article-section-bodyCol: 3 / span 7;
+    }
+
+    @media (min-width: 64rem) {
+      --app-article-section-headCol: 1 / span 2;
+      --app-article-section-bodyCol: 3 / span 6;
+      --app-article-section-fontSize: max(1rem, 2cqw);
+    }
+
+    & > :where(:not([class])) {
+      grid-column: var(--app-article-section-bodyCol);
+      font-size: var(--app-article-section-fontSize);
+
+      @media (min-width: 64rem) {
+        font-size: max(1rem, 2cqw);
+      }
+    }
+  }
+
+  .app-article-section-head {
+    grid-column: var(--app-article-section-headCol);
+    color: var(--app-color-foregroundAccent);
+    font: 400 max(1rem, 2cqw) / 1 var(--app-font-display);
+
+    @media (min-width: 45rem) {
+      padding-inline: 2ch;
+      transform: translatey(-0.5cqw) translatez(5cqw);
+      text-align: right;
+    }
+  }
+
+  .app-article-section-aside {
+    grid-column: var(--app-article-section-bodyCol);
+
+    font-size: max(0.75rem, 1.5cqw);
+    color: var(--app-color-foregroundSecondary);
+  }
+}

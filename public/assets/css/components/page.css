@@ -12,26 +12,13 @@
       perspective-origin: 30vw 5vmin;
     }
 
-    & * {
+    :where(&) * {
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
       pointer-events: none;
     }
 
-    & a,
-    & button,
-    & figure,
-    & h1,
-    & h2,
-    & h3,
-    & h4,
-    & h5,
-    & h6,
-    & input,
-    & label,
-    & ol,
-    & p,
-    & summary,
-    & table,
-    & ul {
+    :where(&) :where(a, button, figure, h1, h2, h3, h4, h5, h6, input, label, ol, p, summary, table, ul) {
       &,
       & * {
         pointer-events: auto;

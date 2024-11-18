@@ -2,17 +2,17 @@
   .app-feats {
     display: flex;
     flex-flow: column;
-    gap: 5cqw;
-    padding: 0 calc(5cqw + var(--app-size-safeInline)) 20cqw;
+    gap: 6cqw;
+    padding: 0 calc(5cqw + var(--app-size-safeInline));
 
     @media (min-width: 45rem) {
       flex-flow: row;
       justify-content: space-around;
-      padding: 0 calc(5cqw + var(--app-size-safeInline)) 12cqw;
+      padding: 0 calc(5cqw + var(--app-size-safeInline));
     }
 
     @media (min-width: 64rem) {
-      padding: 0 calc(7.5cqw + var(--app-size-safeInline)) 10cqw;
+      padding: 0 calc(7.5cqw + var(--app-size-safeInline));
     }
   }
 
@@ -92,8 +92,10 @@
   }
 
   .app-feats-item {
-    display: block;
-    margin: 4cqw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.125lh;
+    margin: 4cqw 6cqw;
 
     font-size: max(0.75rem, 6cqw);
     text-wrap: balance;
