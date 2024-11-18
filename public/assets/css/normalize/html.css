@@ -5,8 +5,6 @@
     box-sizing: border-box;
     padding: unset;
     margin: unset;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
 
     background: unset;
     border: unset;

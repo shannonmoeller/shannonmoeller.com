@@ -118,5 +118,10 @@
       background-blend-mode: overlay;
       background-image: var(--app-gradient-surfaceMatte);
     }
+
+    &.-matteReverse {
+      background-blend-mode: overlay;
+      background-image: var(--app-gradient-surfaceMatteReverse);
+    }
   }
 }

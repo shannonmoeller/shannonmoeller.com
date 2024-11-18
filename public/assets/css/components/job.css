@@ -1,0 +1,51 @@
+@layer app.components {
+  .app-job {
+    grid-column: var(--app-article-section-bodyCol);
+    font-size: max(1rem, 1.5cqw);
+  }
+
+  .app-job-summary {
+    display: flex;
+    flex-flow: column;
+    cursor: pointer;
+  }
+
+  .app-job-title {
+    font-weight: 700;
+  }
+
+  .app-job-place {
+    color: var(--app-color-foregroundSecondary);
+  }
+
+  .app-job-highlights {
+    margin-block-start: 1em;
+
+    list-style: square outside;
+    transform-style: flat;
+
+    @media (min-width: 45rem) {
+      columns: 2;
+      column-gap: 2em;
+    }
+
+    & > li {
+      @media (min-width: 45rem) {
+        break-inside: avoid;
+      }
+    }
+
+    & > li::-webkit-details-marker {
+      color: var(--app-color-foregroundAccentSecondary);
+    }
+
+    & > li::marker {
+      color: var(--app-color-foregroundAccentSecondary);
+    }
+
+    & > li + li {
+      margin-block-start: 1em;
+      text-wrap: pretty;
+    }
+  }
+}

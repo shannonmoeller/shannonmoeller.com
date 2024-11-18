@@ -7,14 +7,17 @@
 @import './tokens/gradient.css';
 @import './tokens/size.css';
 
+@import './components/article.css';
 @import './components/box.css';
+@import './components/chair.css';
 @import './components/feats.css';
 @import './components/fridge.css';
+@import './components/graph.css';
 @import './components/intro.css';
+@import './components/job.css';
 @import './components/page.css';
-@import './components/resume.css';
+@import './components/skills.css';
 @import './components/stats.css';
-@import './components/story.css';
 @import './components/switch.css';
 @import './components/timeline.css';
 

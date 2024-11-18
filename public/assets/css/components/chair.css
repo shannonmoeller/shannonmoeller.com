@@ -1,0 +1,62 @@
+@layer app.components {
+  .app-box.-app-chair {
+    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-depth: 75cqw;
+
+    grid-column: 2 / span 2;
+    container-type: size;
+    display: grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 4fr 1fr;
+    aspect-ratio: 1;
+    transform: translatez(10cqw) rotatey(0.05turn);
+    transform-origin: left bottom;
+
+    @media (min-width: 45rem) {
+      grid-column: 3 / span 2;
+    }
+  }
+
+  .app-box.-app-chair-armLeft {
+    grid-column: 1;
+    grid-row: 2 / span 3;
+  }
+
+  .app-box.-app-chair-back {
+    --app-box-depth: 20cqw;
+    grid-column: 2;
+    grid-row: 1 / span 4;
+
+    transform: rotatex(0.02turn);
+    transform-origin: center bottom;
+  }
+
+  .app-box.-app-chair-seat {
+    grid-column: 2;
+    grid-row: 3;
+
+    margin: 1cqw;
+  }
+
+  .app-box.-app-chair-armRight {
+    grid-column: 3;
+    grid-row: 2 / span 3;
+  }
+
+  .app-box.-app-chair-base {
+    grid-column: 1 / span 4;
+    grid-row: 4;
+
+    & > .-bottom {
+      display: grid;
+      grid-template: 1fr 1fr / 1fr 1fr;
+      gap: 50cqw;
+
+      & > .app-box {
+        --app-box-color: oklch(from var(--app-color-brown) var(--app-color-700));
+        --app-box-depth: 6cqh;
+        transform: translatez(-1px);
+        margin: 2cqw;
+      }
+    }
+  }
+}
