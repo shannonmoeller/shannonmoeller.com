@@ -13,7 +13,7 @@
     "@eslint/js": "^9.15.0",
     "eslint": "^9.15.0",
     "globals": "^15.12.0",
-    "livery": "^4.0.2",
+    "livery": "^4.0.3",
     "prettier": "^3.3.3",
     "stylelint": "^16.10.0",
     "stylelint-config-recommended": "^14.0.1",
