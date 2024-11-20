@@ -29,6 +29,7 @@
 
     & > li {
       padding-block: 0.5lh;
+      text-wrap: pretty;
 
       &:has(dl) {
         list-style-type: none;
