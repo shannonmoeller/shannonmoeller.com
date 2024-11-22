@@ -58,35 +58,20 @@
             </h1>
 
             <nav class="app-intro-profiles" aria-label="Online profiles">
-              <a href="https://github.com/shannonmoeller">
-                <svg>
-                  <title>GitHub</title>
-                  <use href="#github"></use>
-                </svg>
+              <a href="https://github.com/shannonmoeller" title="GitHub">
+                <svg role="presentation"><use href="#github"></use></svg>
               </a>
-              <a href="https://linkedin.com/in/shannonmoeller">
-                <svg>
-                  <title>LinkedIn</title>
-                  <use href="#linkedin"></use>
-                </svg>
+              <a href="https://linkedin.com/in/shannonmoeller" title="LinkedIn">
+                <svg role="presentation"><use href="#linkedin"></use></svg>
               </a>
-              <a href="https://codepen.io/shannonmoeller">
-                <svg>
-                  <title>Codepen</title>
-                  <use href="#codepen"></use>
-                </svg>
+              <a href="https://codepen.io/shannonmoeller" title="CodePen">
+                <svg role="presentation"><use href="#codepen"></use></svg>
               </a>
-              <a href="https://npmjs.com/~shannonmoeller">
-                <svg>
-                  <title>npm</title>
-                  <use href="#npm"></use>
-                </svg>
+              <a href="https://npmjs.com/~shannonmoeller" title="npm">
+                <svg role="presentation"><use href="#npm"></use></svg>
               </a>
-              <a href="https://dribbble.com/shannonmoeller">
-                <svg>
-                  <title>Dribbble</title>
-                  <use href="#dribbble"></use>
-                </svg>
+              <a href="https://dribbble.com/shannonmoeller" title="Dribbble">
+                <svg role="presentation"><use href="#dribbble"></use></svg>
               </a>
             </nav>
           </div>
@@ -108,7 +93,13 @@
 
               <nav class="app-box -app-fridge -app-intro-room-fridge app--colorSchemeLight" aria-label="Favorite foods">
                 <label class="app-box -app-fridge-door">
-                  <input class="app--visuallyHidden" type="checkbox" aria-label="Toggle fridge door" tabindex="-1" />
+                  <input
+                    class="app--visuallyHidden"
+                    type="checkbox"
+                    aria-label="Toggle fridge door"
+                    tabindex="-1"
+                    checked
+                  />
 
                   <span class="app-box-face -top -fill -lighter"></span>
                   <span class="app-box-face -front -fill -light -toDark -gloss">
@@ -170,13 +161,24 @@
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
                           </div>
+                          <div class="app-box -app-fridge-bottle-neckBase">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
                           <div class="app-box -app-fridge-bottle-body">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -back -fill -darker"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
+                          <div class="app-box -app-fridge-bottle-bodyBase">
                             <div class="app-box-face -front -fill -darker -toLighter"></div>
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
                           </div>
                         </div>
-                        <a class="app-box -app-fridge-bottle" href="https://drinkreeds.com/" aria-label="Drink Reed’s">
+                        <a class="app-box -app-fridge-bottle" href="https://drinkreeds.com/" title="Drink Reed’s">
                           <div class="app-box -app-fridge-bottle-cap">
                             <div class="app-box-face -front -fill -darker -toLighter"></div>
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
@@ -186,7 +188,17 @@
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
                           </div>
+                          <div class="app-box -app-fridge-bottle-neckBase">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
                           <div class="app-box -app-fridge-bottle-body">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
+                          <div class="app-box -app-fridge-bottle-bodyBase">
                             <div class="app-box-face -front -fill -darker -toLighter"></div>
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
@@ -203,7 +215,7 @@
                 </div>
                 <div class="app-box -app-fridge-cabBottom">
                   <div class="app-box-face -top -fill -darker -toLighter">
-                    <a class="app-box -app-fridge-pizza" href="https://giordanos.com/" aria-label="Eat Giordano’s">
+                    <a class="app-box -app-fridge-pizza" href="https://giordanos.com/" title="Eat Giordano’s">
                       <div class="app-box-face -front -fill -darker -toLighter"></div>
                       <div class="app-box-face -right -fill -darker -toNormal"></div>
                       <div class="app-box-face -bottom -fill -darker -toLight"></div>
@@ -285,11 +297,8 @@
           <section class="app-feats-section">
             <h3 class="app-box -app-feats-section-head -green">
               <span class="app-box-face -top -fill -lighter"></span>
-              <a class="app-box-face -front -fill -light" href="https://codepen.io/shannonmoeller">
-                <svg>
-                  <title>Codepen</title>
-                  <use href="#codepen"></use>
-                </svg>
+              <a class="app-box-face -front -fill -light" href="https://codepen.io/shannonmoeller" title="CodePen">
+                <svg><use href="#codepen"></use></svg>
               </a>
               <span class="app-box-face -left -fill"></span>
               <span class="app-box-face -right -fill"></span>
@@ -348,11 +357,8 @@
           <section class="app-feats-section">
             <h3 class="app-box -app-feats-section-head -blue">
               <span class="app-box-face -top -fill -lighter"></span>
-              <a class="app-box-face -front -fill -light" href="https://npm.im/~shannonmoeller">
-                <svg>
-                  <title>npm</title>
-                  <use href="#npm"></use>
-                </svg>
+              <a class="app-box-face -front -fill -light" href="https://npm.im/~shannonmoeller" title="npm">
+                <svg><use href="#npm"></use></svg>
               </a>
               <span class="app-box-face -left -fill"></span>
               <span class="app-box-face -right -fill"></span>
@@ -388,7 +394,7 @@
                   <dl class="app-stats">
                     <div class="app-stats-pair">
                       <dt class="app-stats-key">Downloads</dt>
-                      <dd class="app-stats-value">+780k/month</dd>
+                      <dd class="app-stats-value">+800k/month</dd>
                     </div>
                   </dl>
                 </a>
@@ -399,11 +405,8 @@
           <section class="app-feats-section">
             <h3 class="app-box -app-feats-section-head -gray">
               <span class="app-box-face -top -fill -lighter"></span>
-              <a class="app-box-face -front -fill -light" href="https://github.com/shannonmoeller">
-                <svg>
-                  <title>GitHub</title>
-                  <use href="#github"></use>
-                </svg>
+              <a class="app-box-face -front -fill -light" href="https://github.com/shannonmoeller" title="GitHub">
+                <svg><use href="#github"></use></svg>
               </a>
               <span class="app-box-face -left -fill"></span>
               <span class="app-box-face -right -fill"></span>
@@ -456,7 +459,7 @@
 
             <p>
               Work with a small team on the design and development of innovative projects that are delightful to use and
-              push the boundaries of what’s possible technically.
+              push the boundaries of what’s possible technologically.
             </p>
           </section>
 
@@ -909,13 +912,6 @@
                 </dl>
               </figcaption>
             </figure>
-
-            <p class="app-article-section-aside">
-              Specifically, I’ve worked with TypeScript, Web Components, React, Angular, Polymer, Backbone, jQuery,
-              Express.js, Eslint, Gulp, Grunt, TDD, DDD, Storybook, Jest, Mocha, Tap, Canvas, SVG, Stylelint, PostCSS,
-              Sass, Less, BEM, OOCSS, Accessibility, SEO, Handlebars, Nunjucks, Pug, MySQL, SQL, .NET, Bash, Zsh, JSON,
-              YAML, XML, XSLT, Apache, IIS, tmux, macOS, Unix, and Windows among other things. I love to learn.
-            </p>
           </section>
 
           <section id="experience" class="app-article-section">
@@ -924,24 +920,46 @@
             <article class="app-job" open>
               <h4 class="app-job-summary">
                 <span class="app-job-dates">Oct 2022 – current</span>
-                <span class="app-job-title">Staff Frontend Engineer, Uber&nbsp;Freight</span>
+                <span class="app-job-title">Staff Frontend Engineer, Uber&nbsp;Freight (Uber)</span>
               </h4>
 
               <ul class="app-job-highlights">
                 <li>
-                  Built a framework-agnostic component library using newly available HTML, CSS, and JavaScript features
-                  to enable the rebranding of legacy applications and creation of new applications using Uber’s Base
-                  design language across React, Angular, and Vue.
+                  My main focus has been on building a flexible component library using the latest HTML, CSS, and
+                  JavaScript features. This library has allowed us to apply Uber’s Base design language to existing
+                  applications built with Angular and Vue.js as well as new ones built with React.
                 </li>
                 <li>
-                  Helped define the development patterns and standards for new web applications within Uber Freight
-                  including core page layout, async data fetching, state management, and code sharing as a lead
-                  developer on multiple projects.
+                  As a lead developer on several projects, I helped define the development patterns and standards for
+                  new React applications. This included things like the layout of core pages, how to fetch data
+                  asynchronously, manage state, and share code.
                 </li>
                 <li>
-                  Co-led training sessions for engineers on how to use Figma and take designs from mocks to finished
-                  products with high-fidelity to the designer’s intentions based on the design language, code standards,
-                  responsive techniques, and open communication with the design team.
+                  I also co-led training sessions for engineers on how to use Figma. We taught them how to take design
+                  mocks and turn them into finished products that look and work exactly like the designer intended by
+                  applying the design language, code standards, and responsive techniques with an emphasis on open
+                  communication with the design team.
+                </li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Frontend architecture,</span>
+                        <span class="app--nobr">Component libraries,</span>
+                        <span class="app--nobr">Documentation,</span>
+                        <span class="app--nobr">Accessibility,</span>
+                        <span class="app--nobr">Team leadership</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, TypeScript, ABEM, Web components, React, Angular, Node.js, Storybook, Vite, Vitest,
+                        Webpack, Figma
+                      </dd>
+                    </div>
+                  </dl>
                 </li>
               </ul>
             </article>
@@ -954,31 +972,52 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Rearchitected the networking, management, and deployment of Uber Freight’s ops web services to improve
-                  stability, fast track the deployment cycle, reduce the impact of rollbacks, and ensure teams have
-                  proper ownership of code reviews and on-call duties.
+                  Had the opportunity to rearchitect the networking, management, and deployment of ops&#8209;facing web
+                  services. The new setup made them more stable, faster to deploy, and less likely to cause rollbacks.
+                  This was a big relief for teams as they could now own their own code and on&#8209;call duties.
                 </li>
                 <li>
-                  Collaborated on building a frontend architecture to allow complex forms which integrate with multiple
-                  backend systems to be generated based on a schema; reducing the time to implement new pages and fields
-                  from weeks to minutes.
+                  Collaborated on building a frontend architecture that allowed complex forms to be generated based on a
+                  schema. This reduced the time it took to add new config pages and fields from weeks down to minutes.
                 </li>
                 <li>
-                  Ensured the stability of services responsible for integrating with third-party systems to collect and
-                  manage freight spot opportunities which helped to carry the Uber Freight division through Covid-19
-                  lockdowns and unlocked automated load appointment scheduling.
+                  A teammate and I revamped services that integrated with third&#8209;party systems to collect and
+                  manage freight spot opportunities to increase reliability and performance. These opportunities helped
+                  Uber Freight stay afloat during the Covid&#8209;19 lockdowns.
                 </li>
                 <li>
-                  Helped enable 62k trips to polls on election day in 2018 via the Rider app by creating a poll-finder
-                  webview that seamlessly integrated with the native mobile applications.
+                  Worked with a team to enable 62,000 trips to the polls on election day in 2018 through the Rider app.
+                  I was responsible for creating the poll&#8209;finder webview that seamlessly integrated with the
+                  native mobile apps.
                 </li>
                 <li>
-                  Created a pure CSS implementation of Uber’s Base design language, used by the design team to validate
-                  components and patterns for use in a browser.
+                  Maintained dozens of legacy tools and built a few new frontend tools in the Maps org in support of
+                  various on-site teams and hundreds of operators around the globe.
                 </li>
                 <li>
-                  Worked on frontend tools in Uber Maps in support of the various teams. Responsible for maintaining a
-                  dozen legacy tools as well as the creation of several new tools.
+                  I was also able to make some major quality&#8209;of&#8209;life improvements to Uber's core web
+                  framework used by all frontend projects. I could say it was for the greater good, but mostly it was
+                  really bugging me.
+                </li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Frontend architecture,</span>
+                        <span class="app--nobr">Cross-platform testing,</span>
+                        <span class="app--nobr">Documentation,</span>
+                        <span class="app--nobr">Accessibility,</span>
+                        <span class="app--nobr">Collaboration</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, TypeScript, Flow, React, Node.js, Storybook, Jest, Webpack, Yarn, Thrift, Figma
+                      </dd>
+                    </div>
+                  </dl>
                 </li>
               </ul>
             </article>
@@ -991,18 +1030,48 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Worked directly with clients on over 30 projects including product customization, content management
-                  systems, e-commerce sites, data visualizations, admin interfaces, kiosks, and more.
+                  Was able to work directly with clients on over 30 projects, from customizing products to building
+                  content management systems, e&#8209;commerce sites, kiosks, data visualizations, admin interfaces, and
+                  more.
                 </li>
                 <li>
-                  Architected multiple high-volume Node.js applications and APIs with full test coverage and a
+                  Architected multiple high&#8209;volume Node.js applications and APIs with full test coverage and a
                   composable project structure.
                 </li>
-                <li>Pioneered and advocated internal adoption of budding JavaScript, HTML, and CSS standards.</li>
                 <li>
-                  Responsible for creating internal frontend boilerplate with a web-based GUI and Yeoman generator.
+                  As a big fan of the browser and emerging HTML, CSS, and JavaScript standards, I fostered internal
+                  adoption which raised the bar on quality and customer satisfaction.
                 </li>
-                <li>Officially and unofficially served as a mentor to developers and peers.</li>
+                <li>
+                  One of my favorite projects was creating an internal frontend boilerplate with a web&#8209;based GUI
+                  and Yeoman generator. It was a lot of fun to build something that helped our team streamline their
+                  development process.
+                </li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Frontend,</span>
+                        <span class="app--nobr">Backend,</span>
+                        <span class="app--nobr">Cross-platform testing,</span>
+                        <span class="app--nobr">Shared tooling,</span>
+                        <span class="app--nobr">Web standards,</span>
+                        <span class="app--nobr">Accessibility,</span>
+                        <span class="app--nobr">Data visualization,</span>
+                        <span class="app--nobr">Mentorship</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, JavaScript, CoffeeScript, Angular, Polymer, jQuery, Node.js, Electron.js, PHP,
+                        Apache, BEM, OOCSS, Sass, Less, Canvas, Handlebars, MySQL, Swagger, Git, Vim, Docker, Vagrant,
+                        Photoshop
+                      </dd>
+                    </div>
+                  </dl>
+                </li>
               </ul>
             </article>
 
@@ -1014,11 +1083,38 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Provided frontend web development of designs and integrated them with the company’s in-house content
-                  management system.
+                  Worked on both the web design and frontend development of several websites on top of the company’s
+                  in&#8209;house content management system.
                 </li>
-                <li>Worked directly with clients on the design of several websites and iOS applications.</li>
-                <li>Implemented custom integrations with Facebook and YouTube.</li>
+                <li>
+                  Projects often also included logo and brand design for startups. Getting to work directly with clients
+                  to bring their visions to life was quite rewarding.
+                </li>
+                <li>
+                  Designed an iOS app to be used like a sports playbook for sales teams. While a super fun project, it
+                  was also what made me decide that I'd rather focus my professional time on writing code.
+                </li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Web design,</span>
+                        <span class="app--nobr">Logo design,</span>
+                        <span class="app--nobr">App design,</span>
+                        <span class="app--nobr">Accessibility,</span>
+                        <span class="app--nobr">Information architecture,</span>
+                        <span class="app--nobr">Cross-platform testing</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, JavaScript, REST, Xcode, Photoshop, Illustrator, InDesign
+                      </dd>
+                    </div>
+                  </dl>
+                </li>
               </ul>
             </article>
 
@@ -1030,22 +1126,44 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Instrumental in rearchitecting the frontend of the company’s flagship TV Everywhere product while
-                  remaining compatible with their legacy in-house PHP framework.
+                  Played a key role in revamping the front end of our flagship TV Everywhere product. I made sure it
+                  worked seamlessly with our existing in&#8209;house PHP framework, even though it was a complete
+                  rewrite.
                 </li>
                 <li>
-                  Evangelized the treatment and use of JavaScript as a first-class citizen by demystifying prototypal
-                  inheritance, function scope, and event-driven programming through presentations and one‑on‑one
-                  training.
-                </li>
-                <li>Led a standards group to update and refine internal code and formatting standards.</li>
-                <li>
-                  Built a cross-domain Ajax proxy and in-page admin tool for editing and publishing data to a RESTful
-                  feed API.
+                  Evangelized the treatment and use of JavaScript as a first&#8209;class citizen by helping people
+                  understand prototypal inheritance, function scope, and event&#8209;driven programming through
+                  presentations and one&#8209;on&#8209;one training. I even led a standards group to update and improve
+                  our internal code and formatting standards.
                 </li>
                 <li>
-                  Created a visual in-browser IDE which enabled non-technical personnel to configure, merge, and
-                  manipulate asynchronous data sources.
+                  Built a cross&#8209;domain Ajax proxy and in&#8209;page admin tool for editing and publishing data to
+                  a RESTful feed API. This was before CORS was a thing.
+                </li>
+                <li>
+                  Created a visual in&#8209;browser IDE which enabled non&#8209;technical personnel to configure, merge,
+                  and manipulate data sources. It was asynchronous, let you connect outputs to inputs with wires, and
+                  the resulting instruction set could be run in either JavaScript or PHP.
+                </li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Frontend,</span>
+                        <span class="app--nobr">Backend,</span>
+                        <span class="app--nobr">Cross-platform testing,</span>
+                        <span class="app--nobr">Accessibility,</span>
+                        <span class="app--nobr">Mentorship</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, JavaScript, jQuery, REST, PHP, MySQL, Git, Vim, Photoshop
+                      </dd>
+                    </div>
+                  </dl>
                 </li>
               </ul>
             </article>
@@ -1058,24 +1176,45 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Developed several jQuery plugins including a library for working with HTML5’s canvas element that
-                  provides chainable access to the native 2D-context object’s methods and properties, several helper
-                  methods for common canvas tasks not natively supported, and extensibility via jQuery-like plugin
-                  patterns.
+                  Created a bunch of jQuery plugins including a library for working with HTML5’s canvas element. It made
+                  it easy to access the native 2D&#8209;context object’s methods and properties via a chainable API and
+                  had some helper methods for common canvas tasks that weren’t built&#8209;in. You could also extend the
+                  library using jQuery&#8209;like plugin patterns. We used it to build charts.
                 </li>
                 <li>
-                  Created a .NET controller to combine multiple images into one file using data URIs and MHTML,
-                  eliminating the overhead and inflexibilities inherent with sprites.
+                  Created a .NET controller that could combine multiple images into one file using data URIs and an
+                  obscure feature called MHTML. It let us avoid the overhead of compiling and maintaining image sprites,
+                  but the tech died with IE.
                 </li>
                 <li>
-                  Played a key role in completing several client projects under tight deadlines by applying knowledge of
-                  CSS and JavaScript to resolve issues others could not.
+                  Helped complete several client projects under tight deadlines by applying my knowledge of CSS and
+                  JavaScript to resolve issues others could not. They called me a wizard, but I had just read the docs.
                 </li>
                 <li>
-                  Collaborated on the client and server-side architecture of an internal .NET MVC framework for the
-                  rapid development of financial analysis and news reporting products and services.
+                  Got to help out with the client and server architecture of an internal .NET MVC framework which sped
+                  up our development of financial analysis and news reporting products and services used by the likes of
+                  The New York Times and Financial Times.
                 </li>
-                <li>Solely responsible for the design and development of an internal admin utility.</li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Frontend,</span>
+                        <span class="app--nobr">Backend,</span>
+                        <span class="app--nobr">Cross-platform testing,</span>
+                        <span class="app--nobr">Data visualization,</span>
+                        <span class="app--nobr">Accessibility</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, JavaScript, jQuery, Canvas, PHP, .NET, SQL, SVN, Photoshop
+                      </dd>
+                    </div>
+                  </dl>
+                </li>
               </ul>
             </article>
 
@@ -1087,21 +1226,50 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Responsible for the design and initial development of eight websites including a multimedia download
-                  store.
+                  Struck out solo for a while and during that time I was responsible for the design and initial
+                  development of eight websites. One I collaborated on was a multimedia download store; it had
+                  dinosaurs.
                 </li>
                 <li>
-                  Built a custom content management system to control the flow of an alternate-reality treasure hunt,
-                  including clue-based regular expressions to match a variety of valid user input, in less than two
-                  weeks to meet a stiff deadline.
+                  One fun challenge I solved was developing a means of manipulating URLs in ASP.NET 1.1 similar to the
+                  functionality of Apache’s mod_rewrite. This made it a lot easier to configure new routes and opened up
+                  new possibilities for the frontend.
                 </li>
                 <li>
-                  Developed a means of manipulating URLs in ASP.NET 1.1 similar to the functionality of Apache’s
-                  mod_rewrite.
+                  Other highlights include programming a 36KB object‑oriented PHP5 MVC framework, doing the cover design
+                  and typesetting of a (slightly boring) 430‑page novel, and leading a team of five designers in the
+                  layout of a 116&#8209;page catalog.
                 </li>
-                <li>Programmed a 36KB object-oriented PHP5 MVC framework.</li>
-                <li>Led a team of five designers in the layout of a 116-page catalog.</li>
-                <li>Designed the cover for, and typeset, a 430-page novel.</li>
+                <li>
+                  Lost a lot of sleep over two weeks designing and implementing a website to control the flow of an
+                  alternate&#8209;reality treasure hunt. Contestants had to scour the internet and the globe to find
+                  answers to riddles which I validated using complex regular expressions within a fully custom content
+                  management system.
+                </li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Frontend,</span>
+                        <span class="app--nobr">Backend,</span>
+                        <span class="app--nobr">Web design,</span>
+                        <span class="app--nobr">Graphic design,</span>
+                        <span class="app--nobr">Print design,</span>
+                        <span class="app--nobr">Product design,</span>
+                        <span class="app--nobr">Cross-platform testing,</span>
+                        <span class="app--nobr">Team leadership</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, JavaScript, PHP, MySQL, Apache, SQL, .NET, XML, XSLT, Photoshop, Illustrator,
+                        InDesign
+                      </dd>
+                    </div>
+                  </dl>
+                </li>
               </ul>
             </article>
 
@@ -1113,19 +1281,44 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Responsible for the design and initial development of three websites, as well as collaborated in their
-                  ongoing maintenance.
+                  This was my first real job after high school, and I’m so grateful for the patience and mentorship of
+                  my manager and teammates. They helped me get my feet wet and paved the way for my career.
                 </li>
                 <li>
-                  Played a key role in the redesign and overhaul of the company’s flagship website to improve the user
-                  experience and breach a scalability limit of 10,000 simultaneous users.
+                  During my time there, I was responsible for designing, developing, and maintaining three websites. But
+                  the most interesting part was working on the redesign and overhaul of the company’s flagship website
+                  to make it more user&#8209;friendly and break though its scalability limit of 10,000 simultaneous
+                  users.
                 </li>
-                <li>Collaborated on the design and layout of five annual catalogs.</li>
-                <li>Created and maintained the branding for multiple events.</li>
-                <li>Designed eight book covers, seven DVDs and boxed sets, and over twenty-five CDs and boxed sets.</li>
                 <li>
-                  Designed an HTML email newsletter template and over seventy-five of the newsletter’s graphical
-                  banners.
+                  Got to work on the design and layout of 5 annual product catalogs, designed 8 book covers, 7 DVDs and
+                  boxed sets, and over 25 CDs and boxed sets.
+                </li>
+                <li>
+                  I also designed an HTML email newsletter template and over seventy&#8209;five of the newsletter’s
+                  graphical banners over the years. Viva la table&#8209;based layouts.
+                </li>
+                <li>
+                  <dl class="app-stats -app-job-stats">
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Skills</dt>
+                      <dd class="app-stats-value">
+                        <span class="app--nobr">Frontend,</span>
+                        <span class="app--nobr">Backend,</span>
+                        <span class="app--nobr">Web design,</span>
+                        <span class="app--nobr">Graphic design,</span>
+                        <span class="app--nobr">Print design,</span>
+                        <span class="app--nobr">Product design,</span>
+                        <span class="app--nobr">Email templates</span>
+                      </dd>
+                    </div>
+                    <div class="app-stats-pair">
+                      <dt class="app-stats-key">Tools</dt>
+                      <dd class="app-stats-value">
+                        HTML, CSS, JavaScript, PHP, .NET, SQL, Photoshop, Illustrator, InDesign, Quark
+                      </dd>
+                    </div>
+                  </dl>
                 </li>
               </ul>
             </article>

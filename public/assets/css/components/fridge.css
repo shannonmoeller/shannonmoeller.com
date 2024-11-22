@@ -203,8 +203,6 @@
     aspect-ratio: 1;
     width: 8cqw;
 
-    box-shadow: 0 0 8px oklch(from var(--app-color-gray) var(--app-color-800));
-
     :nth-child(1 of &) {
       top: 20cqw;
       left: 24cqw;
@@ -218,21 +216,21 @@
   }
 
   .app-box.-app-fridge-bottle-cap {
-    --app-box-color: oklch(from var(--app-color-yellow) var(--app-color-200));
-    --app-box-depth: 1cqw;
+    --app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
+    --app-box-depth: 1.5cqw;
 
     grid-area: 1 / 1;
-    margin: 20%;
-    transform: translateZ(36cqw);
+    margin: 19%;
+    transform: translateZ(39cqw);
   }
 
   .app-box.-app-fridge-bottle-neck {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
+    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
     --app-box-depth: 12cqw;
 
     grid-area: 1 / 1;
     margin: 20%;
-    transform: translateZ(24cqw);
+    transform: translateZ(27cqw);
 
     & > .-bottom {
       background-image: var(--app-gradient-surfaceGloss), var(--app-gradient-label);
@@ -244,11 +242,21 @@
     }
   }
 
-  .app-box.-app-fridge-bottle-body {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
-    --app-box-depth: 24cqw;
+  .app-box.-app-fridge-bottle-neckBase {
+    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
+    --app-box-depth: 1cqw;
 
     grid-area: 1 / 1;
+    margin: 10%;
+    transform: translateZ(26cqw);
+  }
+
+  .app-box.-app-fridge-bottle-body {
+    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
+    --app-box-depth: 25cqw;
+
+    grid-area: 1 / 1;
+    transform: translateZ(1cqw);
 
     & > .-bottom {
       background-image: var(--app-gradient-surfaceGloss), var(--app-gradient-labelText), var(--app-gradient-label);
@@ -258,8 +266,17 @@
         cover,
         80% 15%,
         100% 60%;
-      border-right: 2px solid oklch(from var(--app-color-green) var(--app-color-400));
     }
+  }
+
+  .app-box.-app-fridge-bottle-bodyBase {
+    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
+    --app-box-depth: 2cqw;
+
+    grid-area: 1 / 1;
+    margin: 10%;
+
+    box-shadow: 0 0 8px oklch(from var(--app-color-gray) var(--app-color-800));
   }
 
   /**

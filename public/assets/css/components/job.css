@@ -29,6 +29,11 @@
 
     & > li {
       padding-block: 0.5lh;
+      text-wrap: pretty;
+
+      &:has(dl) {
+        list-style-type: none;
+      }
 
       @media (min-width: 45rem) {
         break-inside: avoid;
@@ -41,6 +46,15 @@
 
     & > li::marker {
       color: var(--app-color-foregroundAccentSecondary);
+    }
+  }
+
+  .app-stats.-app-job-stats {
+    flex-direction: column;
+    gap: 1em;
+
+    & > .app-stats-pair {
+      flex-direction: column;
     }
   }
 }
