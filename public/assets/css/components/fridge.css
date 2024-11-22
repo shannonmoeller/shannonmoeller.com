@@ -217,7 +217,7 @@
 
   .app-box.-app-fridge-bottle-cap {
     --app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
-    --app-box-depth: 1cqw;
+    --app-box-depth: 1.5cqw;
 
     grid-area: 1 / 1;
     margin: 19%;
