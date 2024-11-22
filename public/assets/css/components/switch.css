@@ -29,7 +29,7 @@
 
   .app-box.-app-switch-knob {
     --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
-    --app-box-depth: 1cqw;
+    --app-box-depth: 0.5cqw;
 
     grid-column: 1;
     grid-row: 1;
@@ -41,13 +41,13 @@
     box-shadow: 0 2cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
 
     .app-box.-app-switch:has(:checked) & {
-      box-shadow: 0 1cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
+      box-shadow: 0 0.5cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
     }
   }
 
   .app-box.-app-switch-lever {
     --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
-    --app-box-depth: 2.5cqw;
+    --app-box-depth: 2cqw;
 
     grid-column: 1;
     grid-row: 1;

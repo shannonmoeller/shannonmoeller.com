@@ -93,7 +93,13 @@
 
               <nav class="app-box -app-fridge -app-intro-room-fridge app--colorSchemeLight" aria-label="Favorite foods">
                 <label class="app-box -app-fridge-door">
-                  <input class="app--visuallyHidden" type="checkbox" aria-label="Toggle fridge door" tabindex="-1" />
+                  <input
+                    class="app--visuallyHidden"
+                    type="checkbox"
+                    aria-label="Toggle fridge door"
+                    tabindex="-1"
+                    checked
+                  />
 
                   <span class="app-box-face -top -fill -lighter"></span>
                   <span class="app-box-face -front -fill -light -toDark -gloss">
@@ -155,7 +161,18 @@
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
                           </div>
+                          <div class="app-box -app-fridge-bottle-neckBase">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
                           <div class="app-box -app-fridge-bottle-body">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -back -fill -darker"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
+                          <div class="app-box -app-fridge-bottle-bodyBase">
                             <div class="app-box-face -front -fill -darker -toLighter"></div>
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
@@ -171,7 +188,17 @@
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
                           </div>
+                          <div class="app-box -app-fridge-bottle-neckBase">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
                           <div class="app-box -app-fridge-bottle-body">
+                            <div class="app-box-face -front -fill -darker -toLighter"></div>
+                            <div class="app-box-face -right -fill -darker -toNormal"></div>
+                            <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                          </div>
+                          <div class="app-box -app-fridge-bottle-bodyBase">
                             <div class="app-box-face -front -fill -darker -toLighter"></div>
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
@@ -367,7 +394,7 @@
                   <dl class="app-stats">
                     <div class="app-stats-pair">
                       <dt class="app-stats-key">Downloads</dt>
-                      <dd class="app-stats-value">+780k/month</dd>
+                      <dd class="app-stats-value">+800k/month</dd>
                     </div>
                   </dl>
                 </a>
@@ -893,7 +920,7 @@
             <article class="app-job" open>
               <h4 class="app-job-summary">
                 <span class="app-job-dates">Oct 2022 – current</span>
-                <span class="app-job-title">Staff Frontend Engineer, Uber&nbsp;Freight</span>
+                <span class="app-job-title">Staff Frontend Engineer, Uber&nbsp;Freight (Uber)</span>
               </h4>
 
               <ul class="app-job-highlights">
@@ -964,8 +991,8 @@
                   native mobile apps.
                 </li>
                 <li>
-                  In addition to these projects, I also worked on dozens of legacy and a few new frontend tools in the
-                  Maps org in support of various on&#8209;site teams and hundreds of operators.
+                  Maintained dozens of legacy tools and built a few new frontend tools in the Maps org in support of
+                  various on-site teams and hundreds of operators around the globe.
                 </li>
                 <li>
                   I was also able to make some major quality&#8209;of&#8209;life improvements to Uber's core web
@@ -1012,8 +1039,8 @@
                   composable project structure.
                 </li>
                 <li>
-                  As a big fan of the browser and budding HTML, CSS, and JavaScript standards, I helped get them adopted
-                  internally which raised the bar on quality and customer satisfaction.
+                  As a big fan of the browser and emerging HTML, CSS, and JavaScript standards, I fostered internal
+                  adoption which raised the bar on quality and customer satisfaction.
                 </li>
                 <li>
                   One of my favorite projects was creating an internal frontend boilerplate with a web&#8209;based GUI
@@ -1065,7 +1092,7 @@
                 </li>
                 <li>
                   Designed an iOS app to be used like a sports playbook for sales teams. While a super fun project, it
-                  was also what made me decide that I'd rather focus my professional time writing code.
+                  was also what made me decide that I'd rather focus my professional time on writing code.
                 </li>
                 <li>
                   <dl class="app-stats -app-job-stats">
@@ -1083,7 +1110,7 @@
                     <div class="app-stats-pair">
                       <dt class="app-stats-key">Tools</dt>
                       <dd class="app-stats-value">
-                        HTML, CSS, JavaScript, REST, XCode, Photoshop, Illustrator, InDesign
+                        HTML, CSS, JavaScript, REST, Xcode, Photoshop, Illustrator, InDesign
                       </dd>
                     </div>
                   </dl>
@@ -1133,7 +1160,7 @@
                     <div class="app-stats-pair">
                       <dt class="app-stats-key">Tools</dt>
                       <dd class="app-stats-value">
-                        HTML, CSS, JavaScript, jQuery, REST, PHP, MySQL, Git, SVN, Vim, Photoshop
+                        HTML, CSS, JavaScript, jQuery, REST, PHP, MySQL, Git, Vim, Photoshop
                       </dd>
                     </div>
                   </dl>
@@ -1199,24 +1226,25 @@
 
               <ul class="app-job-highlights">
                 <li>
-                  Struck out solo for a while, and during that time I was responsible for the design and initial
-                  development of eight websites including a multimedia download store. It had dinosaurs.
+                  Struck out solo for a while and during that time I was responsible for the design and initial
+                  development of eight websites. One I collaborated on was a multimedia download store; it had
+                  dinosaurs.
                 </li>
                 <li>
                   One fun challenge I solved was developing a means of manipulating URLs in ASP.NET 1.1 similar to the
                   functionality of Apache’s mod_rewrite. This made it a lot easier to configure new routes and opened up
-                  new possibilities from the frontend.
+                  new possibilities for the frontend.
                 </li>
                 <li>
-                  Other highlights include programming a 36KB object&#8209;oriented PHP5 MVC framework, doing the cover
-                  design and typesetting of a (slightly boring) 430&#8209;page novel, and leading a team of five
-                  designers in the layout of a 116&#8209;page catalog.
+                  Other highlights include programming a 36KB object‑oriented PHP5 MVC framework, doing the cover design
+                  and typesetting of a (slightly boring) 430‑page novel, and leading a team of five designers in the
+                  layout of a 116&#8209;page catalog.
                 </li>
                 <li>
-                  Lost a lot of sleep building a custom content management system to control the flow of an
+                  Lost a lot of sleep over two weeks designing and implementing a website to control the flow of an
                   alternate&#8209;reality treasure hunt. Contestants had to scour the internet and the globe to find
-                  answers to riddles which I validated with complex regular expressions. I had to design and implement
-                  the whole thing in less than two weeks to meet a stiff deadline.
+                  answers to riddles which I validated using complex regular expressions within a fully custom content
+                  management system.
                 </li>
                 <li>
                   <dl class="app-stats -app-job-stats">
@@ -1258,13 +1286,13 @@
                 </li>
                 <li>
                   During my time there, I was responsible for designing, developing, and maintaining three websites. But
-                  the most exciting part was working on the redesign and overhaul of the company’s flagship website. We
-                  wanted to make it more user&#8209;friendly and break the scalability limit of 10,000 simultaneous
-                  users. It was a tough challenge, but we did it.
+                  the most interesting part was working on the redesign and overhaul of the company’s flagship website
+                  to make it more user&#8209;friendly and break though its scalability limit of 10,000 simultaneous
+                  users.
                 </li>
                 <li>
-                  Got to work on the design and layout of five annual product catalogs and designed eight book covers,
-                  seven DVDs and boxed sets, and over twenty&#8209;five CDs and boxed sets.
+                  Got to work on the design and layout of 5 annual product catalogs, designed 8 book covers, 7 DVDs and
+                  boxed sets, and over 25 CDs and boxed sets.
                 </li>
                 <li>
                   I also designed an HTML email newsletter template and over seventy&#8209;five of the newsletter’s

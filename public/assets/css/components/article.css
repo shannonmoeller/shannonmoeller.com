@@ -44,7 +44,9 @@
 
     & > :where(:not([class])) {
       grid-column: var(--app-article-section-bodyCol);
+
       font-size: var(--app-article-section-fontSize);
+      text-wrap: pretty;
 
       @media (min-width: 64rem) {
         font-size: max(1rem, 2cqw);
