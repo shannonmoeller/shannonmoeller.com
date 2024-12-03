@@ -28,8 +28,8 @@
       oklch(from var(--app-color-gray) var(--app-color-700))
     );
     --app-color-backgroundSecondary: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-100) / 40%),
-      oklch(from var(--app-color-gray) var(--app-color-800) / 40%)
+      oklch(from var(--app-color-gray) var(--app-color-100) / 60%),
+      oklch(from var(--app-color-gray) var(--app-color-800) / 60%)
     );
 
     --app-color-foreground: light-dark(
@@ -56,6 +56,8 @@
       oklch(from var(--app-color-gray) var(--app-color-50)),
       oklch(from var(--app-color-gray) var(--app-color-50))
     );
+
+    --app-color-border: oklch(from var(--app-color-foregroundSecondary) l c h / 30%);
 
     color-scheme: light dark;
   }

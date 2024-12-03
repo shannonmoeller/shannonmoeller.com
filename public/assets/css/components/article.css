@@ -44,9 +44,7 @@
 
     & > :where(:not([class])) {
       grid-column: var(--app-article-section-bodyCol);
-
       font-size: var(--app-article-section-fontSize);
-      text-wrap: pretty;
 
       @media (min-width: 64rem) {
         font-size: max(1rem, 2cqw);
@@ -68,10 +66,12 @@
     }
   }
 
-  .app-article-section-aside {
+  .app-article-section-copyright {
     grid-column: var(--app-article-section-bodyCol);
+    padding-block-start: 1em;
 
     color: var(--app-color-foregroundSecondary);
-    font-size: max(0.75rem, 1.5cqw);
+    font-size: max(10px, 0.75rem, 0.75em);
+    border-block-start: 1px solid var(--app-color-border);
   }
 }
