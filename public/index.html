@@ -38,6 +38,7 @@
     <script>
       addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.remove('app--loading');
+        document.querySelector(location.hash)?.scrollIntoView();
       });
     </script>
   </head>
@@ -93,12 +94,7 @@
 
               <nav class="app-box -app-fridge -app-intro-room-fridge app--colorSchemeLight" aria-label="Favorite foods">
                 <label class="app-box -app-fridge-door">
-                  <input
-                    class="app--visuallyHidden"
-                    type="checkbox"
-                    aria-label="Toggle fridge door"
-                    tabindex="-1"
-                  />
+                  <input class="app--visuallyHidden" type="checkbox" aria-label="Toggle fridge door" tabindex="-1" />
 
                   <span class="app-box-face -top -fill -lighter"></span>
                   <span class="app-box-face -front -fill -light -toDark -gloss">
@@ -260,7 +256,7 @@
               </nav>
 
               <app-color-scheme>
-                <label class="app-box -app-switch">
+                <label class="app-box -app-switch app--colorSchemeDark">
                   <input
                     class="app--visuallyHidden"
                     type="checkbox"
@@ -919,7 +915,9 @@
             <article class="app-job" open>
               <h4 class="app-job-summary">
                 <span class="app-job-dates">Oct 2022 – current</span>
-                <span class="app-job-title">Staff Frontend Engineer, Uber&nbsp;Freight (Uber)</span>
+                <span class="app-job-title">
+                  Staff Frontend Engineer, <a href="https://uber.com/freight">Uber&nbsp;Freight (Uber)</a>
+                </span>
               </h4>
 
               <ul class="app-job-highlights">
@@ -966,7 +964,7 @@
             <article class="app-job" open>
               <h4 class="app-job-summary">
                 <span class="app-job-dates">Aug 2017 – Oct 2022</span>
-                <span class="app-job-title">Senior Frontend Engineer, Uber</span>
+                <span class="app-job-title">Senior Frontend Engineer, <a href="https://uber.com">Uber</a></span>
               </h4>
 
               <ul class="app-job-highlights">
@@ -1024,7 +1022,9 @@
             <article class="app-job" open>
               <h4 class="app-job-summary">
                 <span class="app-job-dates">Dec 2012 – Aug 2017</span>
-                <span class="app-job-title">Principal Frontend Engineer, The&nbsp;Nerdery</span>
+                <span class="app-job-title">
+                  Principal Frontend Engineer, <a href="https://nerdery.com">The&nbsp;Nerdery</a>
+                </span>
               </h4>
 
               <ul class="app-job-highlights">
@@ -1077,7 +1077,9 @@
             <article class="app-job">
               <h4 class="app-job-summary">
                 <span class="app-job-dates">Jun 2012 – Dec 2012</span>
-                <span class="app-job-title">Designer &amp; Developer, Speak&nbsp;Creative</span>
+                <span class="app-job-title">
+                  Designer &amp; Developer, <a href="https://speakcreative.com">Speak&nbsp;Creative</a>
+                </span>
               </h4>
 
               <ul class="app-job-highlights">
@@ -1120,7 +1122,7 @@
             <article class="app-job">
               <h4 class="app-job-summary">
                 <span class="app-job-dates">Feb 2010 – Jun 2012</span>
-                <span class="app-job-title">Senior Frontend Developer, Synacor</span>
+                <span class="app-job-title">Senior Frontend Developer, <a href="https://synacor.com">Synacor</a></span>
               </h4>
 
               <ul class="app-job-highlights">
@@ -1325,8 +1327,17 @@
         </article>
       </main>
 
-      <footer class="app-article -secondary">
+      <aside id="fridge" class="app-article -secondary">
         <section class="app-article-section">
+          <h2 class="app-article-section-head">What’s with the fridge?</h2>
+
+          <p>
+            When I was a kid I randomly received three identical t-shirts, each green bearing the white outline of a
+            vintage refrigerator. I have no idea why they existed, just that they did and that I loved them.
+          </p>
+
+          <p>I miss them.</p>
+
           <div class="app-box -app-chair">
             <div class="app-box -app-chair-armLeft">
               <div class="app-box-face -top -fill -lighter"></div>
@@ -1375,28 +1386,20 @@
                   <div class="app-box-face -front -fill -darker"></div>
                   <div class="app-box-face -left -fill -darker"></div>
                 </div>
-                <div class="app-box -app-chair-shadow">
+                <div class="app-box -app-chair-floor">
+                  <div class="app-box-face -back -app-chair-rug -gloss"></div>
                   <div class="app-box-face -back -shadow"></div>
                 </div>
               </div>
             </div>
           </div>
         </section>
+      </aside>
 
-        <section id="fridge" class="app-article-section">
-          <h2 class="app-article-section-head">What’s with the fridge?</h2>
-
-          <p>
-            When I was a kid I randomly received three identical t-shirts, each green bearing the white outline of a
-            vintage refrigerator. I have no idea why they existed, just that they did and that I loved them.
-          </p>
-
-          <p>I miss them.</p>
-        </section>
-
+      <footer class="app-article -secondary">
         <section class="app-article-section">
-          <p class="app-article-section-aside">
-            <small>© <app-copyright>2004</app-copyright> Shannon Moeller</small>
+          <p class="app-article-section-copyright">
+            <small>© <app-copyright>2004</app-copyright> Shannon Moeller. All rights reserved.</small>
           </p>
         </section>
       </footer>

@@ -17,7 +17,8 @@
     vertical-align: baseline;
   }
 
-  :where(:focus-visible) {
+  :where(:focus-visible),
+  :where(label:has(:focus-visible)) {
     outline: 0.2em solid;
     outline-offset: 0.2em;
   }
@@ -50,6 +51,10 @@
     font-synthesis: none;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+  }
+
+  a:where(:not([class]):hover) {
+    color: var(--app-color-foregroundLink);
   }
 
   em:where(:not([class])) {
