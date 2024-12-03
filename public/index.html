@@ -38,7 +38,10 @@
     <script>
       addEventListener('DOMContentLoaded', () => {
         document.documentElement.classList.remove('app--loading');
-        document.querySelector(location.hash)?.scrollIntoView();
+
+        if (location.hash) {
+          document.querySelector(location.hash)?.scrollIntoView();
+        }
       });
     </script>
   </head>
