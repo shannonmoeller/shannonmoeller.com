@@ -8,7 +8,7 @@
     display: grid;
     grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 4fr 1fr;
     aspect-ratio: 1;
-    transform: translateZ(10cqw) rotateY(0.05turn);
+    transform: translateZ(12cqw) rotateY(0.05turn);
     transform-origin: left bottom;
 
     @media (min-width: 45rem) {
