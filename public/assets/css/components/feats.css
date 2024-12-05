@@ -82,6 +82,7 @@
     }
 
     & > .-front {
+      gap: 0.5em;
       padding: 25% 0;
       text-align: center;
 
@@ -99,6 +100,14 @@
 
     font-size: max(0.75rem, 6cqw);
     text-wrap: balance;
+
+    &.-secondary {
+      font-size: max(0.5rem, 0.5em);
+      font-weight: 700;
+      letter-spacing: 0.25ch;
+      text-align: right;
+      text-transform: uppercase;
+    }
 
     &:hover {
       color: var(--app-color-foregroundLink);

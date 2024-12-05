@@ -27,6 +27,10 @@
     display: none !important;
   }
 
+  :where([id]) {
+    scroll-margin-block: 10cqh;
+  }
+
   :where(dl, ol, ul) {
     list-style: none;
   }
