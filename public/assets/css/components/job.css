@@ -1,7 +1,7 @@
 @layer app.components {
   .app-job {
     grid-column: var(--app-article-section-bodyCol);
-    font-size: max(1rem, 1.5cqw);
+    font-size: max(1rem, 1.5cqi);
   }
 
   .app-job-summary {
@@ -22,7 +22,7 @@
     list-style: square outside;
     transform-style: flat;
 
-    @media (min-width: 45rem) {
+    @media (width >= 45rem) {
       columns: 2;
       column-gap: 2em;
     }
@@ -35,7 +35,7 @@
         list-style-type: none;
       }
 
-      @media (min-width: 45rem) {
+      @media (width >= 45rem) {
         break-inside: avoid;
       }
     }

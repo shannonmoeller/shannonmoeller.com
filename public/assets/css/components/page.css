@@ -2,13 +2,16 @@
   .app-page {
     height: 100%;
     overflow: hidden auto;
-    perspective: calc(1000px + 100vmax);
-    perspective-origin: 30vw 30vw;
 
+    background-color: var(--app-color-background);
+    background-attachment: fixed;
+    background-image: var(--app-gradient-background);
+    background-blend-mode: multiply;
     border-top: 0.5vmax solid;
     border-image: var(--app-gradient-stripes) 1;
 
-    @media (min-width: 45rem) {
+    @media (width >= 45rem) AND (height >= 45rem) {
+      perspective: calc(1000px + 100vmax);
       perspective-origin: 30vw 5vmin;
     }
 

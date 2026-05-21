@@ -126,7 +126,7 @@
 
     &.-shadow {
       background-color: oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
-      filter: blur(0.3cqw);
+      filter: blur(0.3cqi);
     }
   }
 }

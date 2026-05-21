@@ -28,7 +28,7 @@
   }
 
   :where([id]) {
-    scroll-margin-block: 10cqh;
+    scroll-margin-block: 10cqb;
   }
 
   :where(dl, ol, ul) {
@@ -37,14 +37,14 @@
 
   html {
     height: 100%;
-    overflow: hidden;
+
+    @media (width >= 45rem) AND (height >= 45rem) {
+      overflow: hidden;
+    }
   }
 
   body {
-    height: 100%;
-    overflow: hidden;
-
-    background: var(--app-color-background);
+    background: var(--app-color-backgroundOverscroll);
     background-image: var(--app-gradient-background);
     background-blend-mode: multiply;
     color: var(--app-color-foreground);
@@ -55,6 +55,11 @@
     font-synthesis: none;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+
+    @media (width >= 45rem) AND (height >= 45rem) {
+      height: 100%;
+      overflow: hidden;
+    }
   }
 
   a:where(:not([class]):hover) {

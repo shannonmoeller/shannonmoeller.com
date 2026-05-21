@@ -23,6 +23,10 @@
     --app-color-dark: calc(l - 0.04) c h;
     --app-color-darker: calc(l - 0.08) c h;
 
+    --app-color-backgroundOverscroll: light-dark(
+      oklch(from var(--app-color-gray) var(--app-color-200)),
+      oklch(from var(--app-color-gray) var(--app-color-800))
+    );
     --app-color-background: light-dark(
       oklch(from var(--app-color-gray) var(--app-color-0)),
       oklch(from var(--app-color-gray) var(--app-color-700))

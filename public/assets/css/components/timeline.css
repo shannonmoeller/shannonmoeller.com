@@ -1,7 +1,7 @@
 @layer app.components {
   .app-timeline {
     display: grid;
-    grid-template-columns: repeat(25, 1fr);
+    grid-template-columns: repeat(27, 1fr);
     column-gap: 1px;
   }
 

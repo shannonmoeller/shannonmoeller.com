@@ -54,7 +54,7 @@
     .app-box.-app-fridge:has(:checked, a:focus) & {
       rotate: y -0.14turn;
 
-      @media (min-width: 45rem) {
+      @media (width >= 45rem) {
         rotate: y -0.17turn;
       }
     }
@@ -74,15 +74,15 @@
     transition: box-shadow var(--app-animation-durationFast);
 
     box-shadow:
-      0 6.6cqw 0.3cqw oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-      0 18.3cqw 0.4cqw oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-      0 30cqw 0.5cqw oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
+      0 6.6cqi 0.3cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+      0 18.3cqi 0.4cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+      0 30cqi 0.5cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
 
     .app-box.-app-fridge-door:not(:has(:checked)):active & {
       box-shadow:
-        0 10.6cqw 0.3cqw oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-        0 22.3cqw 0.8cqw oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-        0 34cqw 1.2cqw oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
+        0 10.6cqi 0.3cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+        0 22.3cqi 0.8cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
+        0 34cqi 1.2cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
     }
   }
 
@@ -305,7 +305,7 @@
         border: 0.1em dashed;
         border-radius: 50%;
         color: oklch(from var(--app-color-gray) var(--app-color-800));
-        font: 400 25cqw var(--app-font-display);
+        font: 400 25cqi var(--app-font-display);
       }
     }
   }

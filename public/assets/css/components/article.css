@@ -2,22 +2,27 @@
   .app-article {
     display: flex;
     flex-direction: column;
-    gap: 10cqw;
+    gap: 10cqi;
     margin-inline: var(--app-size-safeInline);
-    padding-block: 10cqw;
+    padding-block: 10cqi;
     max-width: 100rem;
 
-    @media (min-width: 64rem) {
+    @media (width >= 64rem) {
       margin-inline: auto;
     }
 
     &.-secondary {
-      gap: 20cqw;
+      gap: 20cqi;
+
+      @media (width < 45rem) OR (height < 45rem) {
+        perspective: calc(1000px + 100vmax);
+        perspective-origin: 30vw 0%;
+      }
 
       &::before {
         content: '';
         position: absolute;
-        inset: 0 -50vw;
+        inset: 0 -50vi;
 
         background-color: var(--app-color-backgroundSecondary);
         pointer-events: none;
@@ -28,19 +33,19 @@
   .app-article-section {
     --app-article-section-headCol: 2 / span 8;
     --app-article-section-bodyCol: 2 / span 8;
-    --app-article-section-fontSize: max(1rem, 2.5cqw);
+    --app-article-section-fontSize: max(1rem, 2.5cqi);
 
     container-type: inline-size;
     display: grid;
     grid-template-columns: repeat(10, minmax(0, 1fr));
-    gap: max(1.6rem, 4cqw) 0;
+    gap: max(1.6rem, 4cqi) 0;
 
-    @media (min-width: 45rem) {
+    @media (width >= 45rem) {
       --app-article-section-headCol: 1 / span 2;
       --app-article-section-bodyCol: 3 / span 7;
     }
 
-    @media (min-width: 64rem) {
+    @media (width >= 64rem) {
       --app-article-section-headCol: 1 / span 2;
       --app-article-section-bodyCol: 3 / span 6;
       --app-article-section-fontSize: max(1rem, 2cqw);
@@ -52,7 +57,7 @@
       font-size: var(--app-article-section-fontSize);
       text-wrap: pretty;
 
-      @media (min-width: 64rem) {
+      @media (width >= 64rem) {
         font-size: max(1rem, 2cqw);
       }
     }
@@ -62,13 +67,16 @@
     grid-column: var(--app-article-section-headCol);
 
     color: var(--app-color-foregroundAccent);
-    font: 400 max(1rem, 2cqw) / 1 var(--app-font-display);
+    font: 400 max(1rem, 2cqi) / 1 var(--app-font-display);
 
-    @media (min-width: 45rem) {
+    @media (width >= 45rem) {
       padding-inline: 2ch;
-      transform: translateY(-0.5cqw) translateZ(5cqw);
 
       text-align: right;
+    }
+
+    @media (width >= 45rem) AND (height >= 45rem) {
+      transform: translateY(-0.5cqi) translateZ(5cqi);
     }
   }
 

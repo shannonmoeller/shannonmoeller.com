@@ -11,7 +11,7 @@
     transform: translateZ(12cqw) rotateY(0.05turn);
     transform-origin: left bottom;
 
-    @media (min-width: 45rem) {
+    @media (width >= 45rem) {
       grid-column: 3 / span 2;
     }
   }
@@ -35,7 +35,7 @@
     grid-column: 2;
     grid-row: 3;
 
-    margin: 1cqw;
+    margin: 1cqi;
   }
 
   .app-box.-app-chair-armRight {
@@ -50,7 +50,7 @@
     & > .-bottom {
       display: grid;
       grid-template: 1fr 1fr / 1fr 1fr;
-      gap: 50cqw;
+      gap: 50cqi;
     }
   }
 
@@ -59,7 +59,7 @@
     --app-box-depth: 6cqh;
 
     transform: translateZ(-1px);
-    margin: 2cqw;
+    margin: 2cqi;
   }
 
   .app-box.-app-chair-floor {
@@ -71,10 +71,10 @@
   }
 
   .app-box-face.-app-chair-rug {
-    inset: -40cqw;
+    inset: -40cqi;
 
     background-color: oklch(from var(--app-color-blue) var(--app-color-600));
-    border: 10cqw solid oklch(from var(--app-color-blue) var(--app-color-500));
+    border: 10cqi solid oklch(from var(--app-color-blue) var(--app-color-500));
     border-radius: 50%;
   }
 }
