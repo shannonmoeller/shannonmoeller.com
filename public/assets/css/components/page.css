@@ -4,13 +4,13 @@
     overflow: hidden auto;
 
     background-color: var(--app-color-background);
-    background-attachment: fixed;
-    background-image: var(--app-gradient-background);
-    background-blend-mode: multiply;
     border-top: 0.5vmax solid;
     border-image: var(--app-gradient-stripes) 1;
 
     @media (width >= 45rem) AND (height >= 45rem) {
+      background-attachment: fixed;
+      background-image: var(--app-gradient-background);
+      background-blend-mode: multiply;
       perspective: calc(1000px + 100vmax);
       perspective-origin: 30vw 5vmin;
     }

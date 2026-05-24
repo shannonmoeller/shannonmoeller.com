@@ -18,7 +18,7 @@
         '. .    aside .' minmax(4cqi, 1fr)
         '. .    .     .' minmax(4cqi, 2fr)
         / 1fr 3fr 5fr 1fr;
-      min-block-size: min(66cqi, 95cqb);
+      min-block-size: min(66cqi, 90cqb);
     }
 
     @media (width < 45rem) OR (height < 45rem) {

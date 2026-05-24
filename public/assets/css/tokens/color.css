@@ -32,7 +32,7 @@
       oklch(from var(--app-color-gray) var(--app-color-700))
     );
     --app-color-backgroundSecondary: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-100) / 60%),
+      oklch(from var(--app-color-gray) var(--app-color-100) / 30%),
       oklch(from var(--app-color-gray) var(--app-color-800) / 60%)
     );
 
