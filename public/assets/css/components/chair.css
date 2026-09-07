@@ -1,6 +1,6 @@
 @layer app.components {
   .app-box.-app-chair {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 75cqw;
 
     grid-column: 3 / span 3;
@@ -55,7 +55,7 @@
   }
 
   .app-box.-app-chair-foot {
-    --app-box-color: oklch(from var(--app-color-brown) var(--app-color-600));
+    --app-box-color: oklch(var(--app-color-brown) var(--app-color-600));
     --app-box-depth: 6cqh;
 
     transform: translateZ(-1px);
@@ -73,8 +73,8 @@
   .app-box-face.-app-chair-rug {
     inset: -40cqi;
 
-    background-color: oklch(from var(--app-color-blue) var(--app-color-600));
-    border: 10cqi solid oklch(from var(--app-color-blue) var(--app-color-500));
+    background-color: oklch(var(--app-color-blue) var(--app-color-600));
+    border: 10cqi solid oklch(var(--app-color-blue) var(--app-color-500));
     border-radius: 50%;
   }
 }

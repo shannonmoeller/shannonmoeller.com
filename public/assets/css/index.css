@@ -24,4 +24,5 @@
 @import './utils/dev.css';
 @import './utils/hidden.css';
 @import './utils/nobr.css';
+@import './utils/scheme.css';
 @import './utils/visually-hidden.css';

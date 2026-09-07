@@ -1,10 +1,10 @@
 @layer app.tokens {
   :root {
-    --app-color-gray: oklch(60% 0 0);
-    --app-color-brown: oklch(60% 0.1 66);
-    --app-color-yellow: oklch(60% 0.3 116);
-    --app-color-green: oklch(60% 0.15 136);
-    --app-color-blue: oklch(60% 0.15 246);
+    --app-color-gray: from oklch(60% 0 0);
+    --app-color-brown: from oklch(60% 0.1 66);
+    --app-color-yellow: from oklch(60% 0.3 116);
+    --app-color-green: from oklch(60% 0.15 136);
+    --app-color-blue: from oklch(60% 0.15 246);
 
     --app-color-0: 100% 0 h;
     --app-color-50: 100% calc(c * 0.2) h;
@@ -24,55 +24,43 @@
     --app-color-darker: calc(l - 0.08) c h;
 
     --app-color-backgroundOverscroll: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-200)),
-      oklch(from var(--app-color-gray) var(--app-color-800))
+      oklch(var(--app-color-gray) var(--app-color-200)),
+      oklch(var(--app-color-gray) var(--app-color-800))
     );
     --app-color-background: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-0)),
-      oklch(from var(--app-color-gray) var(--app-color-700))
+      oklch(var(--app-color-gray) var(--app-color-0)),
+      oklch(var(--app-color-gray) var(--app-color-700))
     );
     --app-color-backgroundSecondary: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-100) / 30%),
-      oklch(from var(--app-color-gray) var(--app-color-800) / 60%)
+      oklch(var(--app-color-gray) var(--app-color-100) / 30%),
+      oklch(var(--app-color-gray) var(--app-color-800) / 60%)
     );
 
     --app-color-foreground: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-700)),
-      oklch(from var(--app-color-gray) var(--app-color-100))
+      oklch(var(--app-color-gray) var(--app-color-700)),
+      oklch(var(--app-color-gray) var(--app-color-100))
     );
     --app-color-foregroundSecondary: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-500)),
-      oklch(from var(--app-color-gray) var(--app-color-300))
+      oklch(var(--app-color-gray) var(--app-color-500)),
+      oklch(var(--app-color-gray) var(--app-color-300))
     );
     --app-color-foregroundAccent: light-dark(
-      oklch(from var(--app-color-green) var(--app-color-300)),
-      oklch(from var(--app-color-green) var(--app-color-300))
+      oklch(var(--app-color-green) var(--app-color-300)),
+      oklch(var(--app-color-green) var(--app-color-300))
     );
     --app-color-foregroundAccentSecondary: light-dark(
-      oklch(from var(--app-color-blue) var(--app-color-300)),
-      oklch(from var(--app-color-blue) var(--app-color-300))
+      oklch(var(--app-color-blue) var(--app-color-300)),
+      oklch(var(--app-color-blue) var(--app-color-300))
     );
     --app-color-foregroundLink: light-dark(
-      oklch(from var(--app-color-blue) var(--app-color-500)),
-      oklch(from var(--app-color-blue) var(--app-color-300))
+      oklch(var(--app-color-blue) var(--app-color-500)),
+      oklch(var(--app-color-blue) var(--app-color-300))
     );
     --app-color-foregroundOnColor: light-dark(
-      oklch(from var(--app-color-gray) var(--app-color-50)),
-      oklch(from var(--app-color-gray) var(--app-color-50))
+      oklch(var(--app-color-gray) var(--app-color-50)),
+      oklch(var(--app-color-gray) var(--app-color-50))
     );
 
-    --app-color-border: oklch(from var(--app-color-foregroundSecondary) l c h / 30%);
-
-    color-scheme: light dark;
-  }
-
-  .app--colorSchemeDark {
-    color-scheme: dark;
-    color: var(--app-color-foreground);
-  }
-
-  .app--colorSchemeLight {
-    color-scheme: light;
-    color: var(--app-color-foreground);
+    --app-color-border: oklch(var(--app-color-foregroundSecondary) l c h / 30%);
   }
 }

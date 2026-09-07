@@ -125,8 +125,13 @@
     }
 
     &.-shadow {
-      background-color: oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
+      background-color: oklch(var(--app-color-gray) var(--app-color-800) / 20%);
       filter: blur(0.3cqi);
+    }
+
+    &:where(:focus-visible),
+    &:where(label:has(:focus-visible)) {
+      outline-offset: -0.2em;
     }
   }
 }

@@ -1,6 +1,6 @@
 @layer app.components {
   .app-box.-app-switch {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-600));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-600));
     --app-box-depth: 1cqw;
 
     grid-column: 3;
@@ -10,7 +10,7 @@
     width: 5cqw;
     transform: translateZ(calc(3cqw + 1px));
 
-    box-shadow: 0 1cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 30%);
+    box-shadow: 0 1cqw 0 oklch(var(--app-color-gray) var(--app-color-800) / 30%);
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
 
@@ -28,7 +28,7 @@
   }
 
   .app-box.-app-switch-knob {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 0.5cqw;
 
     grid-column: 1;
@@ -38,15 +38,15 @@
     width: 1cqw;
     transition: box-shadow var(--app-animation-durationFast);
 
-    box-shadow: 0 2cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
+    box-shadow: 0 2cqw 0 oklch(var(--app-color-gray) var(--app-color-800) / 20%);
 
     .app-box.-app-switch:has(:checked) & {
-      box-shadow: 0 0.5cqw 0 oklch(from var(--app-color-gray) var(--app-color-800) / 20%);
+      box-shadow: 0 0.5cqw 0 oklch(var(--app-color-gray) var(--app-color-800) / 20%);
     }
   }
 
   .app-box.-app-switch-lever {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 2cqw;
 
     grid-column: 1;

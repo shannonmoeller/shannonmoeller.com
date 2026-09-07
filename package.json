@@ -2,6 +2,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "deploy": "npx vercel deploy --prod",
     "dev": "livery public",
     "lint": "npm run lint:js && npm run lint:css && npm run lint:format && npm run lint:types",
     "lint:js": "eslint --fix \"**/*.js\"",

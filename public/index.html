@@ -95,9 +95,9 @@
                 <div class="app-box-face -bottom -fill -darker"></div>
               </div>
 
-              <nav class="app-box -app-fridge -app-intro-room-fridge app--colorSchemeLight" aria-label="Favorite foods">
-                <label class="app-box -app-fridge-door">
-                  <input class="app--visuallyHidden" type="checkbox" aria-label="Toggle fridge door" tabindex="-1" />
+              <nav class="app-box -app-fridge -app-intro-room-fridge app--schemeLight" aria-label="Favorite foods">
+                <label class="app-box -app-fridge-door" title="Toggle fridge door">
+                  <input class="app--visuallyHidden" type="checkbox" tabindex="-1" />
 
                   <span class="app-box-face -top -fill -lighter"></span>
                   <span class="app-box-face -front -fill -light -toDark -gloss">
@@ -147,8 +147,12 @@
                 </div>
                 <div class="app-box -app-fridge-cabBack">
                   <div class="app-box-face -front -fill -darker -toDark">
-                    <div class="app-box -app-fridge-shelf">
-                      <div class="app-box-face -top -fill -darker -toLighter">
+                    <div class="app-box -app-fridge-topShelf">
+                      <a
+                        class="app-box-face -top -fill -darker -toLighter"
+                        href="https://drinkreeds.com/"
+                        title="Drink Reed’s"
+                      >
                         <div class="app-box -app-fridge-bottle">
                           <div class="app-box -app-fridge-bottle-cap">
                             <div class="app-box-face -front -fill -darker -toLighter"></div>
@@ -176,7 +180,7 @@
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
                           </div>
                         </div>
-                        <a class="app-box -app-fridge-bottle" href="https://drinkreeds.com/" title="Drink Reed’s">
+                        <div class="app-box -app-fridge-bottle">
                           <div class="app-box -app-fridge-bottle-cap">
                             <div class="app-box-face -front -fill -darker -toLighter"></div>
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
@@ -201,10 +205,23 @@
                             <div class="app-box-face -right -fill -darker -toNormal"></div>
                             <div class="app-box-face -bottom -fill -darker -toLight"></div>
                           </div>
-                        </a>
-                      </div>
+                        </div>
+                      </a>
                       <div class="app-box-face -front -fill -darker -toLight"></div>
                       <div class="app-box-face -bottom -fill -darker"></div>
+                    </div>
+                    <div class="app-box -app-fridge-bottomShelf">
+                      <a
+                        class="app-box-face -top -fill -darker -toLighter"
+                        href="https://giordanos.com/"
+                        title="Eat Giordano’s"
+                      >
+                        <div class="app-box -app-fridge-pizza">
+                          <div class="app-box-face -front -fill -darker -toLighter"></div>
+                          <div class="app-box-face -right -fill -darker -toNormal"></div>
+                          <div class="app-box-face -bottom -fill -darker -toLight"></div>
+                        </div>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -212,13 +229,7 @@
                   <div class="app-box-face -front -fill -darker -toLight"></div>
                 </div>
                 <div class="app-box -app-fridge-cabBottom">
-                  <div class="app-box-face -top -fill -darker -toLighter">
-                    <a class="app-box -app-fridge-pizza" href="https://giordanos.com/" title="Eat Giordano’s">
-                      <div class="app-box-face -front -fill -darker -toLighter"></div>
-                      <div class="app-box-face -right -fill -darker -toNormal"></div>
-                      <div class="app-box-face -bottom -fill -darker -toLight"></div>
-                    </a>
-                  </div>
+                  <div class="app-box-face -top -fill -darker -toLighter"></div>
                   <div class="app-box-face -front -fill -darker -toLight"></div>
                 </div>
 
@@ -258,13 +269,12 @@
                 </div>
               </nav>
 
-              <app-color-scheme>
-                <label class="app-box -app-switch app--colorSchemeDark">
-                  <input
-                    class="app--visuallyHidden"
-                    type="checkbox"
-                    aria-label="Toggle light/dark mode (shift-click to clear)"
-                  />
+              <app-scheme>
+                <label
+                  class="app-box -app-switch app--schemeDark"
+                  title="Toggle light/dark mode (shift-click to clear)"
+                >
+                  <input class="app--visuallyHidden" type="checkbox" />
 
                   <span class="app-box-face -top -fill -lighter"></span>
                   <span class="app-box-face -front -fill -light -gloss">
@@ -284,7 +294,7 @@
                   <span class="app-box-face -right -fill"></span>
                   <span class="app-box-face -bottom -fill -darker"></span>
                 </label>
-              </app-color-scheme>
+              </app-scheme>
             </div>
           </div>
         </article>
@@ -948,13 +958,13 @@
                   framework, including React, Angular, and Vue.
                 </li>
                 <li>
-                  As a lead developer on several projects, I helped define the development patterns and standards
-                  for new React applications. This included things like the layout of core pages, how to fetch data
+                  As a lead developer on several projects, I helped define the development patterns and standards for
+                  new React applications. This included things like the layout of core pages, how to fetch data
                   asynchronously, manage state, and share code.
                 </li>
                 <li>
-                  Upgraded the authentication and data&#8209;fetching layers across multiple legacy Angular projects
-                  to allow local development of frontends using live backends to improve the velocity and veracity of
+                  Upgraded the authentication and data&#8209;fetching layers across multiple legacy Angular projects to
+                  allow local development of frontends using live backends to improve the velocity and veracity of
                   development, testing, and deployment.
                 </li>
                 <li>

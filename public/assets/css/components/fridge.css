@@ -38,7 +38,7 @@
 	 */
 
   .app-box.-app-fridge-door {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 19cqw;
 
     z-index: 1;
@@ -66,7 +66,7 @@
   }
 
   .app-box.-app-fridge-door-opener {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-200));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-200));
     --app-box-depth: 6cqw;
 
     grid-column: 2;
@@ -74,20 +74,20 @@
     transition: box-shadow var(--app-animation-durationFast);
 
     box-shadow:
-      0 6.6cqi 0.3cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-      0 18.3cqi 0.4cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-      0 30cqi 0.5cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
+      0 6.6cqi 0.3cqi oklch(var(--app-color-gray) var(--app-color-800) / 10%),
+      0 18.3cqi 0.4cqi oklch(var(--app-color-gray) var(--app-color-800) / 10%),
+      0 30cqi 0.5cqi oklch(var(--app-color-gray) var(--app-color-800) / 10%);
 
     .app-box.-app-fridge-door:not(:has(:checked)):active & {
       box-shadow:
-        0 10.6cqi 0.3cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-        0 22.3cqi 0.8cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%),
-        0 34cqi 1.2cqi oklch(from var(--app-color-gray) var(--app-color-800) / 10%);
+        0 10.6cqi 0.3cqi oklch(var(--app-color-gray) var(--app-color-800) / 10%),
+        0 22.3cqi 0.8cqi oklch(var(--app-color-gray) var(--app-color-800) / 10%),
+        0 34cqi 1.2cqi oklch(var(--app-color-gray) var(--app-color-800) / 10%);
     }
   }
 
   .app-box.-app-fridge-door-handle {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-200));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-200));
     --app-box-depth: 4cqw;
 
     grid-column: 2;
@@ -106,7 +106,7 @@
 	 */
 
   .app-box.-app-fridge-caseTop {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 80cqw;
 
     grid-column: 1 / span 5;
@@ -114,7 +114,7 @@
   }
 
   .app-box.-app-fridge-caseLeft {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 80cqw;
 
     grid-column: 1;
@@ -122,7 +122,7 @@
   }
 
   .app-box.-app-fridge-caseRight {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 80cqw;
 
     grid-column: 5;
@@ -130,7 +130,7 @@
   }
 
   .app-box.-app-fridge-caseBottom {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 80cqw;
 
     grid-column: 1 / span 5;
@@ -142,7 +142,7 @@
 	 */
 
   .app-box.-app-fridge-cabTop {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 80cqw;
 
     grid-column: 2 / span 3;
@@ -150,7 +150,7 @@
   }
 
   .app-box.-app-fridge-cabLeft {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 80cqw;
 
     grid-column: 2;
@@ -158,7 +158,7 @@
   }
 
   .app-box.-app-fridge-cabBack {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 10cqw;
 
     grid-column: 3;
@@ -166,7 +166,7 @@
   }
 
   .app-box.-app-fridge-cabRight {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 80cqw;
 
     grid-column: 4;
@@ -174,7 +174,7 @@
   }
 
   .app-box.-app-fridge-cabBottom {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 80cqw;
 
     grid-column: 2 / span 3;
@@ -185,12 +185,20 @@
 	 * # Shelf
 	 */
 
-  .app-box.-app-fridge-shelf {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-100));
+  .app-box.-app-fridge-topShelf {
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
     --app-box-depth: 68cqw;
 
     position: absolute;
     inset: 60% 0 38% 0;
+  }
+
+  .app-box.-app-fridge-bottomShelf {
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-100));
+    --app-box-depth: 68cqw;
+
+    position: absolute;
+    inset: calc(100% - 1px) 0 38% 0;
   }
 
   /**
@@ -216,7 +224,7 @@
   }
 
   .app-box.-app-fridge-bottle-cap {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-600));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-600));
     --app-box-depth: 1.6cqw;
 
     grid-area: 1 / 1;
@@ -225,7 +233,7 @@
   }
 
   .app-box.-app-fridge-bottle-neck {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-500));
     --app-box-depth: 12.1cqw;
 
     grid-area: 1 / 1;
@@ -243,7 +251,7 @@
   }
 
   .app-box.-app-fridge-bottle-neckBase {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-500));
     --app-box-depth: 1.1cqw;
 
     grid-area: 1 / 1;
@@ -252,7 +260,7 @@
   }
 
   .app-box.-app-fridge-bottle-body {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-500));
     --app-box-depth: 25cqw;
 
     grid-area: 1 / 1;
@@ -270,13 +278,13 @@
   }
 
   .app-box.-app-fridge-bottle-bodyBase {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-500));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-500));
     --app-box-depth: 2cqw;
 
     grid-area: 1 / 1;
     margin: 10%;
 
-    box-shadow: 0 0 8px oklch(from var(--app-color-gray) var(--app-color-800));
+    box-shadow: 0 0 8px oklch(var(--app-color-gray) var(--app-color-800));
   }
 
   /**
@@ -284,14 +292,14 @@
 	 */
 
   .app-box.-app-fridge-pizza {
-    --app-box-color: oklch(from var(--app-color-brown) var(--app-color-500));
+    --app-box-color: oklch(var(--app-color-brown) var(--app-color-500));
     --app-box-depth: 8cqw;
 
     position: absolute;
     inset: 15cqw 15cqw 15cqw 20cqw;
     transform: rotate(-0.02turn);
 
-    box-shadow: 0 0 8px oklch(from var(--app-color-gray) var(--app-color-800));
+    box-shadow: 0 0 8px oklch(var(--app-color-gray) var(--app-color-800));
 
     & > .-front {
       container-type: size;
@@ -304,7 +312,7 @@
         inset: 10cqw;
         border: 0.1em dashed;
         border-radius: 50%;
-        color: oklch(from var(--app-color-gray) var(--app-color-800));
+        color: oklch(var(--app-color-gray) var(--app-color-800));
         font: 400 25cqi var(--app-font-display);
       }
     }
@@ -315,7 +323,7 @@
 	 */
 
   .app-box.-app-fridge-panelFront {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 19cqw;
 
     grid-column: 1 / span 5;
@@ -325,7 +333,7 @@
   }
 
   .app-box.-app-fridge-panelBack {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
     --app-box-depth: 80cqw;
 
     grid-column: 1 / span 5;
@@ -337,7 +345,7 @@
 	 */
 
   .app-box.-app-fridge-base {
-    --app-box-color: oklch(from var(--app-color-green) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-green) var(--app-color-400));
 
     grid-column: 1 / span 5;
     grid-row: 8;

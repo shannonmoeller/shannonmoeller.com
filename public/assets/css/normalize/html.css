@@ -36,6 +36,7 @@
   }
 
   html {
+    color-scheme: light dark;
     height: 100%;
 
     @media (width >= 45rem) AND (height >= 45rem) {
@@ -81,7 +82,7 @@
     vertical-align: middle;
   }
 
-  app-color-scheme,
+  app-scheme,
   app-copyright {
     display: contents;
   }

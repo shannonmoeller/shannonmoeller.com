@@ -100,7 +100,7 @@
   }
 
   .app-box.-app-intro-room-wall {
-    --app-box-color: oklch(from var(--app-color-gray) var(--app-color-800));
+    --app-box-color: oklch(var(--app-color-gray) var(--app-color-800));
     --app-box-depth: 3cqw;
 
     grid-column: 1 / span 3;
@@ -116,7 +116,7 @@
   }
 
   .app-box.-app-intro-room-floor {
-    --app-box-color: oklch(from var(--app-color-brown) var(--app-color-400));
+    --app-box-color: oklch(var(--app-color-brown) var(--app-color-400));
     --app-box-depth: 100cqw;
 
     grid-column: 1 / span 3;
@@ -127,14 +127,14 @@
       background:
         url('../../images/flooring.svg') 0 0 / cover,
         var(--app-gradient-planks) -2px -2px / 12.5cqw 12.5cqw,
-        oklch(from var(--app-color-brown) var(--app-color-300));
+        oklch(var(--app-color-brown) var(--app-color-300));
 
       &::before {
         content: '';
         position: absolute;
         inset: 25.25cqw;
         transform: rotate(-0.05turn) translateZ(0.5px);
-        background-color: oklch(from var(--app-color-gray) var(--app-color-800) / 25%);
+        background-color: oklch(var(--app-color-gray) var(--app-color-800) / 25%);
         filter: blur(0.3cqi);
         mix-blend-mode: multiply;
       }
