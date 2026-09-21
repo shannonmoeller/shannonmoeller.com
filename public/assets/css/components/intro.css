@@ -21,7 +21,7 @@
       min-block-size: min(66cqi, 90cqb);
     }
 
-    @media (width < 45rem) OR (height < 45rem) {
+    @media (width < 45rem) or (height < 45rem) {
       perspective: calc(1000px + 100vmax);
       perspective-origin: 30vw 5vmin;
     }
@@ -43,7 +43,7 @@
   .app-intro-name {
     display: inline-block;
 
-    @media (width >= 45rem) AND (height >= 45rem) {
+    @media (width >= 45rem) and (height >= 45rem) {
       transform: translateX(-7cqw) translateY(-2.5cqw) translateZ(40cqw);
     }
 
@@ -61,7 +61,7 @@
 
     font-size: max(1rem, 0.75rem, 8cqi);
 
-    @media (width >= 45rem) AND (height >= 45rem) {
+    @media (width >= 45rem) and (height >= 45rem) {
       transform: translateX(-6cqw) translateY(-6cqw) translateZ(40cqw);
     }
   }

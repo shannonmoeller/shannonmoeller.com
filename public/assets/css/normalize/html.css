@@ -39,7 +39,7 @@
     color-scheme: light dark;
     height: 100%;
 
-    @media (width >= 45rem) AND (height >= 45rem) {
+    @media (width >= 45rem) and (height >= 45rem) {
       overflow: hidden;
     }
   }
@@ -57,7 +57,7 @@
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 
-    @media (width >= 45rem) AND (height >= 45rem) {
+    @media (width >= 45rem) and (height >= 45rem) {
       height: 100%;
       overflow: hidden;
     }

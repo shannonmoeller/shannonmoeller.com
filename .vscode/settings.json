@@ -1,0 +1,39 @@
+{
+  "cSpell.words": ["serviceworker"],
+  "oxc.disableNestedConfig": true,
+  "oxc.configPath": "./vite.config.js",
+  "oxc.fmt.disableNestedConfig": true,
+  "oxc.fmt.configPath": "./vite.config.js",
+  "oxc.path.oxfmt": "node_modules/vite-plus/bin/oxfmt",
+  "oxc.path.oxlint": "node_modules/vite-plus/bin/oxlint",
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.formatOnSave": true,
+  "editor.formatOnSaveMode": "file",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[svg]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "oxc.oxc-vscode"
+  }
+}

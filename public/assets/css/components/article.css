@@ -14,7 +14,7 @@
     &.-secondary {
       gap: 20cqi;
 
-      @media (width < 45rem) OR (height < 45rem) {
+      @media (width < 45rem) or (height < 45rem) {
         perspective: calc(1000px + 100vmax);
         perspective-origin: 30vw 0%;
       }
@@ -75,7 +75,7 @@
       text-align: right;
     }
 
-    @media (width >= 45rem) AND (height >= 45rem) {
+    @media (width >= 45rem) and (height >= 45rem) {
       transform: translateY(-0.5cqi) translateZ(5cqi);
     }
   }

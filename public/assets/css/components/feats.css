@@ -5,7 +5,7 @@
     gap: 6cqi;
     padding: 0 calc(5cqi + var(--app-size-safeInline));
 
-    @media (width < 45rem) OR (height < 45rem) {
+    @media (width < 45rem) or (height < 45rem) {
       perspective: calc(1000px + 100vmax);
       perspective-origin: 30vw -30%;
     }
@@ -63,7 +63,7 @@
       }
     }
 
-    @media (width >= 45rem) AND (height >= 45rem) {
+    @media (width >= 45rem) and (height >= 45rem) {
       :nth-child(1 of &) {
         transform: translateX(1.6cqw) translateY(-8cqw) translateZ(24cqw) rotateY(0.03turn);
       }
