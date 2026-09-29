@@ -59,7 +59,7 @@
     gap: 8cqi;
     margin-block-start: 8cqi;
 
-    font-size: max(1rem, 0.75rem, 8cqi);
+    font-size: max(1rem, 0.75rem, 7cqi);
 
     @media (width >= 45rem) and (height >= 45rem) {
       transform: translateX(-6cqw) translateY(-6cqw) translateZ(40cqw);
